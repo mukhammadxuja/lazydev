@@ -1,16 +1,31 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import "./defaultClasses.css";
+
+html {
+  scroll-behavior: smooth;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: #2c3e50;
+    --color-secondary: #808b96;
+    --color-dark-primary: #1e2023;
+    --color-dark-secondary: #18191c;
+  }
 }
 
-* {
-  box-sizing: border-box;
+@layer components {
+  body::-webkit-scrollbar-thumb {
+    @apply bg-primary rounded-3xl outline-0 dark:bg-white;
+  }
+  body::-webkit-scrollbar {
+    @apply w-[4px];
+  }
+  input::placeholder {
+    @apply text-primary dark:text-white;
+  }
 }
+

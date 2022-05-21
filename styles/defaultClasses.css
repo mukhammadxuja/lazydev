@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Home css */
+  .link {
+    @apply text-secondary cursor-pointer hover:text-primary font-medium dark:hover:text-white whitespace-nowrap dark:group-hover:text-white;
+  }
+  .sidebar__link {
+    @apply text-secondary cursor-pointer hover:text-primary font-normal py-1 md:py-1.5 dark:hover:text-white whitespace-nowrap dark:group-hover:text-white;
+  }
+  .darkOrLight {
+    @apply bg-white text-primary dark:bg-darkPrimary dark:text-white;
+  }
+  .ul__hover_dropdown {
+    @apply absolute py-4 pl-4 pr-8 rounded-md top-14 -left-2 opacity-0 duration-200 ease-in-out bg-white shadow-xl dark:bg-darkPrimary;
+  }
+  .btn {
+    @apply w-fit mx-auto rounded-xl py-3 px-5 shadow-lg text-sm duration-300 ease-in-out;
+  }
+  .dark__btn {
+    @apply bg-white dark:bg-darkSecondary text-xs md:text-sm text-primary dark:text-white hover:drop-shadow-2xl hover:translate-y-1;
+  }
+  .btn__primary {
+    @apply bg-[#1a5cff] dark:bg-[#1a5cff] text-xs md:text-sm text-white hover:drop-shadow-2xl hover:-translate-y-1;
+  }
+  .square__card {
+    @apply py-7 px-8 rounded-3xl w-[120px] h-[120px] md:w-[140px] md:h-[140px] inline-flex items-center justify-center bg-white dark:bg-darkSecondary shadow-lg hover:translate-y-2 duration-300 ease-in-out;
+  }
+  .heading {
+    @apply text-[1.2rem] md:text-[1.7rem] lg:text-[2rem] font-semibold text-primary dark:text-white;
+  }
+  .paragraph {
+    @apply text-xs sm:text-sm md:text-base lg:text-lg font-medium text-primary dark:text-white;
+  }
+  .ripple_bg_gray_300 {
+    @apply bg-[#e2e8f0];
+  }
+  .dropdown__ul {
+    @apply flex my-1 items-center space-x-2 p-2 rounded-xl bg-white dark:bg-darkSecondary shadow-2xl w-fit;
+  }
+}
+
+/* ==================== MEN ================= */
+
+.animation1 {
+  animation: animation1 infinite 3s linear;
+}
+
+@keyframes animation1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animation2 {
+  animation: animation2 infinite 4s linear;
+}
+
+@keyframes animation2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
