@@ -108,6 +108,7 @@ const Header = () => {
               {/* Input example */}
               <Input
                 Icon={CgSearch}
+                animation="animation1"
                 p="px-2 p-2"
                 focusAnimation="px-4"
                 width="w-[13rem]"

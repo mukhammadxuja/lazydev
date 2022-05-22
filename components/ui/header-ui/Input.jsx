@@ -1,10 +1,10 @@
 import React from 'react';
 import { CgSearch } from 'react-icons/cg';
 
-const Input = ({ Icon, p, focusAnimation, width, placeholder }) => {
+const Input = ({ Icon, p, focusAnimation, width, placeholder, animation }) => {
   return (
     <>
-      <div className="animation2 m-5 w-fit flex items-center bg-gray-200 dark:bg-darkSecondary justify-between shadow-xl rounded-lg">
+      <div className={`${animation} m-5 w-fit flex items-center bg-gray-200 dark:bg-darkSecondary justify-between shadow-xl rounded-lg`}>
         <input
           className={`${p} ${width} text-xs bg-transparent flex-grow outline-none focus:${focusAnimation} duration-300`}
           type="text"

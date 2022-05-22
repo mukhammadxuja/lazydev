@@ -1,4 +1,3 @@
-import React from "react";
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { NestedLayout } from '@/components/layout/NestedLayout';
@@ -11,10 +10,6 @@ export const getStaticProps = async ({ locale }) => {
   };
 };
 
-const button = () => {
-    return <NestedLayout>
-      <div className="pt-20">alert</div>
-  </NestedLayout>;
-};
+<div className="h-screen"></div>
 
-export default button;
+export default ({ children }) => <NestedLayout>{children}</NestedLayout>;

@@ -12,6 +12,7 @@ const Footer = ({ bg }) => {
         </h3>
         <Input
           Icon={AiOutlineSend}
+          animation=""
           p="py-3 px-4"
           focusAnimation="px-6"
           width="w-[15rem] md:w-[17rem]"
