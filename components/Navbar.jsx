@@ -11,7 +11,7 @@ import { useTranslation } from 'next-i18next';
 
 import { links } from '../data/links'
 
-const Navbar = () => {
+const Navbar = ({ sidebar, setSidebar }) => {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [guide, setGuide] = React.useState(true);
   const [components, setComponents] = React.useState(true);
@@ -19,6 +19,10 @@ const Navbar = () => {
   const [input, setInput] = React.useState(true);
   const router = useRouter();
   const { t } = useTranslation();
+
+  const toggleSidebar = () => {
+    setSidebar(!sidebar);
+  }
 
   const guideData = [
     {
@@ -28,53 +32,6 @@ const Navbar = () => {
     {
       title: `${t('home:boshlash')}`,
       link: '/docs/gettingStarted',
-    },
-  ];
-
-  const documentationData = [
-    {
-      title: 'Button',
-      link: '/docs/components/button',
-    },
-    {
-      title: 'Alert',
-      link: '/docs/components/alert',
-    },
-    {
-      title: 'Loading',
-      link: '/docs/components/loading',
-    },
-    {
-      title: 'Input',
-      link: '/docs/components/input',
-    },
-    {
-      title: '',
-      link: '/docs/components/gettingStarted',
-    },
-    {
-      title: 'Checkbox',
-      link: '/docs/components/checkbox',
-    },
-    {
-      title: 'Avatar',
-      link: '/docs/components/avatar',
-    },
-    {
-      title: 'Select',
-      link: '/docs/components/select',
-    },
-    {
-      title: 'Card',
-      link: '/docs/components/card',
-    },
-    {
-      title: 'Navbar',
-      link: '/docs/components/navbar',
-    },
-    {
-      title: 'Sidebar',
-      link: '/docs/components/sidebar',
     },
   ];
 
@@ -95,7 +52,7 @@ const Navbar = () => {
     <div className='relative'>
       <div className="fixed z-40 top-0 left-0 right-0 py-3 darkOrLight shadow-md px-4 flex items-center justify-between">
         <div className="flex items-center">
-          <FiMenu className="block lg:hidden h-5 w-5 mr-4" />
+          <FiMenu onClick={toggleSidebar} className="block lg:hidden h-5 w-5 mr-4" />
           <div onClick={() => router.push('/')} className='relative flex items-center group'>
             <img className='w-10 group-hover:opacity-80' src="/images/logo.png" alt="logo" />
             <div className='relative'>

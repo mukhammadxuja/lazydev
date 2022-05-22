@@ -10,6 +10,12 @@
   .sidebar__link {
     @apply text-secondary cursor-pointer hover:text-primary font-normal py-1 md:py-1.5 dark:hover:text-white whitespace-nowrap dark:group-hover:text-white;
   }
+  .sidebar {
+    @apply bg-white dark:bg-darkSecondary fixed z-[100] h-screen w-[240px] transform -translate-x-full px-5 overflow-y-auto scrollbar-hide duration-200
+  }
+  .sidebar__active {
+    @apply bg-white dark:bg-darkSecondary fixed z-[100] h-screen w-[240px] px-5 overflow-y-auto scrollbar-hide transform translate-x-0 duration-200
+  }
   .darkOrLight {
     @apply bg-white text-primary dark:bg-darkPrimary dark:text-white;
   }

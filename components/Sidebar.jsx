@@ -1,7 +1,79 @@
 import React from 'react';
+import { links } from '../data/links';
+import { IoIosArrowForward } from 'react-icons/io';
+import Image from 'next/image';
+import { useRouter } from 'next/router';
 
-const Sidebar = () => {
-  return <div>Sidebar</div>;
+const Sidebar = ({ sidebar, setSidebar }) => {
+  const router = useRouter();
+  const toggleSidebar = () => {
+    setSidebar(!sidebar);
+  };
+
+  return (
+    <div>
+      <aside className={sidebar ? 'sidebar__active' : 'sidebar'}>
+        <div className="">
+        <div onClick={() => router.push('/')} className='relative flex items-center group py-4 -ml-2'>
+            <Image className='group-hover:opacity-80' width={35} height={35} src="/images/logo.png" alt="logo" />
+            <div className='relative'>
+              <h3 className='font-sora tracking-wide -ml-1 font-semibold text-lg cursor-pointer text-primary dark:text-white group-hover:opacity-80'>Lazydev</h3>
+              <p className='absolute -top-4 -right-2 text-2xl group-hover:text-[#82ceee]'>.</p>
+            </div>
+          </div>
+          <div className="py-1">
+            <span className="flex items-center space-x-1 cursor-pointer">
+              <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
+                Guide
+              </h4>
+              <IoIosArrowForward className="text-sm" />
+            </span>
+            <ul className="p-2">
+              <li className="sidebar__link">Introduction</li>
+              <li className="sidebar__link">Getting started</li>
+            </ul>
+          </div>
+          <div className="py-1">
+            <span className="flex items-center space-x-1 cursor-pointer">
+              <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
+                Theme
+              </h4>
+              <IoIosArrowForward className="text-sm" />
+            </span>
+            <ul className="p-2">
+              <li className="sidebar__link">Colors</li>
+            </ul>
+          </div>
+          <div className="py-1">
+            <span className="flex items-center space-x-1 cursor-pointer">
+              <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
+                Components
+              </h4>
+              <IoIosArrowForward className="text-sm" />
+            </span>
+            <ul className="p-2">
+              {links.map((item) => (
+                <li
+                  onClick={() => router.push(`${item.path}`)}
+                  key={item.id}
+                  className="sidebar__link">
+                  {item.title}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </aside>
+      <div
+        onClick={toggleSidebar}
+        className={
+          sidebar
+            ? 'fixed z-20 h-screen w-screen bg-black opacity-40'
+            : 'hidden'
+        }
+      />
+    </div>
+  );
 };
 
 export default Sidebar;

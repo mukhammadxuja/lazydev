@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { IoIosArrowUp } from 'react-icons/io';
-import { Navbar } from '..';
+import { Navbar, Sidebar } from '..';
 
 const Layout = ({ children }) => {
   const [show, setShow] = useState(true);
+  const [sidebar, setSidebar] = useState(false);
   // scroll animation
   const controlNavbar = () => {
     if (window.scrollY > 200) {
@@ -23,8 +24,11 @@ const Layout = ({ children }) => {
   return (
     <div className="dark:bg-darkPrimary">
       <header className="">
-        <Navbar />
+        <Navbar sidebar={sidebar} setSidebar={setSidebar} />
       </header>
+      <aside>
+        <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
+      </aside>
       <main>{children}</main>
       <div
         className={
