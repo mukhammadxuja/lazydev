@@ -1,8 +1,23 @@
 import React from 'react';
+import { AiOutlineSend } from 'react-icons/ai';
+
+import { Input } from './';
 
 const Footer = ({ bg }) => {
   return (
-    <div className={`bg-white dark:${bg} px-4 lg:px-0`}>
+    <div className={`${bg} px-4 lg:px-0`}>
+      <div className="flex flex-col items-center justify-center py-10 md:py-16">
+        <h3 className="text-center font-medium text-primary dark:text-white">
+          <p className="text-[#1a5cff]">Subscribe</p> to our Weekly Newsletter
+        </h3>
+        <Input
+          Icon={AiOutlineSend}
+          p="py-3 px-4"
+          focusAnimation="px-6"
+          width="w-[15rem] md:w-[17rem]"
+          placeholder="Search"
+        />
+      </div>
       <div className="max-w-4xl py-10 md:py-16 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
         <div className="py-2 space-y-3 md:space-y-4">
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
