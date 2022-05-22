@@ -1,6 +1,12 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import Head from 'next/head'
 
 import { NestedLayout } from '@/components/layout/NestedLayout';
+
+export const meta = {
+  name: 'Button',
+  title: 'Button | Lazydev ui components'
+}
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -10,8 +16,91 @@ export const getStaticProps = async ({ locale }) => {
   };
 };
 
-# This a component page
 
-export default ({ children }) => <NestedLayout>{children}</NestedLayout>;
+# This a component page
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+# test 
+
+export default ({ children }) => <NestedLayout name={meta.name} title={meta.title}>{children}</NestedLayout>;
 
 

@@ -2,6 +2,11 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { NestedLayout } from '@/components/layout/NestedLayout';
 
+export const meta = {
+  name: 'Sidebar',
+  title: 'Sidebar | Lazydev ui components',
+};
+
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
@@ -12,4 +17,9 @@ export const getStaticProps = async ({ locale }) => {
 
 <div className="h-screen"></div>
 
-export default ({ children }) => <NestedLayout>{children}</NestedLayout>;
+export default ({ children }) => (
+  <NestedLayout name={meta.name} title={meta.title}>
+    {children}
+  </NestedLayout>
+);
+
