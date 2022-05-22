@@ -9,7 +9,7 @@ export const NestedLayout = ({ children }) => {
   const router = useRouter();
 
   return (
-    <div className="test flex bg-white dark:bg-darkSecondary">
+    <div className="test flex bg-white dark:bg-darkSecondary shadow-lg">
       <div className="hidden lg:block">
         <aside className="bg-white dark:bg-darkPrimary fixed z-30 h-screen w-[240px] px-5 pt-[5rem] overflow-y-auto scrollbar-hide">
           <div className="">

@@ -4,6 +4,14 @@ export { default as Sidebar } from './Sidebar';
 export { default as Setting } from './Settings';
 export { default as Footer } from './Footer';
 
+// Home
+export { default as YouCanUse } from './home/YouCanUse';        
+export { default as Tools } from './home/Tools';
+export { default as PremiumThemes } from './home/PremiumThemes';
+export { default as Description1 } from './home/Description1';
+export { default as Description2 } from './home/Description2';
+
+
 // Layouts
 export { default as Layout } from './layout/Layout';
 export { default as NestedLayout } from './layout/NestedLayout';

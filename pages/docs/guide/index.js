@@ -1,7 +1,20 @@
 import React from "react";
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
-const index = () => {
-  return <div>index</div>;
+import { NestedLayout } from '@/components/layout/NestedLayout';
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home'])),
+    },
+  };
 };
 
-export default index;
+const button = () => {
+    return <NestedLayout>
+      <div className="pt-20 h-screen">guide</div>
+  </NestedLayout>;
+};
+
+export default button;
