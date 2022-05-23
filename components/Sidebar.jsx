@@ -1,7 +1,8 @@
 import React from 'react';
 import { links } from '../data/links';
-import { IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import Image from 'next/image';
+import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 const Sidebar = ({ sidebar, setSidebar }) => {
@@ -14,12 +15,15 @@ const Sidebar = ({ sidebar, setSidebar }) => {
     <div>
       <aside className={sidebar ? 'sidebar__active' : 'sidebar'}>
         <div className="">
-        <div onClick={() => router.push('/')} className='relative flex items-center group py-4 -ml-2'>
-            <Image className='group-hover:opacity-80' width={35} height={35} src="/images/logo.png" alt="logo" />
-            <div className='relative'>
-              <h3 className='font-sora tracking-wide -ml-1 font-semibold text-lg cursor-pointer text-primary dark:text-white group-hover:opacity-80'>Lazydev</h3>
-              <p className='absolute -top-4 -right-2 text-2xl group-hover:text-[#82ceee]'>.</p>
+          <div className='flex items-center justify-between'>
+            <div onClick={() => router.push('/')} className='relative flex items-center group py-4 -ml-2'>
+              <Image className='group-hover:opacity-80' width={35} height={35} src="/images/logo.png" alt="logo" />
+              <div className='relative'>
+                <h3 className='font-sora tracking-wide -ml-1 font-semibold text-lg cursor-pointer text-primary dark:text-white group-hover:opacity-80'>Lazydev</h3>
+                <p className='absolute -top-4 -right-2 text-2xl group-hover:text-[#82ceee]'>.</p>
+              </div>
             </div>
+            <IoIosArrowBack onClick={toggleSidebar} />
           </div>
           <div className="py-1">
             <div className="flex items-center space-x-1 cursor-pointer">
@@ -29,8 +33,12 @@ const Sidebar = ({ sidebar, setSidebar }) => {
               <IoIosArrowForward className="text-sm" />
             </div>
             <ul className="p-2">
-              <li className="sidebar__link">Introduction</li>
-              <li className="sidebar__link">Getting started</li>
+              <Link href="/docs/guide/introduction">
+                <p className="sidebar__link">Introduction</p>
+              </Link>
+              <Link href="/docs/guide/">
+                <p className="sidebar__link">Getting started</p>
+              </Link>
             </ul>
           </div>
           <div className="py-1">
@@ -41,7 +49,9 @@ const Sidebar = ({ sidebar, setSidebar }) => {
               <IoIosArrowForward className="text-sm" />
             </div>
             <ul className="p-2">
-              <li className="sidebar__link">Colors</li>
+              <Link href="/docs/theme/">
+                <p className="sidebar__link">Colors</p>
+              </Link>
             </ul>
           </div>
           <div className="py-1">
