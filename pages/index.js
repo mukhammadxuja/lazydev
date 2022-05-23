@@ -30,13 +30,13 @@ export default function Home({ locale }) {
       />
       <Header />
 
-      <main className="px-4 md:px-0">
+      <div className="px-4 md:px-0">
         <YouCanUse />
         <Description1 />
         <Tools />
         <Description2 />
         <PremiumThemes />
-      </main>
+      </div>
 
       <Footer bg="bg-white dark:bg-darkPrimary" />
     </div>

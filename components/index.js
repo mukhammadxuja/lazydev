@@ -4,8 +4,13 @@ export { default as Sidebar } from './Sidebar';
 export { default as Setting } from './Settings';
 export { default as Footer } from './Footer';
 
+// Navbar
+export { default as Left } from './navbar/Left';
+export { default as Center } from './navbar/Center';
+export { default as Right } from './navbar/Right';
+
 // Home
-export { default as YouCanUse } from './home/YouCanUse';        
+export { default as YouCanUse } from './home/YouCanUse';   
 export { default as Tools } from './home/Tools';
 export { default as PremiumThemes } from './home/PremiumThemes';
 export { default as Description1 } from './home/Description1';

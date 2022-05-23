@@ -27,5 +27,8 @@ html {
   input::placeholder {
     @apply text-primary dark:text-white;
   }
+  body ul {
+    @apply list-none;
+  }
 }
 

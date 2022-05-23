@@ -47,7 +47,7 @@
     @apply flex my-1 items-center space-x-2 p-2 rounded-xl bg-white dark:bg-darkSecondary shadow-2xl w-fit;
   }
   .breadcrumbs__div {
-    @apply sticky top-[3.5rem] mt-[3.5rem] bg-white dark:bg-[#141417] rounded-bl-[2rem] duration-150
+    @apply sticky top-[3.5rem] mt-[3.5rem] bg-gray-100 dark:bg-[#141417] duration-150
   }
 }
 

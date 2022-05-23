@@ -14,7 +14,7 @@ export const NestedLayout = ({ children, name, title }) => {
 
   // scroll animation
   const controlNavbar = () => {
-    if (window.scrollY > 150) {
+    if (window.scrollY > 200) {
       setShow(false);
     } else {
       setShow(true);
@@ -39,35 +39,35 @@ export const NestedLayout = ({ children, name, title }) => {
           <aside className="bg-white dark:bg-darkPrimary fixed z-30 h-screen w-[240px] px-5 pt-[5rem] overflow-y-auto scrollbar-hide">
             <div className="">
               <div className="py-1">
-                <span className="flex items-center space-x-1 cursor-pointer">
+                <div className="flex items-center space-x-1 cursor-pointer">
                   <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
                     Guide
                   </h4>
                   <IoIosArrowForward className="text-sm" />
-                </span>
+                </div>
                 <ul className="p-2">
                   <li className="sidebar__link">Introduction</li>
                   <li className="sidebar__link">Getting started</li>
                 </ul>
               </div>
               <div className="py-1">
-                <span className="flex items-center space-x-1 cursor-pointer">
+                <div className="flex items-center space-x-1 cursor-pointer">
                   <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
                     Theme
                   </h4>
                   <IoIosArrowForward className="text-sm" />
-                </span>
+                </div>
                 <ul className="p-2">
                   <li className="sidebar__link">Colors</li>
                 </ul>
               </div>
               <div className="py-1">
-                <span className="flex items-center space-x-1 cursor-pointer">
+                <div className="flex items-center space-x-1 cursor-pointer">
                   <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
                     Components
                   </h4>
                   <IoIosArrowForward className="text-sm" />
-                </span>
+                </div>
                 <ul className="p-2">
                   {links.map((item) => (
                     <li
@@ -117,7 +117,7 @@ export const NestedLayout = ({ children, name, title }) => {
                   />
                 </div>
               </div>
-                <div>
+                <div className='hidden lg:block'>
                   <BiArrowBack
                     onClick={() => router.push('/docs/guide/introduction')}
                     title="Go to Back"

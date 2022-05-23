@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
       <aside>
         <Sidebar sidebar={sidebar} setSidebar={setSidebar} />
       </aside>
-      <main>{children}</main>
+      <div>{children}</div>
       <div
         className={
           show

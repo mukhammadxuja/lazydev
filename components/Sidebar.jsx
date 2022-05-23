@@ -22,35 +22,35 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             </div>
           </div>
           <div className="py-1">
-            <span className="flex items-center space-x-1 cursor-pointer">
+            <div className="flex items-center space-x-1 cursor-pointer">
               <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
                 Guide
               </h4>
               <IoIosArrowForward className="text-sm" />
-            </span>
+            </div>
             <ul className="p-2">
               <li className="sidebar__link">Introduction</li>
               <li className="sidebar__link">Getting started</li>
             </ul>
           </div>
           <div className="py-1">
-            <span className="flex items-center space-x-1 cursor-pointer">
+            <div className="flex items-center space-x-1 cursor-pointer">
               <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
                 Theme
               </h4>
               <IoIosArrowForward className="text-sm" />
-            </span>
+            </div>
             <ul className="p-2">
               <li className="sidebar__link">Colors</li>
             </ul>
           </div>
           <div className="py-1">
-            <span className="flex items-center space-x-1 cursor-pointer">
+            <div className="flex items-center space-x-1 cursor-pointer">
               <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
                 Components
               </h4>
               <IoIosArrowForward className="text-sm" />
-            </span>
+            </div>
             <ul className="p-2">
               {links.map((item) => (
                 <li
