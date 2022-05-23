@@ -10,8 +10,6 @@ const withMDX = require('@next/mdx')({
 const nextConfig = withMDX({
   reactStrictMode: true,
   pageExtensions: ['js', 'jsx', 'mdx'],
-  trailingSlash: true,
-  experimental: { esmExternals: true },
   i18n,
   images: {
     domains: [],

@@ -5,62 +5,62 @@ export const links = [
         path: "/docs/components/button"
     },
     {
-        id: 1,
+        id: 2,
         title: 'Alert',
         path: "/docs/components/alert"
     },
     {
-        id: 1,
+        id: 3,
         title: 'Loading',
         path: "/docs/components/loading"
     },
     {
-        id: 1,
+        id: 4,
         title: 'Input',
         path: "/docs/components/input"
     },
     {
-        id: 1,
+        id: 5,
         title: 'Select',
         path: "/docs/components/select"
     },
     {
-        id: 1,
+        id: 6,
         title: 'Avatar',
         path: "/docs/components/avatar"
     },
     {
-        id: 1,
+        id: 7,
         title: 'Tooltip',
         path: "/docs/components/tooltip"
     },
     {
-        id: 1,
+        id: 8,
         title: 'Dialog',
         path: "/docs/components/dialog"
     },
     {
-        id: 1,
+        id: 9,
         title: 'Pagination',
         path: "/docs/components/pagination"
     },
     {
-        id: 1,
+        id: 10,
         title: 'Navbar',
         path: "/docs/components/navbar"
     },
     {
-        id: 1,
+        id: 11,
         title: 'Sidebar',
         path: "/docs/components/sidebar"
     },
     {
-        id: 1,
+        id: 12,
         title: 'Toast',
         path: "/docs/components/toast"
     },
     {
-        id: 1,
+        id: 13,
         title: 'Card',
         path: "/docs/components/card"
     },
