@@ -1,6 +1,7 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { NestedLayout } from '@/components/layout/NestedLayout';
+import { PrevAndNext } from '@/components/layout/PrevAndNext';
 
 export const meta = {
   name: 'Alert',
@@ -14,6 +15,8 @@ export const getStaticProps = async ({ locale }) => {
     },
   };
 };
+
+<PrevAndNext leftPath="/docs/components/toast" rightPath="/docs/components/tag-input" />
 
 <div className="h-screen"></div>
 

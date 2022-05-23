@@ -17,11 +17,11 @@ const Center = () => {
   const guideData = [
     {
       title: `${t('home:kirish')}`,
-      link: '/docs/introduction',
+      link: '/docs/guide/introduction',
     },
     {
       title: `${t('home:boshlash')}`,
-      link: '/docs/gettingStarted',
+      link: '/docs/guide',
     },
   ];
 

@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
-import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
+import { IoIosArrowForward } from 'react-icons/io';
 import { FiEdit, FiCode } from 'react-icons/fi';
 import { BiBug, BiArrowBack } from 'react-icons/bi';
 
@@ -127,7 +127,7 @@ export const NestedLayout = ({ children, name, title }) => {
               </div>
                 <div className='hidden lg:block'>
                   <BiArrowBack
-                    onClick={() => router.push('/docs/guide/introduction')}
+                    onClick={() => router.push('/')}
                     title="Go to Back"
                     className="absolute left-3 top-1/3 text-lg hover:opacity-75 rounded-lg cursor-pointer"
                   />
@@ -136,11 +136,6 @@ export const NestedLayout = ({ children, name, title }) => {
           </div>
           <div className="max-w-4xl mx-auto px-4 lg:px-0 z-10">
             <div>{children}</div>
-          </div>
-
-          <div className='relative top-1/2 flex items-center justify-between'>
-              <IoIosArrowBack className='fixed top-1/2 left-0 text-[2.5rem] p-3 bg-gray-100 dark:bg-darkPrimary rounded-r-lg' />
-              <IoIosArrowForward className='fixed top-1/2 right-0 text-[2.5rem] p-3 bg-gray-100 dark:bg-darkPrimary rounded-l-lg' />
           </div>
 
           <Footer bg="bg-gray-100 dark:bg-darkSecondary" />
