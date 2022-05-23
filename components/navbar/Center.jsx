@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { BsThreeDots } from 'react-icons/bs';
 
@@ -9,6 +10,7 @@ const Center = () => {
   const [guide, setGuide] = useState(true);
   const [components, setComponents] = useState(true);
   const [social, setSocial] = useState(true);
+  const router = useRouter();
   const { t } = useTranslation();
 
   const guideData = [
