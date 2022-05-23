@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import Head from 'next/head';
 import { IoIosArrowForward } from 'react-icons/io';
 import { FiEdit, FiCode } from 'react-icons/fi';
@@ -70,12 +71,13 @@ export const NestedLayout = ({ children, name, title }) => {
                 </div>
                 <ul className="p-2">
                   {links.map((item) => (
-                    <li
-                      onClick={() => router.push(`${item.path}`)}
-                      key={item.id}
-                      className="sidebar__link">
-                      {item.title}
-                    </li>
+                    <Link href={`${item.path}`}>
+                      <li
+                        key={item.id}
+                        className="sidebar__link">
+                        {item.title}
+                      </li>
+                    </Link>
                   ))}
                 </ul>
               </div>

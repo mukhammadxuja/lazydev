@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'next-i18next';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { BsThreeDots } from 'react-icons/bs';
 
 import { links } from '../../data/links';
+
 const Center = () => {
   const [guide, setGuide] = useState(true);
   const [components, setComponents] = useState(true);
@@ -56,12 +57,13 @@ const Center = () => {
                 : 'ul__hover_dropdown top-8 opacity-100'
             }>
             {guideData.map((item, index) => (
-              <li
-                onClick={() => router.push(`${item.link}`)}
-                key={index}
-                className="link py-1">
-                {item.title}
-              </li>
+              <Link href={`${item.link}`}>
+                <li
+                  key={index}
+                  className="link py-1">
+                  {item.title}
+                </li>
+              </Link>
             ))}
           </ul>
         </div>
@@ -84,12 +86,13 @@ const Center = () => {
                 : 'ul__hover_dropdown top-8 opacity-100'
             }>
             {links.map((item, index) => (
-              <li
-                onClick={() => router.push(`${item.path}`)}
-                key={index}
-                className="link py-1">
-                {item.title}
-              </li>
+              <Link href={`${item.path}`}>
+                <li
+                  key={index}
+                  className="link py-1">
+                  {item.title}
+                </li>
+              </Link>
             ))}
           </ul>
         </div>

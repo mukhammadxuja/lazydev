@@ -11,7 +11,8 @@ const Footer = ({ bg }) => {
     <div className={`${bg} px-4 lg:px-0`}>
       <div className="flex flex-col items-center justify-center py-10 md:py-16">
         <h3 className="text-center font-medium text-primary dark:text-white">
-          <span className="text-[#1a5cff]">Subscribe</span> to our Weekly Newsletter
+          <span className="text-[#1a5cff]">Subscribe</span> to our Weekly
+          Newsletter
         </h3>
         <Input
           Icon={AiOutlineSend}
@@ -27,62 +28,46 @@ const Footer = ({ bg }) => {
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
             Lazy dev
           </h3>
-          <p
-            onClick={() =>
-              router.push('/docs/guide/introduction/#about-lazydev')
-            }
-            className="link text-sm">
-            Lazy.dev haqida
-          </p>
-          <p
-            onClick={() => router.push('/docs/guide/introduction/#why-lazydev')}
-            className="link text-sm">
-            Nima uchun Lazy.dev?
-          </p>
-          <p
-            onClick={() => router.push('/docs/guide/introduction/#faq')}
-            className="link text-sm">
-            FAQ
-          </p>
+          <Link href="/docs/guide/introduction/#about-lazydev">
+            <p className="link text-sm">Lazy.dev haqida</p>
+          </Link>
+          <Link href="/docs/guide/introduction/#why-lazydev">
+            <p className="link text-sm">Nima uchun Lazy.dev?</p>
+          </Link>
+          <Link href="/docs/guide/introduction/#faq">
+            <p className="link text-sm">FAQ</p>
+          </Link>
         </div>
         <div className="py-2 space-y-4">
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
             Resurslar
           </h3>
-          <p
-            onClick={() => router.push('docs/components')}
-            className="link text-sm">
-            Dakumintatsiya
-          </p>
-          <p
-            onClick={() => router.push('https://github/AnvarovM/lazydev')}
-            className="link text-sm">
-            GitHUb
-          </p>
-          <p onClick={() => router.push('')} className="link text-sm">
-            Privacy Policy
-          </p>
+          <Link href="docs/components">
+            <p className="link text-sm">Dakumintatsiya</p>
+          </Link>
+          <Link href="https://github/AnvarovM/lazydev">
+            <p className="link text-sm">GitHUb</p>
+          </Link>
+          <Link href="">
+            <p className="link text-sm">Privacy Policy</p>
+          </Link>
         </div>
         <div className="py-2 space-y-4">
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
             Yordam
           </h3>
-          <p
-            onClick={() => router.push('https://github/AnvarovM/lazydev')}
-            className="link text-sm">
-            Issues
-          </p>
-          <p
-            onClick={() => router.push('/docs/guide/introduction/#faq')}
-            className="link text-sm">
-            FAQ
-          </p>
+          <Link href="https://github/AnvarovM/lazydev">
+            <p className="link text-sm">Issues</p>
+          </Link>
+          <Link href="/docs/guide/introduction/#faq">
+            <p className="link text-sm">FAQ</p>
+          </Link>
         </div>
         <div className="py-2 space-y-4">
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
             Jamoa
           </h3>
-          <Link className="list-none" target="_blank" href="">
+          <Link className="list-none" href="/docs/components/avatar">
             <p className="link text-sm">Website</p>
           </Link>
           <Link target="_blank" href="">
