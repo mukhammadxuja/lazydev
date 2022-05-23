@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
-import { IoIosArrowForward } from 'react-icons/io';
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import { FiEdit, FiCode } from 'react-icons/fi';
 import { BiBug, BiArrowBack } from 'react-icons/bi';
 
@@ -47,8 +47,12 @@ export const NestedLayout = ({ children, name, title }) => {
                   <IoIosArrowForward className="text-sm" />
                 </div>
                 <ul className="p-2">
-                  <li className="sidebar__link">Introduction</li>
-                  <li className="sidebar__link">Getting started</li>
+                  <Link href="/docs/guide/introduction">
+                    <p className="sidebar__link">Introduction</p>
+                  </Link>
+                  <Link href="/docs/guide/">
+                    <p className="sidebar__link">Getting started</p>
+                  </Link>
                 </ul>
               </div>
               <div className="py-1">
@@ -59,7 +63,9 @@ export const NestedLayout = ({ children, name, title }) => {
                   <IoIosArrowForward className="text-sm" />
                 </div>
                 <ul className="p-2">
-                  <li className="sidebar__link">Colors</li>
+                  <Link href="/docs/theme/">
+                    <p className="sidebar__link">Colors</p>
+                  </Link>
                 </ul>
               </div>
               <div className="py-1">
@@ -89,15 +95,15 @@ export const NestedLayout = ({ children, name, title }) => {
           position="fixed z-40 bottom-5 right-4"
         />
 
-        <div className="right-content bg-white dark:bg-darkSecondary absolute w-full pl-0 lg:pl-[240px] duration-300">
+        <div className="bg-gray-100 dark:bg-darkSecondary absolute z-20 w-full pl-0 lg:pl-[240px] duration-300">
           <div
             className={
               show
-                ? 'breadcrumbs__div py-10'
-                : 'breadcrumbs__div py-3 bg-white dark:bg-darkSecondary'
+                ? 'breadcrumbs__div py-5 bg-gray-200 duration-300'
+                : 'breadcrumbs__div py-3 bg-gray-100 dark:bg-darkSecondary shadow-md duration-300'
             }>
             <div className='relative'>
-              <div className="max-w-6xl mx-auto px-4 lg:px-0 flex items-center justify-between">
+              <div className="max-w-4xl mx-auto px-4 lg:px-0 flex items-center justify-between">
                 <h3
                   className={
                     show ? 'heading' : 'heading text-base font-medium'
@@ -128,13 +134,19 @@ export const NestedLayout = ({ children, name, title }) => {
                 </div>
             </div>
           </div>
-          <div className="max-w-6xl mx-auto px-4 lg:px-0">
+          <div className="max-w-4xl mx-auto px-4 lg:px-0 z-10">
             <div>{children}</div>
           </div>
 
-          <Footer bg="bg-white dark:bg-darkSecondary" />
+          <div className='relative top-1/2 flex items-center justify-between'>
+              <IoIosArrowBack className='fixed top-1/2 left-0 text-[2.5rem] p-3 bg-gray-100 dark:bg-darkPrimary rounded-r-lg' />
+              <IoIosArrowForward className='fixed top-1/2 right-0 text-[2.5rem] p-3 bg-gray-100 dark:bg-darkPrimary rounded-l-lg' />
+          </div>
+
+          <Footer bg="bg-gray-100 dark:bg-darkSecondary" />
         </div>
       </div>
     </div>
   );
 };
+

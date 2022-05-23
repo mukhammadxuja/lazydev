@@ -1,12 +1,12 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import Head from 'next/head'
-
 import { NestedLayout } from '@/components/layout/NestedLayout';
+import ComponentExample from '@/components/layout/ComponentExample';
+import { Code } from '@/components/layout/Code';
 
 export const meta = {
   name: 'Button',
-  title: 'Button | Lazydev ui components'
-}
+  title: 'Button | Lazydev ui components',
+};
 
 export const getStaticProps = async ({ locale }) => {
   return {
@@ -17,90 +17,42 @@ export const getStaticProps = async ({ locale }) => {
 };
 
 
-# This a component page
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
-# test 
+<ComponentExample name="Default" paragraph="This is a paragraph">
 
-export default ({ children }) => <NestedLayout name={meta.name} title={meta.title}>{children}</NestedLayout>;
+  <button className="btn btn__primary">Click</button>
+  <button className="btn btn__primary">Click</button>
+  <button className="btn btn__primary">Click</button>
 
+</ComponentExample>
 
+<Code>
+
+```jsx
+import React from 'react';
+import { MdOutlineContentCopy, MdCode, MdCodeOff } from 'react-icons/md';
+
+const ComponentExample = ({ children }) => {
+  return (
+    <div>
+      <div className="relative rounded-t-lg rounded-b-2xl bg-white dark:bg-darkPrimary pt-4 pb-10 md:pb-16 flex justify-center">
+        <div className="space-x-2 select-none">{children}</div>
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-center space-x-2">
+          <MdOutlineContentCopy className="hover:opacity-75 cursor-pointer text-primary dark:text-white" />
+          <MdCode className="hover:opacity-75 cursor-pointer text-primary dark:text-white" />
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ComponentExample;
+```
+
+</Code>
+
+<div className="h-screen"></div>
+export default ({children}) => <NestedLayout
+  name={meta.name}
+  title={meta.title}>
+  {children}
+</NestedLayout>;

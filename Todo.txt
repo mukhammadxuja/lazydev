@@ -2,7 +2,5 @@ TODO:
 3 -Increase performance
 4 -Tiny ugly & mobile
 5 -Guide & Theme
-6 -Added some components
 7 -vercel BUG
 8 -Search
-9 -All links

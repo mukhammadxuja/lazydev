@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 import { FiMenu } from 'react-icons/fi';
 
-const Left = () => {
+const Left = ({ sidebar, setSidebar }) => {
   const router = useRouter();
 
   const toggleSidebar = () => {

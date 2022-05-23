@@ -20,6 +20,7 @@ export { default as Description2 } from './home/Description2';
 // Layouts
 export { default as Layout } from './layout/Layout';
 export { default as NestedLayout } from './layout/NestedLayout';
+export { default as ComponentExample } from './layout/ComponentExample';
 
 // UI components example's path
 export { default as Input } from './ui/header-ui/Input';
