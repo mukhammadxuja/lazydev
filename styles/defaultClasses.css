@@ -16,6 +16,9 @@
   .sidebar__active {
     @apply bg-white dark:bg-darkSecondary fixed z-[100] h-screen w-[240px] px-5 overflow-y-auto scrollbar-hide transform translate-x-0 duration-200
   }
+  .map__link {
+    @apply text-primary dark:text-gray-200 dark:hover:text-white text-xs font-thin cursor-pointer
+  }
   .darkOrLight {
     @apply bg-white text-primary dark:bg-darkPrimary dark:text-white;
   }

@@ -1,6 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import dynamic from 'next/dynamic';
 import {
   Setting,
   Header,

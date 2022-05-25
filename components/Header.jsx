@@ -41,7 +41,7 @@ const Header = () => {
             {t('home:paragraph')}
           </p>
           <div className="flex items-center w-fit space-x-2 mx-auto md:mx-0">
-            <button onClick={() => router.push('docs/components/button')} className="btn btn__primary">{t('home:boshlash')}</button>
+            <button onClick={() => router.push('docs/guide/introduction')} className="btn btn__primary">{t('home:boshlash')}</button>
             <a target="_blank" href='https://t.me/akzmsh' className="btn px-3 py-[0.60rem] bg-transparent dark:bg-darkSecondary border-2 border-gray-300 hover:border-gray-800 dark:border-gray-600 dark:hover:border-gray-200 flex items-center space-x-2 text-primary dark:text-white" rel="noreferrer">
               <BsTelegram className="text-xl" />
               <p>Telegram</p>

@@ -34,10 +34,10 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             </div>
             <ul className="p-2">
               <Link href="/docs/guide/introduction">
-                <p className="sidebar__link">Introduction</p>
+                <li className="sidebar__link">Introduction</li>
               </Link>
               <Link href="/docs/guide/">
-                <p className="sidebar__link">Getting started</p>
+                <li className="sidebar__link">Getting started</li>
               </Link>
             </ul>
           </div>
@@ -50,7 +50,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             </div>
             <ul className="p-2">
               <Link href="/docs/theme/">
-                <p className="sidebar__link">Colors</p>
+                <li className="sidebar__link">Colors</li>
               </Link>
             </ul>
           </div>

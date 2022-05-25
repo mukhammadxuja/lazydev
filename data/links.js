@@ -70,3 +70,10 @@ export const links = [
     path: '/docs/components/tag-input',
   },
 ];
+
+export const sidebar_links = [
+  {
+    name: 'Default',
+    id: '#default',
+  },
+];

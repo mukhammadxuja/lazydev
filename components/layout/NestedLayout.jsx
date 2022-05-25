@@ -9,7 +9,7 @@ import { BiBug, BiArrowBack } from 'react-icons/bi';
 import { Footer, Setting } from '../';
 import { links } from '../../data/links';
 
-export const NestedLayout = ({ children, name, title }) => {
+export const NestedLayout = ({ children, name, title, sidebarLink }) => {
   const [show, setShow] = useState(true);
   const router = useRouter();
 
