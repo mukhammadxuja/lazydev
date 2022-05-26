@@ -1,7 +1,13 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
+import ComponentExample from '@/components/layout/ComponentExample';
+import { Code } from '@/components/layout/Code';
+import { SidebarLink } from '@/components/layout/SidebarLink';
 import { NestedLayout } from '@/components/layout/NestedLayout';
 import { PrevAndNext } from '@/components/layout/PrevAndNext';
+
+import { Default } from '@/components/docs/components/avatar/Default';
+import { Icon } from '@/components/docs/components/avatar/Icon';
 
 export const meta = {
   name: 'Avatar',
@@ -16,9 +22,123 @@ export const getStaticProps = async ({ locale }) => {
   };
 };
 
-<PrevAndNext leftPath="/docs/components/select" rightPath="/docs/components/tooltip" />
+<SidebarLink>
+  <a href="#default" className="text-right">
+    Default
+  </a>
+  <a href="#icon" className="text-right">
+    Icon
+  </a>
+</SidebarLink>
 
-# This a component page
+<PrevAndNext
+  leftPath="/docs/components/select"
+  rightPath="/docs/components/tooltip"
+/>
+
+<div id="default"></div>
+
+<ComponentExample
+  name="Default"
+  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  <Default />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+import Image from 'next/image'
+
+export const Default = () => {
+  return (
+    <div className='flex items-center space-x-3'>
+      <div className='group'>
+        <Image className='rounded-lg group-hover:scale-105 duration-200' width={60} height={60} src="/images/avatar/3d-avatar1.webp" alt="default avatar rounded-lg" />
+      </div>
+      <div className='group'>
+        <Image className='rounded-2xl group-hover:scale-105 duration-200' width={60} height={60} src="/images/avatar/3d-avatar2.webp" alt="default avatar rounded-2xl" />
+      </div>
+      <div className='group'>
+        <Image className='rounded-full group-hover:scale-105 duration-200' width={60} height={60} src="/images/avatar/3d-avatar3.webp" alt="default avatar rounded-full" />
+      </div>
+    </div>
+  );
+};
+```
+</Code>
+
+<div id="icon"></div>
+
+<ComponentExample
+  name="Icon"
+  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  <Icon />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+import Image from 'next/image';
+import { MdVerified, MdEdit } from 'react-icons/md';
+
+export const Icon = () => {
+  return (
+    <div className="flex items-center space-x-3">
+      <div className="relative group">
+        <Image
+          className="rounded-full group-hover:scale-105 duration-200"
+          width={60}
+          height={60}
+          src="/images/avatar/3d-avatar3.webp"
+          title='Verified avatar user'
+          alt="default avatar rounded-full"
+        />
+        <div className="absolute bottom-1 -right-1 bg-white rounded-full">
+          <MdVerified className="text-2xl text-[#019eeb]" />
+        </div>
+      </div>
+      <div className="relative group">
+        <Image
+          className="rounded-full group-hover:scale-105 duration-200"
+          width={60}
+          height={60}
+          src="/images/avatar/3d-avatar2.webp"
+          title='Unread messages'
+          alt="default avatar rounded-full"
+        />
+        <div className="absolute bottom-1 -right-1 flex items-center justify-center bg-yellow-400 w-7 h-7 rounded-full">
+          <small className="text-xs text-primary font-medium">321</small>
+        </div>
+      </div>
+      <div className="relative group">
+        <Image
+          className="rounded-full group-hover:scale-105 duration-200"
+          width={60}
+          height={60}
+          src="/images/avatar/3d-avatar1.webp"
+          title='Edit user'
+          alt="default avatar rounded-full"
+        />
+        <div className="absolute bottom-1 -right-1 bg-blue-500 w-7 h-7 flex items-center justify-center rounded-full">
+          <MdEdit className="text-lg text-white" />
+        </div>
+      </div>
+      <div className="relative group">
+        <Image
+          className="rounded-full group-hover:scale-105 duration-200"
+          width={60}
+          height={60}
+          src="/images/avatar/3d-avatar2.webp"
+          title='Online user'
+          alt="default avatar rounded-full"
+        />
+        <div className="absolute bottom-1 -right-1 bg-[#019eeb] w-7 h-7 rounded-full" />
+      </div>
+    </div>
+  );
+};
+```
+</Code>
 
 export default ({ children }) => (
   <NestedLayout name={meta.name} title={meta.title}>

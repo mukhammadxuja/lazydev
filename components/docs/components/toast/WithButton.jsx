@@ -23,7 +23,7 @@ export const WithButton = () => {
         </div>
       </div>
       <div className='flex items-center space-x-2 w-fit ml-10 my-4'>
-          <button className='btn bg-gray-200 dark:bg-white text-primary rounded-md'>Button</button>
+          <button className='w-fit mx-auto py-2 px-4 shadow-lg text-sm duration-300 ease-in-out bg-gray-200 dark:bg-white text-primary rounded-md'>Button</button>
           <a className='text-sm text-gray-400 dark:text-white' href="#!">Learn more</a>
       </div>
     </div>

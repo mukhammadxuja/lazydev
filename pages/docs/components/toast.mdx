@@ -145,7 +145,8 @@ import { MdDone, MdClose } from 'react-icons/md';
 export const Glassmorphism = () => {
   return (
     <>
-      <div className="relative z-20 flex items-center w-[20rem] md:w-[25erm] bg-white shadow-lg dark:bg-darkSecondary p-5 rounded-xl bg-opacity-50 backdrop-filter backdrop-blur-sm">
+      <div className="relative z-20 flex items-center w-[20rem] md:w-[25erm] bg-white shadow-lg
+       p-5 rounded-xl bg-opacity-50 backdrop-filter backdrop-blur-sm">
         <div className="flex items-center justify-center bg-green-200 rounded-xl w-6 h-6 mr-3 md:mr-5">
           <span>
             <MdDone className="text-green-500" />
@@ -179,7 +180,7 @@ import { MdDone, MdClose } from 'react-icons/md';
 
 export const WithButton = () => {
   return (
-    <div className='w-[20rem] md:w-[25rem] p-2 border-l-4 border-green-400 bg-white dark:bg-[#102a43] rounded-xl flex flex-col shadow-lg'>
+    <div className='w-[20rem] md:w-[25rem] p-2 border-l-4 border-green-400 bg-white rounded-xl flex flex-col shadow-lg'>
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <span className="flex items-center justify-center bg-green-300 rounded-xl w-6 h-6">
@@ -188,23 +189,24 @@ export const WithButton = () => {
             </span>
           </span>
           <div className="pl-4 ">
-            <h3 className="text-primary dark:text-white font-medium">
+            <h3 className="text-primary font-medium">
               A success toast
             </h3>
             <p className="text-xs">Toast with button</p>
           </div>
         </div>
         <div>
-          <MdClose className="text-lg text-primary dark:text-white mr-4 cursor-pointer" />
+          <MdClose className="text-lg text-primary mr-4 cursor-pointer" />
         </div>
       </div>
       <div className='flex items-center space-x-2 w-fit ml-10 my-4'>
-          <button className='btn bg-gray-200 dark:bg-white text-primary rounded-md'>Button</button>
-          <a className='text-sm text-gray-400 dark:text-white' href="#!">Learn more</a>
+          <button className='w-fit mx-auto py-2 px-4 shadow-lg text-sm duration-300 ease-in-out bg-gray-200 text-primary rounded-md'>Button</button>
+          <a className='text-sm text-gray-400 href="#!">Learn more</a>
       </div>
     </div>
   );
 };
+
 ```
 </Code>
 

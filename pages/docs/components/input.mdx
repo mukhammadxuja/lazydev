@@ -59,7 +59,7 @@ export const Default = () => {
   return (
     <>
       <input
-        className="rounded-xl w-[20rem] md:w-[25rem] bg-gray-200 dark:bg-[#141417] outline-none py-3 px-4 text-xs focus:px-6 duration-200"
+        className="rounded-xl w-[20rem] md:w-[25rem] bg-gray-200 outline-none py-3 px-4 text-xs focus:px-6 duration-200"
         type="text"
         placeholder="Default input"
       />
@@ -89,7 +89,7 @@ export const Label = () => {
       </label>
       <input
         id="label"
-        className="rounded-xl w-[20rem] md:w-[25rem] bg-gray-200 dark:bg-[#141417] outline-none py-3 px-4 text-xs"
+        className="rounded-xl w-[20rem] md:w-[25rem] bg-gray-200 outline-none py-3 px-4 text-xs"
         type="text"
       />
     </div>
@@ -113,7 +113,7 @@ export const Icon = () => {
   return (
     <div className='grid grid-cols-2 items-center space-x-2'>
       <div className="relative group">
-        <div className="flex items-center rounded-xl bg-gray-200 dark:bg-[#141417]">
+        <div className="flex items-center rounded-xl bg-gray-200">
           <input
             id="icon"
             className="outline-none flex flex-grow p-3 bg-transparent rounded-l-xl px-4 text-xs duration-300"
@@ -121,12 +121,12 @@ export const Icon = () => {
             placeholder="username"
           />
           <div className="absolute top-0 right-0 duration-300 rounded-xl bg-transparent p-3 group-focus-within:-top-2 group-focus-within:-right-2 group-focus-within:bg-[#18191c]">
-            <BiUser className="text-primary dark:text-white group-focus-within:text-white" />
+            <BiUser className="text-primary group-focus-within:text-white" />
           </div>
         </div>
       </div>
       <div className="relative group">
-        <div className="flex items-center rounded-xl bg-gray-200 dark:bg-[#141417]">
+        <div className="flex items-center rounded-xl bg-gray-200">
           <input
             id="icon"
             className="outline-none flex flex-grow p-3 bg-transparent rounded-l-xl px-4 text-xs duration-300"
@@ -134,7 +134,7 @@ export const Icon = () => {
             placeholder="password"
           />
           <div className="absolute top-0 right-0 duration-300 rounded-xl bg-transparent p-3 group-focus-within:-top-2 group-focus-within:-right-2 group-focus-within:bg-[#18191c]">
-            <BiLockOpenAlt className="text-primary dark:text-white group-focus-within:text-white" />
+            <BiLockOpenAlt className="text-primary group-focus-within:text-white" />
           </div>
         </div>
       </div>
