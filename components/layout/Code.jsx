@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
+import {CopyToClipboard} from 'react-copy-to-clipboard';
 
 export const Code = ({ children }) => {
   const [showCode, setShowCode] = useState(true);
+  const [copied, setCopied] = useState(false);
   return (
     <div className="rounded-xl bg-opacity-80 bg-white dark:bg-darkPrimary z-0 text-sm overflow-auto my-5">
       <div
