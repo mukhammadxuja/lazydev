@@ -1,7 +1,17 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
+import ComponentExample from '@/components/layout/ComponentExample';
+import { Code } from '@/components/layout/Code';
+import { SidebarLink } from '@/components/layout/SidebarLink';
 import { NestedLayout } from '@/components/layout/NestedLayout';
 import { PrevAndNext } from '@/components/layout/PrevAndNext';
+
+import { Done } from '@/components/docs/components/toast/default1/Done';
+import { Error } from '@/components/docs/components/toast/default1/Error';
+import { Warning } from '@/components/docs/components/toast/default2/Warning';
+import { Warning2 } from '@/components/docs/components/toast/default2/Warning2';
+import { Glassmorphism } from '@/components/docs/components/toast/Glassmorphism';
+import { WithButton } from '@/components/docs/components/toast/WithButton';
 
 export const meta = {
   name: 'Toast',
@@ -16,13 +26,190 @@ export const getStaticProps = async ({ locale }) => {
   };
 };
 
-<PrevAndNext leftPath="/docs/components/sidebar" rightPath="/docs/components/card" />
+<SidebarLink>
+  <a href="#default1" className="text-right">
+    Default A
+  </a>
+  <a href="#default2" className="text-right">
+    Default B
+  </a>
+  <a href="#glassmorphism" className="text-right">
+    Glassmorphism
+  </a>
+  <a href="#withButton" className="text-right">
+    With button
+  </a>
+  <a href="#iconWithButton" className="text-right">
+    With button
+  </a>
+</SidebarLink>
 
-<div className="h-screen"></div>
+<PrevAndNext
+  leftPath="/docs/components/sidebar"
+  rightPath="/docs/components/card"
+/>
+
+<div id="default1"></div>
+
+<ComponentExample
+  name="Default A"
+  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  <Done />
+  <Error />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+import { MdDone, MdClose } from 'react-icons/md';
+
+export const DefaultB = () => {
+  return (
+    <>
+      <div className="h-max w-[20rem] md:w-[25rem] p-2 border-2 border-green-400 bg-green-100 rounded-xl flex items-center justify-between">
+        <div className="flex items-center">
+          <div className="flex items-center justify-center w-11 h-11 bg-green-500 rounded-2xl">
+            <span className="flex items-center justify-center bg-white rounded-xl w-6 h-6">
+              <span>
+                <MdDone className="text-green-500" />
+              </span>
+            </span>
+          </div>
+          <div>
+            <p className="text-primary pl-4">A success toast</p>
+          </div>
+        </div>
+        <div>
+          <MdClose className="text-lg text-primary mr-4 cursor-pointer" />
+        </div>
+      </div>
+    </>
+  );
+};
+```
+</Code>
+
+<div id="default2"></div>
+
+<ComponentExample
+  name="Default B"
+  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  <Warning />
+  <Warning2 />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+import { MdOutlineWarningAmber, MdClose } from 'react-icons/md';
+
+export const DefaultB = () => {
+  return (
+    <>
+      <div className="h-max w-[20rem] md:w-[25rem] p-2 border-2 border-green-400 bg-green-100 rounded-full flex items-center justify-between">
+        <div className="flex items-center">
+          <div className="flex items-center justify-center w-11 h-11 bg-green-500 rounded-full">
+            <span className="flex items-center justify-center bg-white rounded-full w-6 h-6">
+              <span>
+                <MdOutlineWarningAmber className="text-green-500" />
+              </span>
+            </span>
+          </div>
+          <div>
+            <p className="text-primary pl-4">A success toast</p>
+          </div>
+        </div>
+        <div>
+          <MdClose className="text-lg text-primary mr-4 cursor-pointer" />
+        </div>
+      </div>
+    </>
+  );
+};
+```
+</Code>
+
+<div id="glassmorphism"></div>
+
+<ComponentExample
+  name="Glassmorphism"
+  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  <Glassmorphism />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+import { MdDone, MdClose } from 'react-icons/md';
+
+export const Glassmorphism = () => {
+  return (
+    <>
+      <div className="relative z-20 flex items-center w-[20rem] md:w-[25erm] bg-white shadow-lg dark:bg-darkSecondary p-5 rounded-xl bg-opacity-50 backdrop-filter backdrop-blur-sm">
+        <div className="flex items-center justify-center bg-green-200 rounded-xl w-6 h-6 mr-3 md:mr-5">
+          <span>
+            <MdDone className="text-green-500" />
+          </span>
+        </div>
+        <div>
+          <h4 className="font-semibold text-green-500">
+            Lazydev ui component
+          </h4>
+          <p className='text-xs md:text-sm'>A glassmorphism toast</p>
+        </div>
+      </div>
+    </>
+  );
+};
+```
+</Code>
+
+<div id="withButton"></div>
+
+<ComponentExample
+  name="Toast with Button"
+  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  <WithButton />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+import { MdDone, MdClose } from 'react-icons/md';
+
+export const WithButton = () => {
+  return (
+    <div className='w-[20rem] md:w-[25rem] p-2 border-l-4 border-green-400 bg-white dark:bg-[#102a43] rounded-xl flex flex-col shadow-lg'>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center">
+          <span className="flex items-center justify-center bg-green-300 rounded-xl w-6 h-6">
+            <span>
+              <MdDone className="text-white" />
+            </span>
+          </span>
+          <div className="pl-4 ">
+            <h3 className="text-primary dark:text-white font-medium">
+              A success toast
+            </h3>
+            <p className="text-xs">Toast with button</p>
+          </div>
+        </div>
+        <div>
+          <MdClose className="text-lg text-primary dark:text-white mr-4 cursor-pointer" />
+        </div>
+      </div>
+      <div className='flex items-center space-x-2 w-fit ml-10 my-4'>
+          <button className='btn bg-gray-200 dark:bg-white text-primary rounded-md'>Button</button>
+          <a className='text-sm text-gray-400 dark:text-white' href="#!">Learn more</a>
+      </div>
+    </div>
+  );
+};
+```
+</Code>
 
 export default ({ children }) => (
   <NestedLayout name={meta.name} title={meta.title}>
     {children}
   </NestedLayout>
 );
-

@@ -11,13 +11,10 @@
     @apply text-secondary cursor-pointer hover:text-primary font-normal py-1 md:py-1.5 dark:hover:text-white whitespace-nowrap dark:group-hover:text-white;
   }
   .sidebar {
-    @apply bg-white dark:bg-darkSecondary fixed z-[100] h-screen w-[240px] transform -translate-x-full px-5 overflow-y-auto scrollbar-hide duration-200
+    @apply bg-white dark:bg-darkSecondary fixed z-[100] h-screen w-[240px] transform -translate-x-full px-5 overflow-y-auto scrollbar-hide duration-200;
   }
   .sidebar__active {
-    @apply bg-white dark:bg-darkSecondary fixed z-[100] h-screen w-[240px] px-5 overflow-y-auto scrollbar-hide transform translate-x-0 duration-200
-  }
-  .map__link {
-    @apply text-primary dark:text-gray-200 dark:hover:text-white text-xs font-thin cursor-pointer
+    @apply bg-white dark:bg-darkSecondary fixed z-[100] h-screen w-[240px] px-5 overflow-y-auto scrollbar-hide transform translate-x-0 duration-200;
   }
   .darkOrLight {
     @apply bg-white text-primary dark:bg-darkPrimary dark:text-white;
@@ -50,7 +47,7 @@
     @apply flex my-1 items-center space-x-2 p-2 rounded-xl bg-white dark:bg-darkSecondary shadow-2xl w-fit;
   }
   .breadcrumbs__div {
-    @apply sticky top-[3.5rem] mt-[3.5rem] bg-gray-100 dark:bg-[#141417] duration-150
+    @apply sticky top-[3.5rem] mt-[3.5rem] bg-gray-100 dark:bg-[#141417] duration-150;
   }
 }
 

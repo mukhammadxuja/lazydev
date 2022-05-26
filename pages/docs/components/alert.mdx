@@ -1,7 +1,18 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+import { MdOutlineDone, MdErrorOutline } from 'react-icons/md';
+import { RiErrorWarningLine } from 'react-icons/ri';
 
+import ComponentExample from '@/components/layout/ComponentExample';
+import { Code } from '@/components/layout/Code';
+import { SidebarLink } from '@/components/layout/SidebarLink';
 import { NestedLayout } from '@/components/layout/NestedLayout';
 import { PrevAndNext } from '@/components/layout/PrevAndNext';
+
+import { Default } from '@/components/docs/components/alert/Default';
+import { Solid } from '@/components/docs/components/alert/Solid';
+import { Border } from '@/components/docs/components/alert/Border';
+import { Icon } from '@/components/docs/components/alert/Icon';
+import { IconWithButton } from '@/components/docs/components/alert/IconWithButton';
 
 export const meta = {
   name: 'Alert',
@@ -16,13 +27,239 @@ export const getStaticProps = async ({ locale }) => {
   };
 };
 
-<PrevAndNext leftPath="/docs/components/button" rightPath="/docs/components/loading" />
+<SidebarLink>
+  <a href="#default" className="text-right">
+    Default
+  </a>
+  <a href="#solid" className="text-right">
+    Solid
+  </a>
+  <a href="#border" className="text-right">
+    Border
+  </a>
+  <a href="#icon" className="text-right">
+    Icon
+  </a>
+  <a href="#iconWithButton" className="text-right">
+    With button
+  </a>
+</SidebarLink>
 
-<div className="h-screen"></div>
+<PrevAndNext
+  leftPath="/docs/components/button"
+  rightPath="/docs/components/loading"
+/>
+
+<div id="default"></div>
+
+<ComponentExample name="Default" paragraph="This is a paragraph">
+  <Default />
+</ComponentExample>
+
+<Code>
+  ```jsx
+  import React from 'react';
+
+export const Default = () => {
+  return (
+    <>
+      <div className="p-2 border-l-2 border-blue-600 bg-[#1e2639] text-blue-600 rounded-r-lg">
+        <div className="mx-4">
+          <h4 className="text-[1rem] py-3 font-semibold">
+            Lazydev ui component
+          </h4>
+          <p className="text-sm py-1">
+            Lazydev is a copy and paste components to make projects easily and
+            with a Unique and pleasant style, Lazydev is created from scratch
+            and designed for all types of developed from the frontend lover to
+            the backend that wants to easily create your visual approach to the
+            end user
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
+````
+</Code>
+
+<div id="solid"></div>
+
+<ComponentExample name="Solid" paragraph="This is a paragraph">
+  <Solid />
+</ComponentExample>
+
+<Code>
+  ```jsx
+import React from 'react';
+
+export const Solid = () => {
+  return (
+    <>
+      <div className="p-2 border-l-2 border-blue-600 bg-[#1a5cff] text-white rounded-r-lg">
+        <div className="mx-4">
+          <h4 className="text-[1rem] py-3 font-semibold">
+            Lazydev ui component
+          </h4>
+          <p className="text-sm py-2">
+            Lazydev is a copy and paste components to make projects easily and
+            with a Unique and pleasant style, Lazydev is created from scratch
+            and designed for all types of developed from the frontend lover to
+            the backend that wants to easily create your visual approach to the
+            end user
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
+````
+
+</Code>
+
+<div id="border"></div>
+
+<ComponentExample name="Border" paragraph="This is a paragraph">
+  <Border />
+</ComponentExample>
+
+<Code>
+  ```jsx
+import React from 'react';
+
+export const Border = () => {
+  return (
+    <>
+      <div className="p-2 border-2 border-blue-600 bg-transparent text-blue-600 rounded-r-lg mx-8">
+        <div className="mx-4">
+          <h4 className="text-[1rem] py-3 font-semibold">
+            Lazydev ui component
+          </h4>
+          <p className="text-sm py-2">
+            Lazydev is a copy and paste components to make projects easily and
+            with a Unique and pleasant style, Lazydev is created from scratch
+            and designed for all types of developed from the frontend lover to
+            the backend that wants to easily create your visual approach to the
+            end user
+          </p>
+        </div>
+      </div>
+    </>
+  );
+};
+````
+</Code>
+
+<div id="icon"></div>
+
+<ComponentExample name="Icon" paragraph="This is a paragraph" space="space-y-2">
+  <Icon
+    Icon={MdOutlineDone}
+    iconColor="green-500"
+    text="Uploaded Successful"
+    paragraph="... was uploaded successfully"
+  />
+  <Icon
+    Icon={RiErrorWarningLine}
+    iconColor="red-500"
+    text="Something went wrong"
+    paragraph="... do not uploaded"
+  />
+</ComponentExample>
+
+<Code>
+  ```jsx
+import React from 'react';
+import { MdOutlineDone, MdClose } from 'react-icons/md';
+
+export const Icon = () => {
+  return (
+    <>
+      <div className="p-4 rounded-lg bg-white shadow-lg dark:bg-[#102a43] w-[20rem] md:w-[25rem] my-2">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <div className="w-7 h-7 flex items-center justify-center rounded-full mr-3">
+              <MdOutlineDone className="" text-green-500 />
+            </div>
+            <h4 className="text-gray-700 dark:text-white font-semibold">
+              Uploaded Successful
+            </h4>
+          </div>
+          <div>
+            <MdClose className="text-gray-700 dark:text-white text-lg" />
+          </div>
+        </div>
+        <div>
+          <p className="ml-10 text-gray-500">... was uploaded successfully</p>
+        </div>
+      </div>
+    </>
+  );
+};
+
+````
+</Code>
+
+<div id="iconWithButton"></div>
+
+<ComponentExample name="Icon with Button" paragraph="This is a paragraph" space="space-y-2">
+  <IconWithButton
+    Icon={MdOutlineDone}
+    iconColor="green-500"
+    buttonText="Everything is ok"
+    buttonStyle="btn__primary"
+    text="Uploaded Successful"
+    paragraph="... was uploaded successfully"
+  />
+  <IconWithButton
+    Icon={RiErrorWarningLine}
+    iconColor="red-500"
+    buttonText="Try again"
+    buttonStyle="btn bg-[#ff4757] dark:bg-[#ff4757] text-xs md:text-sm text-white hover:drop-shadow-2xl hover:-translate-y-1"
+    text="Something went wrong"
+    paragraph="... do not uploaded"
+  />
+</ComponentExample>
+
+<Code>
+  ```jsx
+import React from 'react';
+import { MdOutlineDone, MdClose } from 'react-icons/md';
+
+export const IconWithButton = () => {
+  return (
+    <>
+      <div className="p-4 rounded-lg bg-white shadow-lg dark:bg-[#102a43] w-[20rem] md:w-[25rem] my-2">
+        <div className="flex items-center justify-between">
+          <div className="flex items-center">
+            <div className="w-7 h-7 flex items-center justify-center rounded-full mr-3">
+              <MdOutlineDone className="" text-green-500 />
+            </div>
+            <h4 className="text-gray-700 dark:text-white font-semibold">
+              Uploaded Successful
+            </h4>
+          </div>
+          <div>
+            <MdClose className="text-gray-700 dark:text-white text-lg" />
+          </div>
+        </div>
+        <div>
+          <p className="ml-10 text-gray-500">... was uploaded successfully</p>
+        </div>
+        <div className='my-2'>
+            <button className={`btn ${buttonStyle} w-full`}>{buttonText}</button>
+        </div>
+      </div>
+    </>
+  );
+};
+
+````
+
+</Code>
 
 export default ({ children }) => (
   <NestedLayout name={meta.name} title={meta.title}>
     {children}
   </NestedLayout>
 );
-

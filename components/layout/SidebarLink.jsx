@@ -27,7 +27,7 @@ export const SidebarLink = ({ children }) => {
             ? 'fixed z-50 top-[9rem] right-4 duration-300'
             : 'fixed z-50 top-[7rem] right-4 duration-300'
         }>
-        <div className="flex flex-col items-center space-x-1">
+        <div className="flex flex-col text-right text-xs md:text-sm text-primary dark:text-gray-400 dark:hover:text-white space-x-1">
             {children}
         </div>
       </div>
