@@ -48,10 +48,10 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
                 </div>
                 <ul className="p-2">
                   <Link href="/docs/guide/introduction">
-                    <p className="sidebar__link">Introduction</p>
+                    <li className="sidebar__link">Introduction</li>
                   </Link>
                   <Link href="/docs/guide/">
-                    <p className="sidebar__link">Getting started</p>
+                    <li className="sidebar__link">Getting started</li>
                   </Link>
                 </ul>
               </div>
@@ -64,7 +64,7 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
                 </div>
                 <ul className="p-2">
                   <Link href="/docs/theme/">
-                    <p className="sidebar__link">Colors</p>
+                    <li className="sidebar__link">Colors</li>
                   </Link>
                 </ul>
               </div>
@@ -78,9 +78,7 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
                 <ul className="p-2">
                   {links.map((item) => (
                     <Link href={`${item.path}`}>
-                      <li
-                        key={item.id}
-                        className="sidebar__link">
+                      <li key={item.id} className="sidebar__link">
                         {item.title}
                       </li>
                     </Link>
@@ -102,7 +100,7 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
                 ? 'breadcrumbs__div py-5 bg-gray-200 duration-300'
                 : 'breadcrumbs__div py-3 bg-gray-100 dark:bg-darkSecondary shadow-md duration-300'
             }>
-            <div className='relative'>
+            <div className="relative">
               <div className="max-w-4xl mx-auto px-4 lg:px-0 flex items-center justify-between">
                 <h3
                   className={
@@ -125,13 +123,13 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
                   />
                 </div>
               </div>
-                <div className='hidden lg:block'>
-                  <BiArrowBack
-                    onClick={() => router.push('/')}
-                    title="Go to Back"
-                    className="absolute left-3 top-1/3 text-lg hover:opacity-75 rounded-lg cursor-pointer"
-                  />
-                </div>
+              <div className="hidden lg:block">
+                <BiArrowBack
+                  onClick={() => router.push('/')}
+                  title="Go to Back"
+                  className="absolute left-3 top-1/3 text-lg hover:opacity-75 rounded-lg cursor-pointer"
+                />
+              </div>
             </div>
           </div>
           <div className="max-w-4xl mx-auto px-4 lg:px-0 z-10">
@@ -144,4 +142,3 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
     </div>
   );
 };
-
