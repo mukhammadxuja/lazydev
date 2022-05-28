@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { NestedLayout } from '@/components/layout/NestedLayout';
 import { PrevAndNext } from '@/components/layout/PrevAndNext';
@@ -7,6 +8,13 @@ export const meta = {
   title: 'Introduction | Lazydev ui components',
 };
 
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home'])),
+    },
+  };
+};
 
 <PrevAndNext leftPath="#!" rightPath="/docs/guide" />
 

@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { NestedLayout } from '@/components/layout/NestedLayout';
 import ComponentExample from '@/components/layout/ComponentExample';
@@ -17,6 +18,13 @@ export const meta = {
   title: 'Button | Lazydev ui components',
 };
 
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home'])),
+    },
+  };
+};
 
 <SidebarLink>
   <a href="#default" className="sidebar__link">

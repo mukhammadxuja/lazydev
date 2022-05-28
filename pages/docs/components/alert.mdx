@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { MdOutlineDone, MdErrorOutline } from 'react-icons/md';
 import { RiErrorWarningLine } from 'react-icons/ri';
 
@@ -18,6 +19,13 @@ export const meta = {
   title: 'Alert | Lazydev ui components',
 };
 
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home'])),
+    },
+  };
+};
 
 <SidebarLink>
   <a href="#default" className="text-right">

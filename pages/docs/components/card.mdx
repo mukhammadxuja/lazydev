@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import ComponentExample from '@/components/layout/ComponentExample';
 import { Code } from '@/components/layout/Code';
@@ -13,6 +14,14 @@ import { TypeB } from '@/components/docs/components/card/TypeB';
 export const meta = {
   name: 'Card',
   title: 'Card | Lazydev ui components',
+};
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home'])),
+    },
+  };
 };
 
 <SidebarLink>

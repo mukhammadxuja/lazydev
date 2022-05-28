@@ -1,3 +1,4 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { NestedLayout } from '@/components/layout/NestedLayout';
 import ComponentExample from '@/components/layout/ComponentExample';
@@ -10,6 +11,14 @@ import { Default } from '@/components/docs/components/loading/Default';
 export const meta = {
   name: 'Loading',
   title: 'Loading | Lazydev ui components',
+};
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home'])),
+    },
+  };
 };
 
 <SidebarLink>
