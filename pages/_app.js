@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { appWithTranslation } from 'next-i18next';
 import { ThemeProvider } from 'next-themes';
 import Layout from '@/components/layout/Layout';
@@ -8,7 +8,6 @@ import '../styles/globals.css';
 import ErrorBoundary from '../components/ErrorBoundary';
 
 function MyApp({ Component, pageProps }) {
-  const [errorInfo, setErrorInfo] = useState(null);
   return (
     <ThemeProvider enableSystem={true} attribute="class">
       <ErrorBoundary>
