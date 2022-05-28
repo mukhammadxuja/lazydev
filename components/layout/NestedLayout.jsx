@@ -35,7 +35,7 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      <div className="test flex bg-white dark:bg-darkSecondary shadow-lg">
+      <div className="flex bg-white dark:bg-darkSecondary shadow-lg">
         <div className="hidden lg:block">
           <aside className="bg-white dark:bg-darkPrimary fixed z-30 h-screen w-[240px] px-5 pt-[5rem] overflow-y-auto scrollbar-hide">
             <div className="">
@@ -138,6 +138,14 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
 
           <Footer bg="bg-gray-100 dark:bg-darkSecondary" />
         </div>
+      </div>
+
+      <div className='fixed bottom-0 left-0 select-none'>
+        <img
+          className="chicken w-24 mb-2"
+          src="https://media0.giphy.com/media/v8Vux9WxXcnXEnOGn1/giphy.gif?cid=ecf05e47zn1myog0zrkd309o2vq605ztag8vqqu9v1zguc7t&rid=giphy.gif&ct=s"
+          alt=""
+        />
       </div>
     </div>
   );

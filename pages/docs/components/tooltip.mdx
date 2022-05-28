@@ -8,14 +8,6 @@ export const meta = {
   title: 'Tooltip | Lazydev ui components',
 };
 
-export const getStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['home'])),
-    },
-  };
-};
-
 <PrevAndNext leftPath="/docs/components/avatar" rightPath="/docs/components/dialog" />
 
 <div className="h-screen"></div>

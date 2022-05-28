@@ -8,14 +8,6 @@ export const meta = {
   title: 'Navbar | Lazydev ui components',
 };
 
-export const getStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['home'])),
-    },
-  };
-};
-
 <PrevAndNext leftPath="/docs/components/pagination" rightPath="/docs/components/sidebar" />
 
 <div className="h-screen"></div>

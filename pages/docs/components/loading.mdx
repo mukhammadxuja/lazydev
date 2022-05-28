@@ -13,14 +13,6 @@ export const meta = {
   title: 'Loading | Lazydev ui components',
 };
 
-export const getStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['home'])),
-    },
-  };
-};
-
 <SidebarLink>
   <a href="#default" className="sidebar__link">
     Default

@@ -1,39 +1,3 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-import ComponentExample from '@/components/layout/ComponentExample';
-import { Code } from '@/components/layout/Code';
-import { SidebarLink } from '@/components/layout/SidebarLink';
-import { NestedLayout } from '@/components/layout/NestedLayout';
-import { PrevAndNext } from '@/components/layout/PrevAndNext';
-
-import { TypeA } from '@/components/docs/components/dialog/TypeA';
-
-export const meta = {
-  name: 'Dialog',
-  title: 'Dialog | Lazydev ui components',
-};
-
-<SidebarLink>
-  <a href="#typea" className="text-right">
-    Type A
-  </a>
-  <a href="#typeb" className="text-right">
-    Type B
-  </a>
-</SidebarLink>
-
-<PrevAndNext leftPath="/docs/components/tooltip" rightPath="/docs/components/pagination" />
-
-<div id="typea" />
-
-<ComponentExample
-  name="Type A"
-  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
-  <TypeA />
-</ComponentExample>
-
-<Code>
-```jsx
 import React, { useState } from 'react';
 import { GrFormClose } from 'react-icons/gr';
 
@@ -96,12 +60,3 @@ export const TypeA = () => {
     </>
   );
 };
-```
-</Code>
-
-export default ({ children }) => (
-  <NestedLayout name={meta.name} title={meta.title}>
-    {children}
-  </NestedLayout>
-);
-

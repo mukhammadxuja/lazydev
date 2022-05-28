@@ -15,13 +15,6 @@ export const meta = {
   title: 'Avatar | Lazydev ui components',
 };
 
-export const getStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['home'])),
-    },
-  };
-};
 
 <SidebarLink>
   <a href="#default" className="text-right">

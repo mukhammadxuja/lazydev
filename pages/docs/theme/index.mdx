@@ -8,13 +8,6 @@ export const meta = {
   title: 'Colors | Lazydev ui components',
 };
 
-export const getStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['home'])),
-    },
-  };
-};
 
 <PrevAndNext leftPath="/docs/guide" rightPath="/docs/components/button" />
 

@@ -1,4 +1,4 @@
-@import "./defaultClasses.css";
+@import './defaultClasses.css';
 
 html {
   scroll-behavior: smooth;
@@ -32,3 +32,23 @@ html {
   }
 }
 
+.chicken {
+  animation: walk 1.2s steps(8) infinite, forward 70s linear infinite;
+}
+
+@keyframes walk {
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -100%;
+  }
+}
+@keyframes forward {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateX(100vw);
+  }
+}

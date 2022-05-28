@@ -16,14 +16,6 @@ export const meta = {
   title: 'Input | Lazydev ui components',
 };
 
-export const getStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['home'])),
-    },
-  };
-};
-
 <SidebarLink>
   <a href="#default" className="text-right">
     Default
