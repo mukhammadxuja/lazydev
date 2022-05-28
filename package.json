@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "analyze": "ANALYZE=true next build",
-    "export": "next export && touch out/.nojekyll",
+    "export": "next export",
     "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {

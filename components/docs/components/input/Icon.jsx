@@ -7,7 +7,7 @@ export const Icon = () => {
         <div className="flex items-center rounded-xl bg-gray-200 dark:bg-[#141417]">
           <input
             id="username"
-            className="outline-none flex flex-grow p-3 bg-transparent rounded-l-xl px-4 text-xs duration-300 group-focus-within:pl-5"
+            className="outline-none flex flex-grow p-3 bg-transparent rounded-l-xl px-4 text-xs duration-300"
             type="text"
             placeholder="username"
           />
@@ -20,8 +20,8 @@ export const Icon = () => {
         <div className="flex items-center rounded-xl bg-gray-200 dark:bg-[#141417]">
           <input
             id="password"
-            className="outline-none flex flex-grow p-3 bg-transparent rounded-l-xl px-4 text-xs duration-300 group-focus-within:pl-5"
-            type="text"
+            className="outline-none flex flex-grow p-3 bg-transparent rounded-l-xl px-4 text-xs duration-300"
+            type="password"
             placeholder="password"
           />
           <div className="absolute top-0 right-0 duration-300 rounded-xl bg-transparent p-2 group-focus-within:-top-2 group-focus-within:-right-2 group-focus-within:bg-[#18191c]">

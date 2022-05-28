@@ -8,6 +8,7 @@ import { PrevAndNext } from '@/components/layout/PrevAndNext';
 
 import { Default } from '@/components/docs/components/avatar/Default';
 import { Icon } from '@/components/docs/components/avatar/Icon';
+import { Stacked } from '@/components/docs/components/avatar/Stacked';
 
 export const meta = {
   name: 'Avatar',
@@ -29,6 +30,9 @@ export const getStaticProps = async ({ locale }) => {
   <a href="#icon" className="text-right">
     Icon
   </a>
+   <a href="#stacked" className="text-right">
+    Stacked
+  </a>
 </SidebarLink>
 
 <PrevAndNext
@@ -36,30 +40,29 @@ export const getStaticProps = async ({ locale }) => {
   rightPath="/docs/components/tooltip"
 />
 
-<div id="default"></div>
+<div id="default" />
 
 <ComponentExample
   name="Default"
-  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  paragraph="Rasm va border radius ixtiyoriy! Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
   <Default />
 </ComponentExample>
 
 <Code>
 ```jsx
 import React from 'react';
-import Image from 'next/image'
 
 export const Default = () => {
   return (
     <div className='flex items-center space-x-3'>
       <div className='group'>
-        <Image className='rounded-lg group-hover:scale-105 duration-200' width={60} height={60} src="/images/avatar/3d-avatar1.webp" alt="default avatar rounded-lg" />
+        <img className='w-28 h-28 rounded-lg group-hover:scale-105 duration-200' src="your-img-url" alt="default avatar rounded-lg" />
       </div>
       <div className='group'>
-        <Image className='rounded-2xl group-hover:scale-105 duration-200' width={60} height={60} src="/images/avatar/3d-avatar2.webp" alt="default avatar rounded-2xl" />
+        <img className='w-28 h-28 rounded-2xl group-hover:scale-105 duration-200' src="your-img-url" alt="default avatar rounded-2xl" />
       </div>
       <div className='group'>
-        <Image className='rounded-full group-hover:scale-105 duration-200' width={60} height={60} src="/images/avatar/3d-avatar3.webp" alt="default avatar rounded-full" />
+        <img className='w-28 h-28 rounded-full group-hover:scale-105 duration-200' src="your-img-url" alt="default avatar rounded-full" />
       </div>
     </div>
   );
@@ -67,29 +70,26 @@ export const Default = () => {
 ```
 </Code>
 
-<div id="icon"></div>
+<div id="icon" />
 
 <ComponentExample
   name="Icon"
-  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  paragraph="Misolda keltirilgan iconlardan foyadlanaish uchun <react-icons> packageni yuklab oling! Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
   <Icon />
 </ComponentExample>
 
 <Code>
 ```jsx
 import React from 'react';
-import Image from 'next/image';
 import { MdVerified, MdEdit } from 'react-icons/md';
 
 export const Icon = () => {
   return (
     <div className="flex items-center space-x-3">
       <div className="relative group">
-        <Image
-          className="rounded-full group-hover:scale-105 duration-200"
-          width={60}
-          height={60}
-          src="/images/avatar/3d-avatar3.webp"
+        <img
+          className="w-28 h-28 rounded-full group-hover:scale-105 duration-200"
+          src="your-img-url"
           title='Verified avatar user'
           alt="default avatar rounded-full"
         />
@@ -98,11 +98,9 @@ export const Icon = () => {
         </div>
       </div>
       <div className="relative group">
-        <Image
-          className="rounded-full group-hover:scale-105 duration-200"
-          width={60}
-          height={60}
-          src="/images/avatar/3d-avatar2.webp"
+        <img
+          className="w-28 h-28 rounded-full group-hover:scale-105 duration-200"
+          src="your-img-url"
           title='Unread messages'
           alt="default avatar rounded-full"
         />
@@ -111,11 +109,9 @@ export const Icon = () => {
         </div>
       </div>
       <div className="relative group">
-        <Image
-          className="rounded-full group-hover:scale-105 duration-200"
-          width={60}
-          height={60}
-          src="/images/avatar/3d-avatar1.webp"
+        <img
+          className="w-28 h-28 rounded-full group-hover:scale-105 duration-200"
+          src="your-img-url"
           title='Edit user'
           alt="default avatar rounded-full"
         />
@@ -124,11 +120,9 @@ export const Icon = () => {
         </div>
       </div>
       <div className="relative group">
-        <Image
-          className="rounded-full group-hover:scale-105 duration-200"
-          width={60}
-          height={60}
-          src="/images/avatar/3d-avatar2.webp"
+        <img
+          className="w-28 h-28 rounded-full group-hover:scale-105 duration-200"
+          src="your-img-url"
           title='Online user'
           alt="default avatar rounded-full"
         />
@@ -139,6 +133,57 @@ export const Icon = () => {
 };
 ```
 </Code>
+
+<div id="stacked" />
+
+<ComponentExample
+  name="Stacked"
+  paragraph="Rasm va border radius ixtiyoriy! Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  <Stacked />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+
+export const Stacked = () => {
+  return (
+    <div className="flex items-center -space-x-4">
+      <span>
+        <img
+          className="w-20 h-20 rounded-full group-hover:scale-105 duration-200"
+          src="your-image-url"
+          alt="default avatar rounded-full"
+        />
+      </span>
+      <span>
+        <img
+          className="w-20 h-20 rounded-full group-hover:scale-105 duration-200"
+          src="your-image-url"
+          alt="default avatar rounded-full"
+        />
+      </span>
+      <span>
+        <img
+          className="w-20 h-20 rounded-full group-hover:scale-105 duration-200"
+          src="your-image-url"
+          alt="default avatar rounded-full"
+        />
+      </span>
+      <span>
+        <img
+          className="w-20 h-20 rounded-full group-hover:scale-105 duration-200"
+          src="your-image-url"
+          alt="default avatar rounded-full"
+        />
+      </span>
+    </div>
+  );
+};
+
+```
+</Code>
+
 
 export default ({ children }) => (
   <NestedLayout name={meta.name} title={meta.title}>

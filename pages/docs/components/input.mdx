@@ -9,6 +9,7 @@ import { PrevAndNext } from '@/components/layout/PrevAndNext';
 import { Default } from '@/components/docs/components/input/Default';
 import { Label } from '@/components/docs/components/input/Label';
 import { Icon } from '@/components/docs/components/input/Icon';
+import { Color } from '@/components/docs/components/input/Color';
 
 export const meta = {
   name: 'Input',
@@ -113,28 +114,28 @@ export const Icon = () => {
   return (
     <div className='grid grid-cols-2 items-center space-x-2'>
       <div className="relative group">
-        <div className="flex items-center rounded-xl bg-gray-200">
+        <div className="flex items-center rounded-xl bg-gray-200 dark:bg-[#141417]">
           <input
-            id="icon"
+            id="username"
             className="outline-none flex flex-grow p-3 bg-transparent rounded-l-xl px-4 text-xs duration-300"
             type="text"
             placeholder="username"
           />
-          <div className="absolute top-0 right-0 duration-300 rounded-xl bg-transparent p-3 group-focus-within:-top-2 group-focus-within:-right-2 group-focus-within:bg-[#18191c]">
-            <BiUser className="text-primary group-focus-within:text-white" />
+          <div className="absolute top-0 right-0 duration-300 rounded-xl bg-transparent p-2 group-focus-within:-top-2 group-focus-within:-right-2 group-focus-within:bg-[#18191c]">
+            <BiUser className="text-primary dark:text-white group-focus-within:text-white" />
           </div>
         </div>
       </div>
       <div className="relative group">
-        <div className="flex items-center rounded-xl bg-gray-200">
+        <div className="flex items-center rounded-xl bg-gray-200 dark:bg-[#141417]">
           <input
-            id="icon"
+            id="password"
             className="outline-none flex flex-grow p-3 bg-transparent rounded-l-xl px-4 text-xs duration-300"
-            type="text"
+            type="password"
             placeholder="password"
           />
-          <div className="absolute top-0 right-0 duration-300 rounded-xl bg-transparent p-3 group-focus-within:-top-2 group-focus-within:-right-2 group-focus-within:bg-[#18191c]">
-            <BiLockOpenAlt className="text-primary group-focus-within:text-white" />
+          <div className="absolute top-0 right-0 duration-300 rounded-xl bg-transparent p-2 group-focus-within:-top-2 group-focus-within:-right-2 group-focus-within:bg-[#18191c]">
+            <BiLockOpenAlt className="text-primary dark:text-white group-focus-within:text-white" />
           </div>
         </div>
       </div>
@@ -146,12 +147,63 @@ export const Icon = () => {
 
 </Code>
 
+<ComponentExample
+  name="Color"
+  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  <Color />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+import { BiUser } from 'react-icons/bi';
+
+export const Color = () => {
+  return (
+    <div className="grid grid-cols-3 grid-rows-2 gap-x-2">
+      <div className="group">
+        <input
+          className="rounded-xl bg-blue-200 dark:bg-[#1e2639] outline-none py-3 px-4 text-xs duration-200 group-focus-within:bg-opacity-60"
+          type="text"
+          placeholder="Default"
+        />
+      </div>
+      <div className="relative group">
+        <label
+          className="absolute top-0 left-0 w-full h-full flex items-center pl-[10px] duration-300 text-xs group-focus-within:text-xs group-focus-within:h-1/2 group-focus-within:-translate-y-full group-focus-within:pl-0"
+          htmlFor="color">
+          Label
+        </label>
+        <input
+          id="color"
+          className="rounded-xl bg-red-200 dark:bg-[#352428] outline-none py-3 px-4 text-xs group-focus-within:bg-opacity-60"
+          type="text"
+        />
+      </div>
+      <div className="relative group">
+        <div className="flex items-center rounded-xl text-[#46c93a] bg-green-200 dark:bg-[#223125]">
+          <input
+            id="username"
+            className="outline-none flex flex-grow p-3 bg-transparent rounded-l-xl px-4 text-xs duration-300"
+            type="text"
+            placeholder="username"
+          />
+          <div className="absolute top-0 right-0 duration-300 rounded-xl bg-transparent p-2 group-focus-within:-top-2 group-focus-within:-right-2 group-focus-within:bg-[#264027] group-focus-within:bg-opacity-60">
+            <BiUser className="text-primary text-[#46c93a]" />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+```
+</Code>
+
 export default ({ children }) => (
   <NestedLayout name={meta.name} title={meta.title}>
     {children}
   </NestedLayout>
 );
-
-```
 
 ```

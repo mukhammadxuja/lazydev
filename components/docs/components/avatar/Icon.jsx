@@ -10,7 +10,7 @@ export const Icon = () => {
           className="rounded-full group-hover:scale-105 duration-200"
           width={60}
           height={60}
-          src="/images/avatar/3d-avatar3.webp"
+          src="/images/avatar/person01.png"
           title='Verified avatar user'
           alt="default avatar rounded-full"
         />
@@ -23,7 +23,7 @@ export const Icon = () => {
           className="rounded-full group-hover:scale-105 duration-200"
           width={60}
           height={60}
-          src="/images/avatar/3d-avatar2.webp"
+          src="/images/avatar/person04.png"
           title='Unread messages'
           alt="default avatar rounded-full"
         />
@@ -36,7 +36,7 @@ export const Icon = () => {
           className="rounded-full group-hover:scale-105 duration-200"
           width={60}
           height={60}
-          src="/images/avatar/3d-avatar1.webp"
+          src="/images/avatar/person03.png"
           title='Edit user'
           alt="default avatar rounded-full"
         />
@@ -49,7 +49,7 @@ export const Icon = () => {
           className="rounded-full group-hover:scale-105 duration-200"
           width={60}
           height={60}
-          src="/images/avatar/3d-avatar2.webp"
+          src="/images/avatar/person02.png"
           title='Online user'
           alt="default avatar rounded-full"
         />

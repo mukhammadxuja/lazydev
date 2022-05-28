@@ -93,7 +93,7 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
           position="fixed z-40 bottom-5 right-4"
         />
 
-        <div className="bg-gray-100 dark:bg-darkSecondary absolute z-20 w-full pl-0 lg:pl-[240px] duration-300">
+        <div className="bg-gray-100 dark:bg-darkSecondary absolute w-full pl-0 lg:pl-[240px] duration-300">
           <div
             className={
               show
@@ -101,7 +101,7 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
                 : 'breadcrumbs__div py-3 bg-gray-100 dark:bg-darkSecondary shadow-md duration-300'
             }>
             <div className="relative">
-              <div className="max-w-4xl mx-auto px-4 lg:px-0 flex items-center justify-between">
+              <div className="max-w-4xl mx-auto px-4 lg:px-0 flex items-center justify-between z-30">
                 <h3
                   className={
                     show ? 'heading' : 'heading text-base font-medium'

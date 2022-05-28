@@ -17,6 +17,9 @@ module.exports = {
         poppins: ['Poppins', 'Monda', 'sans-serif'],
         sora: ['Sora'],
       },
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0)',
+      }
     },
     ripple: (theme) => ({
       colors: theme('colors'),
