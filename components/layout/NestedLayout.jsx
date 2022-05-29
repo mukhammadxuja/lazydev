@@ -88,10 +88,10 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
             </div>
           </aside>
         </div>
-        <Setting
+        {/* <Setting
           reverse="flex-row-reverse"
           position="fixed z-40 bottom-5 right-4"
-        />
+        /> */}
 
         <div className="bg-gray-100 dark:bg-darkSecondary absolute w-full pl-0 lg:pl-[240px] duration-300">
           <div

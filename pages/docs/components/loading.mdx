@@ -1,0 +1,63 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+import { NestedLayout } from '@/components/layout/NestedLayout';
+import ComponentExample from '@/components/layout/ComponentExample';
+import { Code } from '@/components/layout/Code';
+import { PrevAndNext } from '@/components/layout/PrevAndNext';
+import { SidebarLink } from '@/components/layout/SidebarLink';
+
+import { Default } from '@/components/docs/components/loading/Default';
+
+export const meta = {
+  name: 'Loading',
+  title: 'Loading | Lazydev ui components',
+};
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home'])),
+    },
+  };
+};
+
+<SidebarLink>
+  <a href="#default" className="sidebar__link">
+    Default
+  </a>
+</SidebarLink>
+
+<PrevAndNext
+  leftPath="/docs/components/alert"
+  rightPath="/docs/components/input"
+/>
+
+<div id="default"></div>
+
+<ComponentExample name="Default" paragraph="This is a paragraph">
+  <Default />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+
+export const Default = () => {
+  return (
+    <>
+      <div className="w-[40px] h-[40px] rounded-full border-[3px] border-transparent border-r-[#474bff] animate-spin" />
+    </>
+  );
+};
+```
+</Code>
+
+export default ({ children }) => (
+  <NestedLayout name={meta.name} title={meta.title}>
+    {children}
+  </NestedLayout>
+);
+
+```
+
+```
