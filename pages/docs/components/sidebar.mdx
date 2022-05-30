@@ -1,7 +1,12 @@
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { NestedLayout } from '@/components/layout/NestedLayout';
+import ComponentExample from '@/components/layout/ComponentExample';
+import { Code } from '@/components/layout/Code';
 import { PrevAndNext } from '@/components/layout/PrevAndNext';
+import { SidebarLink } from '@/components/layout/SidebarLink';
+
+import { Test } from '@/components/docs/components/sidebar/Test';
 
 export const meta = {
   name: 'Sidebar',
@@ -18,7 +23,7 @@ export const getStaticProps = async ({ locale }) => {
 
 <PrevAndNext leftPath="/docs/components/navbar" rightPath="/docs/components/toast" />
 
-<div className="h-screen"></div>
+<Test />
 
 export default ({ children }) => (
   <NestedLayout name={meta.name} title={meta.title}>
