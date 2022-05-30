@@ -7,7 +7,7 @@ import { IoLanguageSharp } from 'react-icons/io5';
 import { TiWeatherSunny } from 'react-icons/ti';
 
 const Settings = ({ position, reverse }) => {
-  const { system, theme, setTheme } = useTheme();
+  const { systemTheme, theme, setTheme } = useTheme();
   const [language, setLanguage] = useState(true);
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
