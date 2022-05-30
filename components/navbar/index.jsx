@@ -15,10 +15,6 @@ const Navbar = ({ sidebar, setSidebar }) => {
   const { system, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
-  useEffect(() => setMounted(true), []);
-
-  if (!mounted) return null;
-
   const renderThemeChanger = () => {
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
