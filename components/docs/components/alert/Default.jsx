@@ -3,7 +3,7 @@ import React from 'react';
 export const Default = () => {
   return (
     <>
-      <div className="p-2 border-l-2 border-blue-600 bg-[#E8EEFF]  dark:bg-[#1e2639] text-blue-600 rounded-r-lg mx-8">
+      <div className="p-2 border-l-2 border-blue-600 bg-[#E8EEFF] dark:bg-[#1e2639] text-blue-600 rounded-r-lg mx-8">
         <div className="mx-4">
           <h4 className="text-[1rem] py-3 font-semibold">
             Lazydev ui component

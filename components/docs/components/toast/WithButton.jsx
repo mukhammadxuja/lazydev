@@ -3,7 +3,7 @@ import { MdDone, MdClose } from 'react-icons/md';
 
 export const WithButton = () => {
   return (
-    <div className='w-[20rem] md:w-[25rem] p-2 border-l-4 border-green-400 bg-white dark:bg-[#102a43] rounded-xl flex flex-col shadow-lg'>
+    <div className='w-[15rem] p-2 border-l-4 border-green-400 bg-white dark:bg-[#102a43] rounded-xl flex flex-col shadow-lg'>
       <div className="flex items-center justify-between">
         <div className="flex items-center">
           <span className="flex items-center justify-center bg-green-300 rounded-xl w-6 h-6">
@@ -19,12 +19,12 @@ export const WithButton = () => {
           </div>
         </div>
         <div>
-          <MdClose className="text-lg text-primary dark:text-white mr-4 cursor-pointer" />
+          <MdClose className="text-lg text-primary dark:text-white mr-2 cursor-pointer" />
         </div>
       </div>
-      <div className='flex items-center space-x-2 w-fit ml-10 my-4'>
-          <button className='w-fit mx-auto py-2 px-4 shadow-lg text-sm duration-300 ease-in-out bg-gray-200 dark:bg-white text-primary rounded-md'>Button</button>
-          <a className='text-sm text-gray-400 dark:text-white' href="#!">Learn more</a>
+      <div className='flex items-center space-x-2 w-fit ml-2 my-2'>
+          <button className='w-fit mx-auto py-2 px-4 shadow-lg text-xs duration-300 ease-in-out bg-gray-200 dark:bg-white text-primary rounded-md'>Button</button>
+          <a className='text-xs text-gray-400 dark:text-white' href="#!">Learn more</a>
       </div>
     </div>
   );

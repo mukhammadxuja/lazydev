@@ -9,13 +9,13 @@ import { BiBug, BiArrowBack } from 'react-icons/bi';
 import { Footer, Setting } from '../';
 import { links } from '../../data/links';
 
-export const NestedLayout = ({ children, name, title, sidebarLink }) => {
+export const NestedLayout = ({ children, name, title }) => {
   const [show, setShow] = useState(true);
   const router = useRouter();
 
   // scroll animation
   const controlNavbar = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 50) {
       setShow(false);
     } else {
       setShow(true);
@@ -35,6 +35,7 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
       <Head>
         <title>{title}</title>
       </Head>
+      
       <div className="flex bg-white dark:bg-darkSecondary shadow-lg">
         <div className="hidden lg:block">
           <aside className="bg-white dark:bg-darkPrimary fixed z-30 h-screen w-[240px] px-5 pt-[5rem] overflow-y-auto scrollbar-hide">
@@ -97,10 +98,10 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
           <div
             className={
               show
-                ? 'breadcrumbs__div py-5 bg-gray-200 duration-300'
-                : 'breadcrumbs__div py-3 bg-gray-100 dark:bg-darkSecondary shadow-md duration-300'
+                ? 'breadcrumbs__div py-5 bg-gray-200'
+                : 'breadcrumbs__div py-3 bg-gray-100 dark:bg-darkSecondary'
             }>
-            <div className="relative">
+            <div>
               <div className="max-w-4xl mx-auto px-4 lg:px-0 flex items-center justify-between z-30">
                 <h3
                   className={
@@ -132,20 +133,12 @@ export const NestedLayout = ({ children, name, title, sidebarLink }) => {
               </div>
             </div>
           </div>
-          <div className="max-w-4xl mx-auto px-4 lg:px-0 z-10">
+          <div className="max-w-4xl mx-auto px-4 lg:px-0">
             <div>{children}</div>
           </div>
 
           <Footer bg="bg-gray-100 dark:bg-darkSecondary" />
         </div>
-      </div>
-
-      <div className='fixed bottom-0 left-0 select-none'>
-        <img
-          className="chicken w-24 mb-2"
-          src="https://media0.giphy.com/media/v8Vux9WxXcnXEnOGn1/giphy.gif?cid=ecf05e47zn1myog0zrkd309o2vq605ztag8vqqu9v1zguc7t&rid=giphy.gif&ct=s"
-          alt=""
-        />
       </div>
     </div>
   );

@@ -16,10 +16,10 @@ export const TypeA = () => {
     'rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-[#1a5cff] dark:bg-[#1a5cff] md:text-sm text-white hover:shadow-md hover:shadow-blue-500/50 ';
 
   const buttonBorder =
-    'rounded-xl py-2 px-4 shadow-md text-sm duration-300 border border-[#1a5cff] active:bg-opacity-80 ease-in-out bg-transparent md:text-sm text-[#1a5cff] ';
+    'rounded-xl py-2 px-4 shadow-md text-sm duration-300 whitespace-nowrap border border-[#1a5cff] active:bg-opacity-80 ease-in-out bg-transparent md:text-sm text-[#1a5cff] ';
 
   const buttonTransparent =
-    'rounded-xl py-2 px-4 shadow-md text-sm duration-300 ease-in-out bg-blue-500 bg-opacity-30 md:text-sm text-[#1a5cff] ';
+    'rounded-xl py-2 px-4 shadow-md text-sm duration-300 whitespace-nowrap ease-in-out bg-blue-500 bg-opacity-30 md:text-sm text-[#1a5cff] ';
 
   return (
     <>
@@ -29,7 +29,7 @@ export const TypeA = () => {
             ? 'fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50 '
             : 'hidden'
         }>
-        <div className="relative w-[20rem] md:w-[25rem] p-6 bg-white dark:bg-darkPrimary shadow-lg rounded-xl">
+        <div className="relative w-[15rem] md:w-[25rem] p-6 bg-white dark:bg-darkPrimary shadow-lg rounded-xl">
           <div
             onClick={CloseDialog}
             className="absolute -top-1 -right-1 hover:top-0 hover:right-0 p-1.5 rounded-lg bg-white dark:bg-darkPrimary shadow-lg cursor-pointer duration-200">

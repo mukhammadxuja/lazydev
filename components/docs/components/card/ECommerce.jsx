@@ -8,7 +8,7 @@ export const ECommerce = () => {
 
   return (
     <div>
-      <div className="w-[20rem] bg-white rounded-xl shadow-lg dark:bg-[#18191c] dark:border-gray-700 group">
+      <div className="w-[15rem] bg-white rounded-xl shadow-lg dark:bg-[#18191c] dark:border-gray-700 group">
         <Image className='group-hover:scale-105 duration-300' src={Sneaker} alt="product image" />
         <div className="px-5 pb-5">
           <a href="#">

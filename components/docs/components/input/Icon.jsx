@@ -2,7 +2,7 @@ import React from 'react';
 import { BiUser, BiLockOpenAlt } from 'react-icons/bi';
 export const Icon = () => {
   return (
-    <div className='grid grid-cols-2 items-center space-x-2'>
+    <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-y-4 md:gap-x-2'>
       <div className="relative group">
         <div className="flex items-center rounded-xl bg-gray-200 dark:bg-[#141417]">
           <input

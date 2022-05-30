@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'next-i18next';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
 import { MdOutlineKeyboardArrowDown } from 'react-icons/md';
 import { BsThreeDots } from 'react-icons/bs';
+import Link from 'next/link';
 
 import { links } from '../../data/links';
 
@@ -11,7 +10,6 @@ const Center = () => {
   const [guide, setGuide] = useState(true);
   const [components, setComponents] = useState(true);
   const [social, setSocial] = useState(true);
-  const router = useRouter();
   const { t } = useTranslation();
 
   const guideData = [
@@ -58,9 +56,7 @@ const Center = () => {
             }>
             {guideData.map((item, index) => (
               <Link href={`${item.link}`}>
-                <li
-                  key={index}
-                  className="link py-1">
+                <li key={index} className="link py-1">
                   {item.title}
                 </li>
               </Link>
@@ -87,9 +83,7 @@ const Center = () => {
             }>
             {links.map((item, index) => (
               <Link href={`${item.path}`}>
-                <li
-                  key={index}
-                  className="link py-1">
+                <li key={index} className="link py-1">
                   {item.title}
                 </li>
               </Link>

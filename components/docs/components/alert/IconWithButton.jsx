@@ -4,7 +4,7 @@ import { MdClose } from 'react-icons/md';
 export const IconWithButton = ({ Icon, iconColor, text, paragraph, buttonText, buttonStyle }) => {
   return (
     <>
-      <div className={`p-4 rounded-lg bg-white shadow-lg dark:bg-[#102a43] w-[20rem] md:w-[25rem] my-2`}>
+      <div className={`p-4 rounded-lg bg-white shadow-lg dark:bg-[#102a43] my-2`}>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
             <div

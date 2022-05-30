@@ -3,7 +3,7 @@ import { BiUser } from 'react-icons/bi';
 
 export const Color = () => {
   return (
-    <div className="grid grid-cols-3 grid-rows-2 gap-x-2">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-y-4 md:gap-x-2">
       <div className="group">
         <input
           className="rounded-xl bg-blue-200 dark:bg-[#1e2639] outline-none py-3 px-4 text-xs duration-200 group-focus-within:bg-opacity-60"

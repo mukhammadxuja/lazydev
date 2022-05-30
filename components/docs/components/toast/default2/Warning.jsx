@@ -4,7 +4,7 @@ import { MdOutlineWarningAmber, MdClose } from 'react-icons/md';
 export const Warning = () => {
   return (
     <>
-      <div className="h-max w-[20rem] md:w-[25rem] p-2 border-2 border-yellow-400 bg-yellow-100 rounded-full flex items-center justify-between">
+      <div className="h-max w-[15rem] p-1 border-2 border-yellow-400 bg-yellow-100 rounded-full flex items-center justify-between">
         <div className="flex items-center">
           <div className="flex items-center justify-center w-11 h-11 bg-yellow-500 rounded-full">
             <span className="flex items-center justify-center bg-white rounded-full w-6 h-6">

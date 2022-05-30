@@ -10,7 +10,7 @@ export const Label = () => {
       </label>
       <input
         id="label"
-        className="rounded-xl w-[20rem] md:w-[25rem] bg-gray-200 dark:bg-[#141417] outline-none py-3 px-4 text-xs group-focus-within:bg-opacity-60"
+        className="rounded-xl w-[15rem] md:w-[25rem] bg-gray-200 dark:bg-[#141417] outline-none py-3 px-4 text-xs group-focus-within:bg-opacity-60"
         type="text"
       />
     </div>

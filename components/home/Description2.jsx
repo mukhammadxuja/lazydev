@@ -20,7 +20,7 @@ const Description2 = () => {
         </div>
         <div className="flex justify-center py-10 md:py-0">
           <LazyLoadImage
-            className="block dark:hidden w-[20rem] md:w-[30rem] h-auto"
+            className="block dark:hidden w-[15rem] md:w-[30rem] h-auto"
             effect="blur"
             src="/images/illustration-white-3.svg"
             alt="illustration light"
