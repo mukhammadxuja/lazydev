@@ -12,8 +12,7 @@ import { Left, Center, Right } from '../';
 
 const Navbar = ({ sidebar, setSidebar }) => {
   // theme
-  const { system, theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const { systemTheme, theme, setTheme } = useTheme();
 
   const renderThemeChanger = () => {
     const currentTheme = theme === 'system' ? systemTheme : theme;
