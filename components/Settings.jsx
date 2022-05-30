@@ -12,13 +12,11 @@ const Settings = ({ position, reverse }) => {
   const [mounted, setMounted] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  useEffect(() => setMounted(true), []);
 
+  if (!mounted) return null;
+  
   const renderThemeChanger = () => {
-    if (!mounted) return null;
-
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
     if (currentTheme === 'dark') {
@@ -45,7 +43,7 @@ const Settings = ({ position, reverse }) => {
 
   return (
     <div className={`${position} flex ${reverse} items-center space-x-3`}>
-      <div className='ml-0 md:ml-3'>
+      <div className="ml-0 md:ml-3">
         <AiOutlineSetting className="text-xl text-primary ml-3 md:ml-0 dark:text-white cursor-pointer hover:rotate-90 duration-200" />
       </div>
       <div onClick={() => setLanguage(!language)} className="relative group">

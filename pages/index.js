@@ -22,10 +22,10 @@ export const getStaticProps = async ({ locale }) => {
 export default function Home({ locale }) {
   return (
     <div className="font-poppins">
-      {/* <Setting
+      <Setting
         reverse="flex-row-reverse md:flex-row"
         position="fixed z-50 bottom-2 right-2 md:left-2"
-      /> */}
+      />
       <Header />
 
       <div className="px-4 md:px-0">

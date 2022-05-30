@@ -4,7 +4,7 @@ import { BsGithub, BsTelegram } from 'react-icons/bs';
 
 const Right = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [input, setInput] = useState(false);
+  const [input, setInput] = useState(true);
 
   return (
     <>
