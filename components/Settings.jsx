@@ -15,7 +15,7 @@ const Settings = ({ position, reverse }) => {
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return null;
-  
+
   const renderThemeChanger = () => {
     const currentTheme = theme === 'system' ? systemTheme : theme;
 
@@ -37,9 +37,6 @@ const Settings = ({ position, reverse }) => {
       );
     }
   };
-
-  const [toggle, setToggle] = useState(true);
-  const toggleClass = ' transform translate-x-8';
 
   return (
     <div className={`${position} flex ${reverse} items-center space-x-3`}>
