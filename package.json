@@ -11,6 +11,7 @@
     "deploy": "gh-pages -d out -t true"
   },
   "dependencies": {
+    "@badrap/bar-of-progress": "^0.2.1",
     "@mdx-js/loader": "^2.1.1",
     "@mdx-js/react": "^2.1.1",
     "@next/mdx": "^12.1.6",
