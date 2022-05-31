@@ -32,7 +32,7 @@ export const getStaticProps = async ({ locale }) => {
   rightPath="/docs/components/toast"
 />
 
-<div id="default"></div>
+<div id="example-1"></div>
 
 <ComponentExample name="Example 1 | Loading" paragraph="This is a paragraph">
   <Example1 />
@@ -44,7 +44,7 @@ import React from 'react';
 
 export const Example1 = () => {
   return (
-    <>
+    <div className="space-y-2 md:scroll-py-4">
       <div class="overflow-hidden relative max-w-md mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
         <img
           class="absolute -left-6 w-28 h-28 rounded-full shadow-lg"
@@ -59,7 +59,16 @@ export const Example1 = () => {
           </div>
         </div>
       </div>
-    </>
+      <div class="overflow-hidden relative bg-white dark:bg-darkSecondary shadow-lg rounded-xl p-4 max-w-sm w-full mx-auto">
+        <div class="animate-pulse flex space-x-4">
+          <div class="bg-slate-400 absolute -top-6 -left-6 w-28 h-28 rounded-full shadow-lg"></div>
+          <div class="flex-1 space-y-5 py-1 pl-20">
+            <div class="h-2 bg-slate-400 rounded w-[50%]" />
+            <div class="h-2 bg-slate-400 rounded" />
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 

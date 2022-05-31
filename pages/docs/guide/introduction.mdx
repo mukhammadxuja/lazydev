@@ -3,6 +3,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { NestedLayout } from '@/components/layout/NestedLayout';
 import { PrevAndNext } from '@/components/layout/PrevAndNext';
 
+import { Introduction } from '@/components/docs/components/guide/Introduction'
+
 export const meta = {
   name: 'Introduction',
   title: 'Introduction | Lazydev ui components',
@@ -16,9 +18,10 @@ export const getStaticProps = async ({ locale }) => {
   };
 };
 
-<PrevAndNext leftPath="#!" rightPath="/docs/guide" />
+<PrevAndNext leftPath="#!" rightPath="/docs/theme" />
 
-<div className="h-screen"></div>
+
+<Introduction />
 
 export default ({ children }) => (
   <NestedLayout name={meta.name} title={meta.title}>

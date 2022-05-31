@@ -51,9 +51,6 @@ export const NestedLayout = ({ children, name, title }) => {
                   <Link href="/docs/guide/introduction">
                     <li className="sidebar__link">Introduction</li>
                   </Link>
-                  <Link href="/docs/guide/">
-                    <li className="sidebar__link">Getting started</li>
-                  </Link>
                 </ul>
               </div>
               <div className="py-1">

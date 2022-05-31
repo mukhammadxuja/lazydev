@@ -18,8 +18,8 @@ const Center = () => {
       link: '/docs/guide/introduction',
     },
     {
-      title: `${t('home:boshlash')}`,
-      link: '/docs/guide',
+      title: 'Theme',
+      link: '/docs/theme',
     },
   ];
 

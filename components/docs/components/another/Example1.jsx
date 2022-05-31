@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Example1 = () => {
   return (
-    <div className='space-y-2 md:scroll-py-4'>
+    <div className="space-y-2 md:scroll-py-4">
       <div class="overflow-hidden relative max-w-[18rem] md:max-w-[25rem] mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6 dark:bg-darkSecondary dark:highlight-white/5">
         <img
           class="absolute -left-6 w-28 h-28 rounded-full shadow-lg"
