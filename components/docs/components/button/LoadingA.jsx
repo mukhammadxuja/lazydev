@@ -19,7 +19,7 @@ export const LoadingA = () => {
             : button
         }>
         <div className="border-t-transparent w-[15px] h-[15px] border-[2px] border-white border-dotted rounded-full animate-spin" />
-        <p>Active</p>
+        <p>Active...</p>
       </button>
       <button
         onClick={() => setActive(false)}
@@ -29,11 +29,11 @@ export const LoadingA = () => {
             : button + '-translate-y-1 shadow-md shadow-blue-500/50'
         }>
         <div className="border-t-transparent w-[15px] h-[15px] border-[2px] border-white border-dotted rounded-full animate-spin" />
-        <p>Default</p>
+        <p>Default...</p>
       </button>
       <button className={disabledButton + 'opacity-50 cursor-auto select-none'}>
         <div className="border-t-transparent w-[15px] h-[15px] border-[2px] border-white border-dotted rounded-full animate-spin" />
-        <p>Disabled</p>
+        <p>Disabled...</p>
       </button>
     </div>
   );
