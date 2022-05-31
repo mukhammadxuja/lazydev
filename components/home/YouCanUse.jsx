@@ -1,11 +1,10 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { AiOutlinePlus } from 'react-icons/ai';
 
 import { CircleCard } from '../';
 
 const YouCanUse = () => {
-  const router = useRouter();
   return (
     <>
       <div className="px-4 md:px-0">
@@ -26,7 +25,9 @@ const YouCanUse = () => {
             chiqish vaqtini tolashga yordam beradi .
           </p>
 
-          <button onClick={() => router.push('/docs/guide')} className="btn dark__btn">Hoziroq boshlang</button>
+          <Link href="/docs/components/another">
+            <button className="btn dark__btn">Hoziroq boshlang</button>
+          </Link>
         </div>
       </div>
     </>

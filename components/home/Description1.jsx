@@ -1,13 +1,12 @@
 import React from 'react';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const Description1 = () => {
-  const router = useRouter();
   return (
     <>
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center py-10 md:py-20">
-        <div className="flex justify-center py-10 md:py-0">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
+        <div className="hidden md:inline-flex justify-center py-10 md:py-0">
           <LazyLoadImage
             className="block dark:hidden w-[15rem] md:w-[30rem] h-auto"
             effect="blur"
@@ -31,7 +30,9 @@ const Description1 = () => {
             har qanday komponentdan foydalanishingiz mumkin, va eng muhimi,
             foydalanish va tushunish juda oson
           </p>
-          <button className="btn btn__primary">Komponentlar</button>
+          <Link href="/docs/components/button">
+            <button className="btn btn__primary">Komponentlar</button>
+          </Link>
         </div>
       </div>
     </>

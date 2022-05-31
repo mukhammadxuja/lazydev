@@ -4,7 +4,7 @@ import { BsGithub, BsTelegram } from 'react-icons/bs';
 
 const Right = () => {
   const [searchTerm, setSearchTerm] = useState('');
-  const [input, setInput] = useState(true);
+  const [input, setInput] = useState(false);
 
   return (
     <>
@@ -12,8 +12,8 @@ const Right = () => {
         <div
           className={
             input
-              ? 'flex items-center space-x-3'
-              : 'hidden items-center space-x-3 lg:inline-flex'
+              ? 'hidden items-center space-x-3 lg:inline-flex'
+              : 'flex items-center space-x-3'
           }>
           <a className="link">v1.x</a>
           <BsGithub
@@ -29,8 +29,8 @@ const Right = () => {
           <input
             className={
               input
-                ? 'hidden lg:block bg-transparent outline-none text-primary flex-grow font-normal text-sm'
-                : 'block bg-transparent outline-none text-primary flex-grow font-normal text-sm'
+                ? 'block w-auto bg-transparent outline-none text-primary flex-grow font-normal text-sm'
+                : 'hidden lg:block bg-transparent outline-none text-primary flex-grow font-normal text-sm'
             }
             type="text"
             placeholder="Lazy Search"

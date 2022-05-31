@@ -5,12 +5,12 @@ import { CircleCard } from '../';
 const Tools = () => {
   return (
     <>
-      <div className="my-10">
+      <div>
         <h3 className="text-xl font-medium text-primary dark:text-white text-center">
           Foydalanilgan elementlar
         </h3>
-        <div className="flex overflow-x-scroll my-10 scrollbar-hide">
-          <div className="flex flex-nowrap justify-center mx-auto my-8 space-x-4 md:space-x-8 cursor-auto">
+        <div className="flex overflow-x-scroll my-0 md:my-10 scrollbar-hide">
+          <div className="flex justify-center mx-auto my-8 space-x-4 md:space-x-8 cursor-auto">
             <CircleCard
               src="/images/tools/javascript.png"
               title="Javascript"

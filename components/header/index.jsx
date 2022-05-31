@@ -32,29 +32,43 @@ const Header = () => {
 
   return (
     <div className="w-full h-screen">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 transform translate-y-3/4 md:translate-y-1/2 py-10">
-        <div className="space-y-3 py-5 md:py-16">
-          <h3 className="relative text-3xl text-center md:text-left md:text-[1.7rem] lg:text-[2rem] font-semibold text-primary dark:text-white">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 content-center items-center h-screen px-4 md:px-0">
+        <div className="space-y-3">
+          <h3 className="relative text-2xl text-center md:text-left md:text-[1.7rem] lg:text-[2rem] font-semibold text-primary dark:text-white">
             {t('home:heading')}
           </h3>
           <p className="text-sm text-center md:text-left lg:text-base font-medium text-primary dark:text-white">
             {t('home:paragraph')}
           </p>
           <div className="flex items-center w-fit space-x-2 mx-auto md:mx-0">
-            <button onClick={() => router.push('docs/guide/introduction')} className="btn btn__primary">{t('home:boshlash')}</button>
-            <a target="_blank" href='https://t.me/akzmsh' className="btn px-3 py-[0.60rem] bg-transparent dark:bg-darkSecondary border-2 border-gray-300 hover:border-gray-800 dark:border-gray-600 dark:hover:border-gray-200 flex items-center space-x-2 text-primary dark:text-white" rel="noreferrer">
-              <BsTelegram className="text-xl" />
-              <p>Telegram</p>
-            </a>
-            <a target="_blank" href='https://github.com/AnvarovM/Lazydev' className="btn px-3 py-[0.60rem] relative bg-transparent dark:bg-darkSecondary border-2 border-gray-300 hover:border-gray-800 dark:border-gray-600 dark:hover:border-gray-200 flex items-center space-x-2 text-primary dark:text-white" rel="noreferrer">
-              <BsGithub className="text-xl" />
-              <span className="absolute -top-3 -right-5 px-2 py-1 text-xs text-white bg-primary dark:bg-darkSecondary rounded-t-lg rounded-br-lg">
-                57
-              </span>
-            </a>
+            <button
+              onClick={() => router.push('docs/guide/introduction')}
+              className="btn btn__primary">
+              {t('home:boshlash')}
+            </button>
+            <div className='flex items-center space-x-2'>
+              <a
+                target="_blank"
+                href="https://t.me/akzmsh"
+                className="btn px-3 py-[0.60rem] bg-transparent dark:bg-darkSecondary border-2 border-gray-300 hover:border-gray-800 dark:border-gray-600 dark:hover:border-gray-200 flex items-center space-x-2 text-primary dark:text-white"
+                rel="noreferrer">
+                <BsTelegram className="text-xl" />
+                <p>Telegram</p>
+              </a>
+              <a
+                target="_blank"
+                href="https://github.com/AnvarovM/Lazydev"
+                className="btn px-3 py-[0.60rem] relative bg-transparent dark:bg-darkSecondary border-2 border-gray-300 hover:border-gray-800 dark:border-gray-600 dark:hover:border-gray-200 flex items-center space-x-2 text-primary dark:text-white"
+                rel="noreferrer">
+                <BsGithub className="text-xl" />
+                <span className="absolute -top-3 -right-5 px-2 py-1 text-xs text-white bg-primary dark:bg-darkSecondary rounded-t-lg rounded-br-lg">
+                  57
+                </span>
+              </a>
+            </div>
           </div>
         </div>
-        <div className="grid md:grid-cols-1 lg:grid-cols-2">
+        <div className="grid lg:grid-cols-1 xl:grid-cols-2 items-center">
           <div className="-mt-16 hidden md:inline-flex">
             <div>
               {/* Card1 example */}
@@ -116,27 +130,18 @@ const Header = () => {
               />
             </div>
           </div>
-          <div className="hidden lg:block">
-            <div>
-              <Toast />
-            </div>
+          <div className="hidden xl:block">
+            <Toast />
             <div className="flex items-center space-x-4">
               <div>
                 {/* Card3 example */}
-                <div>
-                  <Card3 />
-                </div>
-
+                <Card3 />
                 {/* Dropdown example */}
-                <div>
-                  <Dropdown />
-                </div>
+                <Dropdown />
               </div>
               <div className="space-y-5">
                 {/* Card4 example */}
-                <div>
-                  <Card4 />
-                </div>
+                <Card4 />
 
                 {/* Avatar example */}
                 <div className="flex space-x-1">
@@ -153,7 +158,6 @@ const Header = () => {
                     rounded="rounded-full"
                   />
                 </div>
-
               </div>
             </div>
           </div>
