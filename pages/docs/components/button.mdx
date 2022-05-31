@@ -12,6 +12,7 @@ import { Gradient } from '@/components/docs/components/button/Gradient';
 import { Transparent } from '@/components/docs/components/button/Transparent';
 import { LoadingA } from '@/components/docs/components/button/LoadingA';
 import { LoadingB } from '@/components/docs/components/button/LoadingB';
+import { Glassphorism } from '@/components/docs/components/button/Glassphorism';
 
 export const meta = {
   name: 'Button',
@@ -42,8 +43,8 @@ export const getStaticProps = async ({ locale }) => {
   <a href="#loadinga" className="sidebar__link">
     Loading A
   </a>
-  <a href="#loadingb" className="sidebar__link">
-    Loading B
+  <a href="#glassphorism" className="sidebar__link">
+    Glassphorism
   </a>
 </SidebarLink>
 
@@ -267,6 +268,36 @@ return (
 ); };
 
 ````
+</Code>
+
+<div id="glassphorism"></div>
+
+<ComponentExample name="Glassphorism" paragraph="This is a paragraph">
+  <Glassphorism />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+
+export const Glassphorism = () => {
+  const buttonGlassphorism =
+    'bg-[#28282d] rounded-xl py-2 px-4 md:py-4 md:px-5 text-white font-medium text-sm group-hover:scale-110 group-hover:z-1 duration-300';
+  const buttonAfter =
+    'absolute -bottom-2 -right-2 group-hover:bottom-2 group-hover:right-0 w-8 h-8 group-hover:w-full group-hover:h-full rounded-xl z-10 bg-gray-200 bg-opacity-50 backdrop-filter backdrop-blur-sm duration-300';
+
+  return (
+    <div className="relative cursor-pointer group">
+      <button className={buttonGlassphorism}>
+        <span className="z-30">Glassphorism</span>
+      </button>
+      <span className={buttonAfter}></span>
+    </div>
+  );
+};
+
+````
+
 </Code>
 
 export default ({ children }) => (

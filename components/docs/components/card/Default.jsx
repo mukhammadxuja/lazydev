@@ -7,7 +7,7 @@ import CardImage from './foto1.png';
 export const Default = () => {
   return (
     <>
-      <div className="my-5 bg-white dark:bg-[#18191c] shadow-xl hover:shadow duration-200 rounded-xl w-[18rem]">
+      <div className="my-5 bg-white dark:bg-[#18191c] shadow-xl hover:shadow duration-200 rounded-xl w-[13rem] md:w-[18rem]">
         <div className="relative w-full rounded-xl">
           <Image className="rounded-xl hover:scale-105 duration-300" src={CardImage} alt="card image" />
           <div className="absolute bottom-3 left-4 flex items-center space-x-2">

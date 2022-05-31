@@ -1,5 +1,5 @@
 import React from 'react';
-import { links } from '../data/links';
+import { links } from '../../data/links';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import Image from 'next/image';
 import Link from 'next/link';

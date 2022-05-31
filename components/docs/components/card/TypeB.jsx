@@ -7,7 +7,7 @@ import CardImage from './foto1.png';
 export const TypeB = () => {
   return (
     <>
-      <div className="relative my-5 bg-white dark:bg-[#18191c] shadow-xl hover:shadow duration-200 rounded-xl w-[18rem] group">
+      <div className="relative my-5 bg-white dark:bg-[#18191c] shadow-xl hover:shadow duration-200 rounded-xl w-[13rem] md:w-[18rem] group">
         <div className="relative w-full rounded-xl">
           <Image
             className="rounded-xl group-hover:scale-105 duration-300"

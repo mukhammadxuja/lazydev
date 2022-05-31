@@ -4,14 +4,22 @@ import Sneaker from './e-commerce.png';
 
 export const ECommerce = () => {
   const button =
-    'rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-[#1a5cff] dark:bg-[#1a5cff] md:text-sm text-white hover:shadow-md hover:shadow-blue-500/50 ';
+    'rounded-xl py-2 px-4 shadow-md text-sm whitespace-nowrap duration-300 active:bg-opacity-80 ease-in-out bg-[#1a5cff] dark:bg-[#1a5cff] md:text-sm text-white hover:shadow-md hover:shadow-blue-500/50 ';
 
   return (
-    <div>
-      <div className="w-[15rem] bg-white rounded-xl shadow-lg dark:bg-[#18191c] dark:border-gray-700 group">
-        <Image className='group-hover:scale-105 duration-300' src={Sneaker} alt="product image" />
+    <>
+      <div className="w-auto md:w-[18rem] bg-white rounded-xl shadow-lg dark:bg-[#18191c] dark:border-gray-700 group">
+        <div className='flex items-center justify-center'>
+          <Image
+            className="group-hover:scale-105 duration-300"
+            width={170}
+            height={170}
+            src={Sneaker}
+            alt="product image"
+          />
+        </div>
         <div className="px-5 pb-5">
-          <a href="#">
+          <a href="#!">
             <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
               Sneaker, Starlight Sport
             </h5>
@@ -57,16 +65,13 @@ export const ECommerce = () => {
             </span>
           </div>
           <div className="flex justify-between items-center">
-            <span className="text-3xl font-bold text-gray-900 dark:text-white">
+            <span className="text-sm md:text-3xl font-bold text-gray-900 dark:text-white">
               $99.99
             </span>
-            <button
-              className={button}>
-              Add to cart
-            </button>
+            <button className={button}>Add to cart</button>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };

@@ -55,19 +55,18 @@ export const getStaticProps = async ({ locale }) => {
 <Code>
 ```jsx
 import React from 'react';
-import Image from 'next/image';
 import { BsHeartFill } from 'react-icons/bs';
 import { RiMessage3Fill } from 'react-icons/ri';
-import CardImage from './foto1.png';
+import YourImage from './your-path/your-img.png';
 
 export const Default = () => {
   return (
     <>
-      <div className="my-5 bg-white dark:bg-[#18191c] shadow-xl hover:shadow duration-200 rounded-xl w-[18rem]">
+      <div className="my-5 bg-white dark:bg-[#18191c] shadow-xl hover:shadow duration-200 rounded-xl">
         <div className="relative w-full rounded-xl">
-          <Image
+          <img
             className="rounded-xl hover:scale-105 duration-300"
-            src={CardImage}
+            src={YourImage}
             alt="card image"
           />
           <div className="absolute bottom-3 left-4 flex items-center space-x-2">
@@ -106,19 +105,18 @@ export const Default = () => {
 <Code>
 ```jsx
 import React from 'react';
-import Image from 'next/image';
 import { BsHeartFill } from 'react-icons/bs';
 import { RiMessage3Fill } from 'react-icons/ri';
-import CardImage from './foto1.png';
+import YourImage from './your-path/your-img.png';
 
 export const Default = () => {
   return (
     <>
-      <div className="my-5 bg-white dark:bg-[#18191c] shadow-xl hover:shadow duration-200 rounded-xl w-[18rem]">
+      <div className="my-5 bg-white dark:bg-[#18191c] shadow-xl hover:shadow duration-200 rounded-xl">
         <div className="relative w-full rounded-xl">
-          <Image
+          <img
             className="rounded-xl hover:scale-105 duration-300"
-            src={CardImage}
+            src={YourImage}
             alt="card image"
           />
           <div className="absolute bottom-3 left-4 flex items-center space-x-2">
@@ -157,18 +155,17 @@ export const Default = () => {
 <Code>
 ```jsx
 import React from 'react';
-import Image from 'next/image';
 import { BsHeartFill } from 'react-icons/bs';
 import { RiMessage3Fill } from 'react-icons/ri';
-import CardImage from './foto1.png';
+import YourImage from './your-path/your-img.png';
 
 export const TypeA = () => {
   return (
     <>
       <div className="flex bg-white dark:bg-[#18191c] shadow-xl hover:shadow rounded-xl hover:scale-105 duration-300">
-        <div className=" w-[13rem]">
+        <div>
           <div className="relative w-full scale-100">
-            <Image className="rounded-xl" src={CardImage} alt="card image" />
+            <img className="rounded-xl" src={YourImage} alt="card image" />
             <div className="absolute bottom-3 left-4 flex items-center space-x-2">
               <span className="p-1.5 rounded-lg bg-white hover:bg-red-500 flex items-center justify-center w-fit group duration-200">
                 <BsHeartFill className="text-sm text-red-500 group-hover:text-white" />
@@ -201,7 +198,7 @@ export const TypeA = () => {
 <div id="typeb" />
 
 <ComponentExample
-  name="Type B"
+  name="Type B | Glassmorphism"
   paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
   <TypeB />
 </ComponentExample>
@@ -209,19 +206,18 @@ export const TypeA = () => {
 <Code>
 ```jsx
 import React from 'react';
-import Image from 'next/image';
 import { BsHeartFill } from 'react-icons/bs';
 import { RiMessage3Fill } from 'react-icons/ri';
-import CardImage from './foto1.png';
+import YourImage from './your-path/your-img.png';
 
 export const TypeB = () => {
   return (
     <>
-      <div className="relative my-5 bg-white dark:bg-[#18191c] shadow-xl hover:shadow duration-200 rounded-xl w-[18rem] group">
+      <div className="relative my-5 bg-white dark:bg-[#18191c] shadow-xl hover:shadow duration-200 rounded-xl group">
         <div className="relative w-full rounded-xl">
-          <Image
+          <img
             className="rounded-xl group-hover:scale-105 duration-300"
-            src={CardImage}
+            src={YourImage}
             alt="card image"
           />
           <div className="absolute top-3 left-4 flex items-center space-x-2 cursor-pointer">

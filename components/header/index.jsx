@@ -23,7 +23,7 @@ import {
   Card2,
   Card3,
   Card4,
-} from './';
+} from '..';
 
 const Header = () => {
   const [dropdown, setDropdown] = useState(true);

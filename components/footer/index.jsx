@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import { AiOutlineSend } from 'react-icons/ai';
 
-import { Input } from './';
+import { Input } from '..';
 
 const Footer = ({ bg }) => {
   const router = useRouter();

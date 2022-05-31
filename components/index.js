@@ -1,8 +1,8 @@
 export { default as Navbar } from './navbar';
-export { default as Header } from './Header';
-export { default as Sidebar } from './Sidebar';
-export { default as Setting } from './Settings';
-export { default as Footer } from './Footer';
+export { default as Header } from './header';
+export { default as Sidebar } from './sidebar';
+export { default as Setting } from './setting';
+export { default as Footer } from './footer';
 
 // Navbar
 export { default as Left } from './navbar/Left';

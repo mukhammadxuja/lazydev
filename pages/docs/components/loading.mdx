@@ -7,6 +7,10 @@ import { PrevAndNext } from '@/components/layout/PrevAndNext';
 import { SidebarLink } from '@/components/layout/SidebarLink';
 
 import { Default } from '@/components/docs/components/loading/Default';
+import { TypeA } from '@/components/docs/components/loading/TypeA';
+import { TypeB } from '@/components/docs/components/loading/TypeB';
+import { TypeC } from '@/components/docs/components/loading/TypeC';
+import { TypeD } from '@/components/docs/components/loading/TypeD';
 
 export const meta = {
   name: 'Loading',
@@ -25,6 +29,18 @@ export const getStaticProps = async ({ locale }) => {
   <a href="#default" className="sidebar__link">
     Default
   </a>
+   <a href="#type-a" className="sidebar__link">
+    Type A
+  </a>
+   <a href="#type-b" className="sidebar__link">
+    Type B
+  </a>
+   <a href="#type-c" className="sidebar__link">
+    Type C
+  </a>
+   <a href="#type-d" className="sidebar__link">
+    Type D
+  </a>
 </SidebarLink>
 
 <PrevAndNext
@@ -32,7 +48,7 @@ export const getStaticProps = async ({ locale }) => {
   rightPath="/docs/components/input"
 />
 
-<div id="default"></div>
+<div id="default" />
 
 <ComponentExample name="Default" paragraph="This is a paragraph">
   <Default />
@@ -52,12 +68,88 @@ export const Default = () => {
 ```
 </Code>
 
+<div id="type-a" />
+
+<ComponentExample name="Type A" paragraph="This is a paragraph">
+  <TypeA />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+
+export const TypeA = () => {
+  return (
+    <>
+      <div className="border-t-transparent w-20 h-20 border-4 border-[#1a5cff] border-dotted rounded-full animate-spin" />
+    </>
+  );
+};
+```
+</Code>
+
+<div id="type-b" />
+
+<ComponentExample name="Type B" paragraph="This is a paragraph">
+  <TypeB />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+
+export const TypeB = () => {
+  return (
+    <>
+      <div className="border-t-transparent w-20 h-20 border-4 border-[#1a5cff] border-dashed rounded-full animate-spin" />
+    </>
+  );
+};
+```
+</Code>
+
+<div id="type-c" />
+
+<ComponentExample name="Type C" paragraph="This is a paragraph">
+  <TypeC />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+
+export const TypeC = () => {
+  return (
+    <>
+     <div className="border-t-transparent w-20 h-20 border-4 border-[#1a5cff] border-double rounded-full animate-spin" />
+    </>
+  );
+};
+```
+</Code>
+
+<div id="type-d" />
+
+<ComponentExample name="Type D" paragraph="This is a paragraph">
+  <TypeD />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+
+export const TypeD = () => {
+  return (
+    <>
+      <div className="w-20 h-20 border-l-2 border-[#1a5cff] rounded-full animate-spin" />
+    </>
+  );
+};
+```
+</Code>
+
 export default ({ children }) => (
   <NestedLayout name={meta.name} title={meta.title}>
     {children}
   </NestedLayout>
 );
-
-```
-
-```
