@@ -69,6 +69,11 @@ export const links = [
     title: 'Tag Input',
     path: '/docs/components/tag-input',
   },
+  {
+    id: 15,
+    title: 'Another',
+    path: '/docs/components/another',
+  },
 ];
 
 export const sidebar_links = [

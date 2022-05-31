@@ -1,0 +1,75 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+import { NestedLayout } from '@/components/layout/NestedLayout';
+import ComponentExample from '@/components/layout/ComponentExample';
+import { Code } from '@/components/layout/Code';
+import { PrevAndNext } from '@/components/layout/PrevAndNext';
+import { SidebarLink } from '@/components/layout/SidebarLink';
+
+import { Example1 } from '@/components/docs/components/another/Example1';
+
+export const meta = {
+  name: 'Another UI',
+  title: 'Another UI | Lazydev ui components',
+};
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home'])),
+    },
+  };
+};
+
+<SidebarLink>
+  <a href="#example-1" className="text-right">
+    Example 1
+  </a>
+</SidebarLink>
+
+<PrevAndNext
+  leftPath="/docs/components/navbar"
+  rightPath="/docs/components/toast"
+/>
+
+<div id="default"></div>
+
+<ComponentExample name="Example 1 | Loading" paragraph="This is a paragraph">
+  <Example1 />
+</ComponentExample>
+
+<Code>
+  ```jsx
+import React from 'react';
+
+export const Example1 = () => {
+  return (
+    <>
+      <div class="overflow-hidden relative max-w-md mx-auto bg-white shadow-lg ring-1 ring-black/5 rounded-xl flex items-center gap-6">
+        <img
+          class="absolute -left-6 w-28 h-28 rounded-full shadow-lg"
+          src="your-image-path"
+        />
+        <div class="min-w-0 py-5 pl-28 pr-5">
+          <div class="text-slate-900 font-medium text-sm sm:text-base truncate">
+            Andrew Alfred
+          </div>
+          <div class="text-slate-500 font-medium text-sm sm:text-base leading-tight truncate">
+            Assistant to the Traveling Secretary
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+
+```
+</Code>
+
+export default ({ children }) => (
+  <NestedLayout name={meta.name} title={meta.title}>
+    {children}
+  </NestedLayout>
+);
+
+```
