@@ -2,9 +2,11 @@
 import React from 'react';
 import { useRouter } from 'next/router';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useTranslation } from 'next-i18next';
 
 const PremiumThemes = () => {
   const router = useRouter();
+  const { t } = useTranslation();
   return (
     <>
       <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 my-10 md:py-16 px-4 lg:px-0">
@@ -39,21 +41,22 @@ const PremiumThemes = () => {
           </div>
         </div>
         <div className="space-y-3 md:space-y-4">
-          <h3 className="heading font-medium">Vuesax Premium Themes</h3>
+          <h3 className="heading font-medium">
+            {t('home:lazydev_premium_themes_heading')}
+          </h3>
           <p className="paragraph text-sm">
-            Create great projects with a higher level saving time and work with
-            the themes created with vuesax
+          {t('home:lazydev_premium_themes_p')}
           </p>
           <div className="space-x-2">
             <button
               onClick={() => router.push('/premium/premium-themes')}
               className="btn btn__primary">
-              See more
+              {t('home:lazydev_see_more')}
             </button>
             <button
               onClick={() => router.push('/premium/premium-themes')}
               className="btn bg-white dark:bg-darkSecondary hover:shadow-2xl">
-              Live demo
+              {t('home:lazydev_live_demo')}
             </button>
           </div>
         </div>

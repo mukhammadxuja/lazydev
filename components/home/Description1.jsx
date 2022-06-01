@@ -1,8 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
+import { useTranslation } from 'next-i18next';
 
 const Description1 = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 items-center">
@@ -22,16 +24,10 @@ const Description1 = () => {
           />
         </div>
         <div className="space-y-5">
-          <h3 className="heading">
-            Qayta foydalanish mumkin bolgan komponentlar va amalga oshirish oson
-          </h3>
-          <p className="paragraph">
-            Vuesax yordamida siz bir necha qator kodli va ajoyib moslashtirilgan
-            har qanday komponentdan foydalanishingiz mumkin, va eng muhimi,
-            foydalanish va tushunish juda oson
-          </p>
+          <h3 className="heading">{t('home:description_heading_1')}</h3>
+          <p className="paragraph">{t('home:description_p_1')}</p>
           <Link href="/docs/components/button">
-            <button className="btn btn__primary">Komponentlar</button>
+            <button className="btn btn__primary">{t('home:components')}</button>
           </Link>
         </div>
       </div>

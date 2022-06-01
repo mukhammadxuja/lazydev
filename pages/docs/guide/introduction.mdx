@@ -3,7 +3,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { NestedLayout } from '@/components/layout/NestedLayout';
 import { PrevAndNext } from '@/components/layout/PrevAndNext';
 
-import { Introduction } from '@/components/docs/components/guide/Introduction'
+import { Introduction } from '@/components/docs//guide/Introduction'
 
 export const meta = {
   name: 'Introduction',
@@ -13,7 +13,7 @@ export const meta = {
 export const getStaticProps = async ({ locale }) => {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ['home'])),
+      ...(await serverSideTranslations(locale, ['home', 'introduction'])),
     },
   };
 };

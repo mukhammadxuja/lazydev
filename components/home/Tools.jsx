@@ -1,13 +1,15 @@
 import React from 'react';
+import { useTranslation } from 'next-i18next';
 
 import { CircleCard } from '../';
 
 const Tools = () => {
+  const { t } = useTranslation();
   return (
     <>
       <div>
         <h3 className="text-xl font-medium text-primary dark:text-white text-center">
-          Foydalanilgan elementlar
+          {t('home:tools')}
         </h3>
         <div className="flex overflow-x-scroll my-0 md:my-10 scrollbar-hide">
           <div className="flex justify-center mx-auto my-8 space-x-4 md:space-x-8 cursor-auto">
