@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { MdVerified, MdEdit } from 'react-icons/md';
 
 export const Stacked = () => {
   return (

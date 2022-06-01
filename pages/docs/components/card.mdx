@@ -10,6 +10,8 @@ import { Default } from '@/components/docs/components/card/Default';
 import { ECommerce } from '@/components/docs/components/card/ECommerce';
 import { TypeA } from '@/components/docs/components/card/TypeA';
 import { TypeB } from '@/components/docs/components/card/TypeB';
+import { TypeC } from '@/components/docs/components/card/TypeC';
+import { TypeD } from '@/components/docs/components/card/TypeD';
 
 export const meta = {
   name: 'Card',
@@ -34,8 +36,14 @@ export const getStaticProps = async ({ locale }) => {
   <a href="#typea" className="text-right">
     Type A
   </a>
-  <a href="#typeb" className="text-right">
+  <a href="#type-b" className="text-right">
     Type B
+  </a>
+  <a href="#type-c" className="text-right">
+    Type C
+  </a>
+  <a href="#type-d" className="text-right">
+    Type D
   </a>
 </SidebarLink>
 
@@ -48,7 +56,7 @@ export const getStaticProps = async ({ locale }) => {
 
 <ComponentExample
   name="Default"
-  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  paragraph="Misolda keltirilgan Iconlar <react-icons> dan olingan. Misolda keltirilgandek loyihangizda qo'llamoqchi bo'sangiz uni yuklab  oling.">
   <Default />
 </ComponentExample>
 
@@ -98,7 +106,7 @@ export const Default = () => {
 
 <ComponentExample
   name="E-commerce"
-  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  paragraph="Misolda keltirilgan Iconlar <react-icons> dan olingan. Misolda keltirilgandek loyihangizda qo'llamoqchi bo'sangiz uni yuklab  oling.">
   <ECommerce />
 </ComponentExample>
 
@@ -148,7 +156,7 @@ export const Default = () => {
 
 <ComponentExample
   name="Type A"
-  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  paragraph="Misolda keltirilgan Iconlar <react-icons> dan olingan. Misolda keltirilgandek loyihangizda qo'llamoqchi bo'sangiz uni yuklab  oling.">
   <TypeA />
 </ComponentExample>
 
@@ -195,11 +203,11 @@ export const TypeA = () => {
 ```
 </Code>
 
-<div id="typeb" />
+<div id="type-b" />
 
 <ComponentExample
   name="Type B | Glassmorphism"
-  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  paragraph="Misolda keltirilgan Iconlar <react-icons> dan olingan. Misolda keltirilgandek loyihangizda qo'llamoqchi bo'sangiz uni yuklab  oling.">
   <TypeB />
 </ComponentExample>
 
@@ -237,6 +245,141 @@ export const TypeB = () => {
           <small className="text-xs font-light text-primary">
             Do you want to participate?
           </small>
+        </div>
+      </div>
+    </>
+  );
+};
+```
+</Code>
+
+<div id="type-c" />
+
+<ComponentExample
+  name="Type C | Unilateral"
+  paragraph="Misolda keltirilgan Iconlar <react-icons> dan olingan. Misolda keltirilgandek loyihangizda qo'llamoqchi bo'sangiz uni yuklab  oling.">
+  <TypeC />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+import { BsHeartFill } from 'react-icons/bs';
+
+export const TypeC = () => {
+  return (
+    <>
+      <div className="w-[10rem] md:w-[13rem]">
+        <div className="relative hover:scale-105 duration-200">
+          <img
+            className="hidden dark:block rounded-r-3xl"
+            src="your-img-path.png"
+            alt=""
+          />
+          <img
+            className="block dark:hidden rounded-r-3xl"
+            src="your-img-path.png"
+            alt=""
+          />
+          <BsHeartFill className="absolute -top-2 -left-2 h-8 w-8 p-2 rounded-lg flex items-center justify-center bg-white shadow-lg dark:bg-primary text-[#ff4757] text-xl" />
+        </div>
+        <div className="flex flex-col items-start space-y-1 md:space-y-0 md:flex-row md:items-center justify-between">
+          <div>
+            <h5 className="text-primary dark:text-white font-semibold text-sm">
+              Lazydev 1.0
+            </h5>
+            <p className="text-xs text-primary font-medium dark:text-gray-400">
+              Copy and paste
+            </p>
+          </div>
+          <div className="flex items-center -space-x-3 cursor-pointer">
+            <span>
+              <img
+                className="w-8 rounded-full group-hover:scale-105 duration-200"
+                src="your-img-path.png"
+                title="Verified avatar user"
+                alt="default avatar rounded-full"
+              />
+            </span>
+            <span>
+              <img
+                className="w-8 rounded-full group-hover:scale-105 duration-200"
+                src="your-img-path.png"
+                title="Unread messages"
+                alt="default avatar rounded-full"
+              />
+            </span>
+            <span>
+              <img
+                className="w-8 rounded-full group-hover:scale-105 duration-200"
+                src="your-img-path.png"
+                title="Edit user"
+                alt="default avatar rounded-full"
+              />
+            </span>
+            <span>
+              <img
+                className="w-8 rounded-full group-hover:scale-105 duration-200"
+                src="your-img-path.png"
+                title="Online user"
+                alt="default avatar rounded-full"
+              />
+            </span>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
+```
+</Code>
+
+<div id="type-d" />
+
+<ComponentExample
+  name="Type D | Button"
+  paragraph="Misolda keltirilgan Iconlar <react-icons> dan olingan. Misolda keltirilgandek loyihangizda qo'llamoqchi bo'sangiz uni yuklab  oling.">
+  <TypeD />
+</ComponentExample>
+
+<Code>
+```jsx
+import React from 'react';
+
+export const TypeD = () => {
+  return (
+    <>
+      <div className="flex flex-col md:flex-row items-center space-x-4 p-2 md:p-3 rounded-xl shadow-lg bg-white">
+        <div className="relative w-fit hover:scale-105 duration-200 py-2 md:py-0">
+          <img
+            className="hidden dark:block w-20 h-20 rounded-3xl hover:scale-110 duration-300"
+            src="your-img-path.png"
+            alt="avatar"
+          />
+          <img
+            className="block dark:hidden w-20 h-20 rounded-3xl"
+            src="your-img-path.png"
+            alt="avatar"
+          />
+          <p className="absolute bottom-2 text-white -right-1 w-5 h-5 flex items-center justify-center p-2 text-xs rounded-2xl bg-[#ff4757]">
+            8
+          </p>
+        </div>
+        <div className="flex flex-col space-y-1 py-2 md:py-0">
+          <h5 className="text-primary dark:text-white font-medium text-sm">
+            Segoe cute
+          </h5>
+          <small className="text-xs font-lighttext-primary  dark:text-gray-400">
+            Do you want to participate in our initiative?
+          </small>
+          <span className="space-x-2">
+            <button className="py-1 px-3 rounded-lg text-white bg-[#ff4757] text-[0.6rem] duration-300 hover:-translate-y-0.5">
+              Open
+            </button>
+            <button className="py-1 px-3 rounded-lg bg-white shadow-xl dark:bg-primary text-[0.6rem] duration-300 hover:-translate-y-1">
+              Cancel
+            </button>
+          </span>
         </div>
       </div>
     </>

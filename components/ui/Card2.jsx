@@ -1,6 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
 import React from 'react';
-import Image from 'next/image'
 import { BsHeartFill } from 'react-icons/bs';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
