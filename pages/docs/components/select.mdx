@@ -16,7 +16,10 @@ export const getStaticProps = async ({ locale }) => {
   };
 };
 
-<PrevAndNext leftPath="/docs/components/input" rightPath="/docs/components/avatar" />
+<PrevAndNext
+  leftPath="/docs/components/input"
+  rightPath="/docs/components/avatar"
+/>
 
 <div className="h-screen"></div>
 
@@ -25,4 +28,3 @@ export default ({ children }) => (
     {children}
   </NestedLayout>
 );
-

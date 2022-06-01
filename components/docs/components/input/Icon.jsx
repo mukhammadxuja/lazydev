@@ -2,7 +2,7 @@ import React from 'react';
 import { BiUser, BiLockOpenAlt } from 'react-icons/bi';
 export const Icon = () => {
   return (
-    <div className='grid grid-cols-1 md:grid-cols-2 items-center gap-y-4 md:gap-x-2'>
+    <div className="grid grid-cols-1 md:grid-cols-2 items-center gap-y-4 md:gap-x-2">
       <div className="relative group">
         <div className="flex items-center rounded-xl bg-gray-200 dark:bg-[#141417]">
           <input
@@ -12,7 +12,13 @@ export const Icon = () => {
             placeholder="username"
           />
           <div className="absolute top-0 right-0 duration-300 rounded-xl bg-transparent p-2 group-focus-within:-top-2 group-focus-within:-right-2 group-focus-within:bg-[#18191c]">
-            <BiUser className="text-primary dark:text-white group-focus-within:text-white" />
+            <svg
+              className=""
+              width="1em"
+              height="1em"
+              fill="currentColor">
+            </svg>
+            {/* <BiUser className="text-primary dark:text-white group-focus-within:text-white" /> */}
           </div>
         </div>
       </div>

@@ -56,8 +56,8 @@ export const TypeC = () => {
                 <BiLockOpenAlt className="text-primary dark:text-white group-focus-within:text-white" />
               </div>
             </div>
-            <div className="hidden md:inline-flex items-center md:justify-between">
-              <div className="flex items-center space-x-2">
+            <div className="hidden md:flex items-center md:justify-between">
+              <span className="flex items-center space-x-2">
                 <input
                   id="remember"
                   type="checkbox"
@@ -67,7 +67,7 @@ export const TypeC = () => {
                 <small className="text-blue-500 cursor-pointer">
                   Remember me
                 </small>
-              </div>
+              </span>
               <small className="text-gray-500 cursor-pointer">
                 Forgot password?
               </small>

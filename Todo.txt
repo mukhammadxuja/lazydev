@@ -1,6 +1,7 @@
 TODO:
+kamida 2 tadan yangi component qoshsh va loyihani tugatish
+select - tooltip - pagination - navbar - sidebar - tag input - colors
+barcha textlarni tugirlab chiqish
+tilli qoshish
 3 -Increase performance
-4 -Tiny ugly & mobile
-5 -Guide & Theme
-7 -vercel BUG
 8 -Search

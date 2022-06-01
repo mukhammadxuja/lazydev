@@ -25,7 +25,7 @@ html {
     @apply w-[4px];
   }
   input::placeholder {
-    @apply text-primary dark:text-white;
+    @apply text-gray-600 dark:text-white;
   }
   body ul {
     @apply list-none;

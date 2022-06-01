@@ -21,7 +21,10 @@ export const getStaticProps = async ({ locale }) => {
   };
 };
 
-<PrevAndNext leftPath="/docs/components/dialog" rightPath="/docs/components/navbar" />
+<PrevAndNext
+  leftPath="/docs/components/dialog"
+  rightPath="/docs/components/navbar"
+/>
 
 <Test />
 
@@ -30,4 +33,3 @@ export default ({ children }) => (
     {children}
   </NestedLayout>
 );
-

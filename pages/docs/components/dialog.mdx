@@ -147,35 +147,35 @@ const defaultButton =
 const emojiStyle = 'text-xl md:text-2xl p-2 bg-pink-100 rounded-lg hover:bg-pink-200 cursor-pointer '
 
 return (
+
 <>
-<div
-className={
-activeDialog
-? 'fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50 '
-: 'hidden'
-}>
-<div className="relative w-[15rem] md:w-[25rem] p-6 bg-white shadow-lg rounded-xl space-y-2">
-<div className='flex items-center justify-between'>
-<h4 className='text-sm md:text-base font-semibold'>Question*</h4>
-<GrFormClose onClick={CloseDialog} className='cursor-pointer' />
-</div>
-<p>How would you rate this ui?*</p>
-<div className='flex items-center justify-between'>
-<span className={emojiStyle}>🥴</span>
-<span className={emojiStyle}>😕</span>
-<span className={emojiStyle}>🙃</span>
-<span className={emojiStyle}>🙂</span>
-<span className={emojiStyle}>😇</span>
-<span className={emojiStyle}>😍</span>
-</div>
-</div>
-</div>
-<button onClick={dialog} className={defaultButton}>
-Open Dialog
-</button>
+  <div
+    className={
+      activeDialog
+        ? 'fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50 '
+        : 'hidden'
+    }>
+    <div className="relative w-[15rem] md:w-[25rem] p-6 bg-white shadow-lg rounded-xl space-y-2">
+      <div className="flex items-center justify-between">
+        <h4 className="text-sm md:text-base font-semibold">Question*</h4>
+        <GrFormClose onClick={CloseDialog} className="cursor-pointer" />
+      </div>
+      <p>How would you rate this ui?*</p>
+      <div className="flex items-center justify-between">
+        <span className={emojiStyle}>🥴</span>
+        <span className={emojiStyle}>😕</span>
+        <span className={emojiStyle}>🙃</span>
+        <span className={emojiStyle}>🙂</span>
+        <span className={emojiStyle}>😇</span>
+        <span className={emojiStyle}>😍</span>
+      </div>
+    </div>
+  </div>
+  <button onClick={dialog} className={defaultButton}>
+    Open Dialog
+  </button>
 </>
-);
-};
+); };
 
 ````
 </Code>
@@ -315,36 +315,36 @@ const defaultButton =
 'rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-[#1a5cff] md:text-sm text-white hover:shadow-md hover:shadow-blue-500/50 ';
 
 return (
+
 <>
-<div
-className={
-activeDialog
-? 'fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50 '
-: 'hidden'
-}>
-<div className="relative w-[90%] md:w-[35rem] lg:w-[45rem] h-[60%] md:h-[30rem] bg-white shadow-lg rounded-xl space-y-2 overflow-y-scroll">
-<div className="sticky z-20 top-0 left-0 right-0 flex items-center justify-between bg-white shadow-sm py-4 px-6">
-<h1 className="text-sm md:text-2xl font-semibold">Introduction</h1>
-<GrFormClose onClick={CloseDialog} className="cursor-pointer" />
-</div>
-<div className="py-2 px-6">
-<div>
-<h2 className="text-base md:text-lg font-semibold opacity-80">
-Your Heading.
-</h2>
-<p className="text-xs md:text-sm font-medium text-gray-500">
-Your paragraph.
-</p>
-</div>
-</div>
-</div>
-</div>
-<button onClick={dialog} className={defaultButton}>
-Open Dialog
-</button>
+  <div
+    className={
+      activeDialog
+        ? 'fixed top-0 left-0 right-0 bottom-0 flex items-center justify-center bg-black bg-opacity-50 '
+        : 'hidden'
+    }>
+    <div className="relative w-[90%] md:w-[35rem] lg:w-[45rem] h-[60%] md:h-[30rem] bg-white shadow-lg rounded-xl space-y-2 overflow-y-scroll">
+      <div className="sticky z-20 top-0 left-0 right-0 flex items-center justify-between bg-white shadow-sm py-4 px-6">
+        <h1 className="text-sm md:text-2xl font-semibold">Introduction</h1>
+        <GrFormClose onClick={CloseDialog} className="cursor-pointer" />
+      </div>
+      <div className="py-2 px-6">
+        <div>
+          <h2 className="text-base md:text-lg font-semibold opacity-80">
+            Your Heading.
+          </h2>
+          <p className="text-xs md:text-sm font-medium text-gray-500">
+            Your paragraph.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button onClick={dialog} className={defaultButton}>
+    Open Dialog
+  </button>
 </>
-);
-};
+); };
 
 ```
 </Code>

@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
-import React, { useState } from 'react';
-import { useRouter } from 'next/router';
+import React from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import {
   BsTelegram,
   BsGithub,
@@ -26,13 +27,11 @@ import {
 } from '..';
 
 const Header = () => {
-  const [dropdown, setDropdown] = useState(true);
-  const router = useRouter();
   const { t } = useTranslation();
 
   return (
     <div className="w-full h-screen">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 content-center items-center h-screen px-4 md:px-0">
+      <div className="relative container mx-auto grid grid-cols-1 md:grid-cols-2 content-center items-center h-screen px-4 md:px-0">
         <div className="space-y-3">
           <h3 className="relative text-2xl text-center md:text-left md:text-[1.7rem] lg:text-[2rem] font-semibold text-primary dark:text-white">
             {t('home:heading')}
@@ -41,12 +40,10 @@ const Header = () => {
             {t('home:paragraph')}
           </p>
           <div className="flex items-center w-fit space-x-2 mx-auto md:mx-0">
-            <button
-              onClick={() => router.push('docs/guide/introduction')}
-              className="btn btn__primary">
-              {t('home:boshlash')}
-            </button>
-            <div className='flex items-center space-x-2'>
+            <Link href="docs/guide/introduction">
+              <button className="btn btn__primary">{t('home:boshlash')}</button>
+            </Link>
+            <div className="flex items-center space-x-2">
               <a
                 target="_blank"
                 href="https://t.me/akzmsh"
