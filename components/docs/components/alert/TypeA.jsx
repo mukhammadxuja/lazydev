@@ -1,69 +1,14 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { MdOutlineDone, MdErrorOutline } from 'react-icons/md';
-import { RiErrorWarningLine } from 'react-icons/ri';
-
-import ComponentExample from '@/components/layout/ComponentExample';
-import { Code } from '@/components/layout/Code';
-import { SidebarLink } from '@/components/layout/SidebarLink';
-import { NestedLayout } from '@/components/layout/NestedLayout';
-import { PrevAndNext } from '@/components/layout/PrevAndNext';
-
-import { TypeA } from '@/components/docs/components/alert/TypeA';
-import { TypeB } from '@/components/docs/components/alert/TypeB';
-
-export const meta = {
-  name: 'Alert',
-  title: 'Alert | Lazydev ui components',
-};
-
-export const getStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['home'])),
-    },
-  };
-};
-
-<SidebarLink>
-  <a href="#type-a" className="text-right">
-    Type A
-  </a>
-  <a href="#type-b" className="text-right">
-    Type B
-  </a>
-</SidebarLink>
-
-<PrevAndNext
-  leftPath="/docs/components/button"
-  rightPath="/docs/components/loading"
-/>
-
-<div id="type-a" />
-
-<ComponentExample
-  name="Colorful"
-  paragraph="This is a paragraph"
-  space="space-y-2">
-  <TypeA />
-</ComponentExample>
-
-<Code>
-  ```jsx
 import React from 'react';
 
 export const TypeA = () => {
   const viewMoreButton =
-    'text-white bg-gray-700 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 focus:outline-none 
-    text-center inline-flex items-center ';
+    'text-white bg-gray-700 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 focus:outline-none text-center inline-flex items-center ';
   const dismissButton =
     'border focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center ';
 
-return (
-
-<>
-
+  return (
+    <>
       {/* Blue alert */}
-
       <div
         className="p-4 mb-4 bg-blue-100 rounded-lg dark:bg-blue-200 mx-8"
         role="alert">
@@ -111,16 +56,13 @@ return (
             type="button"
             className={
               dismissButton +
-              'text-blue-700 bg-transparent border-blue-700 hover:bg-blue-800 hover:text-white dark:border-blue-800
-               dark:text-blue-800 dark:hover:text-white'
+              'text-blue-700 bg-transparent border-blue-700 hover:bg-blue-800 hover:text-white dark:border-blue-800 dark:text-blue-800 dark:hover:text-white'
             }>
             Dismiss
           </button>
         </div>
       </div>
-
       {/* Red alert */}
-
       <div
         className="p-4 mb-4 bg-red-100 rounded-lg dark:bg-red-200 mx-8"
         role="alert">
@@ -147,8 +89,7 @@ return (
         <div className="flex">
           <button
             type="button"
-            className="bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg
-             text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-red-800 dark:hover:bg-red-900">
+            className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-red-800 dark:hover:bg-red-900">
             <svg
               className="-ml-0.5 mr-2 h-4 w-4"
               fill="currentColor"
@@ -164,15 +105,12 @@ return (
           </button>
           <button
             type="button"
-            className="text-red-700 bg-transparent border border-red-700 hover:bg-red-800 hover:text-white focus:ring-4
-             focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:border-red-800 dark:text-red-800 dark:hover:text-white">
+            className="text-red-700 bg-transparent border border-red-700 hover:bg-red-800 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:border-red-800 dark:text-red-800 dark:hover:text-white">
             Dismiss
           </button>
         </div>
       </div>
-
       {/* Green alert */}
-
       <div
         className="p-4 mb-4 bg-green-100 rounded-lg dark:bg-green-200 mx-8"
         role="alert">
@@ -220,16 +158,13 @@ return (
             type="button"
             className={
               dismissButton +
-              'text-green-700 bg-transparent border-green-700 hover:bg-green-800 hover:text-white focus:ring-green-300 dark:border-green-800
-              dark:text-green-800 dark:hover:text-white'
+              'text-green-700 bg-transparent border-green-700 hover:bg-green-800 hover:text-white focus:ring-green-300dark:border-green-800 dark:text-green-800 dark:hover:text-white'
             }>
             Dismiss
           </button>
         </div>
       </div>
-
       {/* Yellow alert */}
-
       <div
         className="p-4 mb-4 bg-yellow-100 rounded-lg dark:bg-yellow-200 mx-8"
         role="alert">
@@ -277,16 +212,13 @@ return (
             type="button"
             className={
               dismissButton +
-              'text-yellow-700 bg-transparent border-yellow-700 hover:bg-yellow-800 hover:text-white focus:ring-yellow-300
-               dark:border-yellow-800 dark:text-yellow-800 dark:hover:text-white'
+              'text-yellow-700 bg-transparent border-yellow-700 hover:bg-yellow-800 hover:text-white focus:ring-yellow-300  dark:border-yellow-800 dark:text-yellow-800 dark:hover:text-white'
             }>
             Dismiss
           </button>
         </div>
       </div>
-
       {/* Gray alert */}
-
       <div
         className="p-4 bg-gray-100 rounded-lg dark:bg-gray-700 mx-8"
         role="alert">
@@ -334,84 +266,12 @@ return (
             type="button"
             className={
               dismissButton +
-              'text-gray-700 bg-transparent border-gray-700 hover:bg-gray-800 hover:text-white dark:border-gray-600 dark:hover:bg-gray-600
-              dark:text-gray-300 dark:hover:text-white'
+              'text-gray-700 bg-transparent border-gray-700 hover:bg-gray-800 hover:text-white dark:border-gray-600 dark:hover:bg-gray-600 dark:text-gray-300 dark:hover:text-white'
             }>
             Dismiss
           </button>
         </div>
       </div>
     </>
-
-);
-};
-
-````
-</Code>
-
-<div id="type-b" />
-
-<ComponentExample name="Type B" paragraph="This is a paragraph">
-  <TypeB />
-</ComponentExample>
-
-<Code>
-```jsx
-import React from 'react';
-
-export const TypeB = () => {
-  return (
-    <div className="space-y-2">
-      {/* Solid alert */}
-      <div className="p-2 border-l-2 border-blue-300 bg-[#1a5cff] text-white rounded-r-lg mx-8">
-        <div className="mx-4">
-          <h4 className="text-[1rem] py-3 font-semibold">Solid alert</h4>
-          <p className="text-sm py-2">
-            Lazydev is a copy and paste components to make projects easily and
-            with a Unique and pleasant style, Lazydev is created from scratch
-            and designed for all types of developed from the frontend lover to
-            the backend that wants to easily create your visual approach to the
-            end user
-          </p>
-        </div>
-      </div>
-      {/* Opacity alert */}
-      <div className="p-2 border-l-2 border-blue-600 bg-[#E8EEFF] dark:bg-[#1e2639] text-blue-600 rounded-r-lg mx-8">
-        <div className="mx-4">
-          <h4 className="text-[1rem] py-3 font-semibold">Opacity alert</h4>
-          <p className="text-sm py-2">
-            Lazydev is a copy and paste components to make projects easily and
-            with a Unique and pleasant style, Lazydev is created from scratch
-            and designed for all types of developed from the frontend lover to
-            the backend that wants to easily create your visual approach to the
-            end user
-          </p>
-        </div>
-      </div>
-      {/* border alert */}
-      <div className="p-2 border-2 border-blue-600 bg-transparent text-blue-600 rounded-r-lg mx-8">
-        <div className="mx-4">
-          <h4 className="text-[1rem] py-2 md:py-3 font-semibold">
-            Border alert
-          </h4>
-          <p className="text-sm">
-            Lazydev is a copy and paste components to make projects easily and
-            with a Unique and pleasant style, Lazydev is created from scratch
-            and designed for all types of developed from the frontend lover to
-            the backend that wants to easily create your visual approach to the
-            end user
-          </p>
-        </div>
-      </div>
-    </div>
   );
 };
-```
-
-</Code>
-
-export default ({ children }) => (
-  <NestedLayout name={meta.name} title={meta.title}>
-    {children}
-  </NestedLayout>
-);

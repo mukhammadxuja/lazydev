@@ -1,7 +1,5 @@
-import {
-  links
-} from '.././../data/links'
+import { links } from '.././../data/links';
 
 export default function handler(req, res) {
-  res.status(200).json(links)
+  res.status(200).json(links);
 }

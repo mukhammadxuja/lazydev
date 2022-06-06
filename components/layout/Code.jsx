@@ -16,7 +16,7 @@ export const Code = ({ children }) => {
           </span>
         ) : (
           <span className="flex items-center space-x-2">
-            <FiEyeOff /> <small>HIde code</small>
+            <FiEyeOff /> <small>Hide code</small>
           </span>
         )}
       </div>

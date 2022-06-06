@@ -14,8 +14,8 @@ module.exports = {
         darkSecondary: 'var(--color-dark-secondary)',
       },
       fontFamily: {
-        poppins: ['Poppins', 'Monda', 'sans-serif'],
-        sora: ['Sora'],
+        poppins: ['Poppins', 'Monda'],
+        sora: ['Sora', 'sans-serif'],
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0)',

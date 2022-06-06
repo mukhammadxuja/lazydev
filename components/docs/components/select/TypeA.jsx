@@ -1,50 +1,3 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-import { NestedLayout } from '@/components/layout/NestedLayout';
-import ComponentExample from '@/components/layout/ComponentExample';
-import { Code } from '@/components/layout/Code';
-import { PrevAndNext } from '@/components/layout/PrevAndNext';
-import { SidebarLink } from '@/components/layout/SidebarLink';
-
-import { TypeA } from '@/components/docs/components/select/TypeA';
-
-export const meta = {
-  name: 'Select',
-  title: 'Select | Lazydev ui components',
-};
-
-export const getStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['home'])),
-    },
-  };
-};
-
-<SidebarLink>
-  <a href="#type-a" className="text-right">
-    Type A
-  </a>
-  <a href="#type-b" className="text-right">
-    Type B
-  </a>
-</SidebarLink>
-
-<PrevAndNext
-  leftPath="/docs/components/input"
-  rightPath="/docs/components/avatar"
-/>
-
-<div id="type-a"></div>
-
-<ComponentExample
-  name="Type A"
-  paragraph="Misolda keltirilgan Iconlar <react-icons> dan olingan. Misolda keltirilgandek loyihangizda qo'llamoqchi bo'sangiz uni yuklab  oling.">
-  <TypeA />
-</ComponentExample>
-
-<Code>
-```jsx
 import React, { useState } from 'react';
 import { BiArrowToBottom, BiArrowToTop, BiCheck } from 'react-icons/bi';
 import { FiSearch } from 'react-icons/fi';
@@ -63,7 +16,6 @@ export const TypeA = () => {
 
   const button =
     'w-full rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-[#1a5cff] dark:bg-[#1a5cff] md:text-sm text-white hover:shadow-md hover:shadow-blue-500/50';
-
   return (
     <>
       <div className="relative rounded-2xl bg-gray-200 dark:bg-[#323741]">
@@ -117,11 +69,3 @@ export const TypeA = () => {
     </>
   );
 };
-```
-</Code>
-
-export default ({ children }) => (
-  <NestedLayout name={meta.name} title={meta.title}>
-    {children}
-  </NestedLayout>
-);

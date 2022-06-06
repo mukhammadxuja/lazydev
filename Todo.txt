@@ -1,7 +1,7 @@
 TODO:
 kamida 2 tadan yangi component qoshsh va loyihani tugatish
-select - tooltip - pagination - navbar - sidebar - tag input - colors
-barcha textlarni tugirlab chiqish
+select - pagination - navbar - sidebar - tag input - colors
 tilli qoshish
 3 -Increase performance
 8 -Search
+Sidebar active

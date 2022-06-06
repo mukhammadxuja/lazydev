@@ -1,53 +1,6 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-
-import { NestedLayout } from '@/components/layout/NestedLayout';
-import ComponentExample from '@/components/layout/ComponentExample';
-import { Code } from '@/components/layout/Code';
-import { PrevAndNext } from '@/components/layout/PrevAndNext';
-import { SidebarLink } from '@/components/layout/SidebarLink';
-
-import { Test } from '@/components/docs/components/sidebar/Test';
-import { TypeA } from '@/components/docs/components/sidebar/TypeA';
-
-export const meta = {
-  name: 'Sidebar',
-  title: 'Sidebar | Lazydev ui components',
-};
-
-export const getStaticProps = async ({ locale }) => {
-  return {
-    props: {
-      ...(await serverSideTranslations(locale, ['home'])),
-    },
-  };
-};
-
-<SidebarLink>
-  <a href="#type-a" className="text-right">
-    Type A
-  </a>
-  <a href="#type-b" className="text-right">
-    Type B
-  </a>
-</SidebarLink>
-
-<PrevAndNext
-  leftPath="/docs/components/navbar"
-  rightPath="/docs/components/toast"
-/>
-
-<div id="type-a" />
-
-<ComponentExample
-  name="Type A"
-   paragraph="Misolda keltirilgan Iconlar <react-icons> dan olingan. Misolda keltirilgandek loyihangizda qo'llamoqchi bo'sangiz uni yuklab  oling.">
-  <TypeA />
-</ComponentExample>
-
-<Code>
-```jsx
 import React, { useState } from 'react';
-import Your-Avatar from './avatar-path';
+import Image from 'next/image';
+import AvatarImg from './person01.png';
 import { BiSearch } from 'react-icons/bi';
 import {
   BsBasket2Fill,
@@ -77,8 +30,8 @@ export const TypeA = () => {
       <div
         className={
           sidebarShow
-            ? 'w-[20rem] h-screen rounded-lg bg-gray-200 dark:bg-[#161819] shadow-xl duration-200'
-            : 'w-24 h-screen rounded-lg bg-gray-200 dark:bg-[#161819] shadow-xl duration-200'
+            ? 'w-[20rem] rounded-lg bg-gray-200 dark:bg-[#161819] shadow-xl duration-200'
+            : 'w-24 rounded-lg bg-gray-200 dark:bg-[#161819] shadow-xl duration-200'
         }>
         <div className="flex items-center space-x-2 p-2">
           <span className="w-2 h-2 rounded-full bg-[#ee6a5e]" />
@@ -88,9 +41,12 @@ export const TypeA = () => {
         <div className="space-y-6 p-5">
           <div className="relative flex items-center">
             <div className="flex items-center justify-center rounded-2xl border-2 border-gray-300 dark:border-transparent bg-transparent dark:bg-[#242627] w-fit p-1">
-              <img
-                className="rounded-full w-10 h-10 object-contain"
-                src={Your-Avatar}
+              <Image
+                className="rounded-full"
+                width={50}
+                height={50}
+                objectFit="contain"
+                src={AvatarImg}
                 alt="avatar img"
               />
             </div>
@@ -179,12 +135,3 @@ export const TypeA = () => {
     </>
   );
 };
-
-```
-</Code>
-
-export default ({ children }) => (
-  <NestedLayout name={meta.name} title={meta.title}>
-    {children}
-  </NestedLayout>
-);

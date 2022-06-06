@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { links } from '../../data/links';
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
+import Logo from './logo.png'
+
 const Sidebar = ({ sidebar, setSidebar }) => {
+  const [activeLink, setActiveLink] = useState(false);
+
   const router = useRouter();
+
   const toggleSidebar = () => {
     setSidebar(!sidebar);
   };
@@ -15,12 +20,24 @@ const Sidebar = ({ sidebar, setSidebar }) => {
     <div>
       <aside className={sidebar ? 'sidebar__active' : 'sidebar'}>
         <div className="">
-          <div className='flex items-center justify-between'>
-            <div onClick={() => router.push('/')} className='relative flex items-center group py-4 -ml-2'>
-              <Image className='group-hover:opacity-80' width={35} height={35} src="/images/logo.png" alt="logo" />
-              <div className='relative'>
-                <h3 className='font-sora tracking-wide -ml-1 font-semibold text-lg cursor-pointer text-primary dark:text-white group-hover:opacity-80'>Lazydev</h3>
-                <p className='absolute -top-4 -right-2 text-2xl group-hover:text-[#82ceee]'>.</p>
+          <div className="flex items-center justify-between">
+            <div
+              onClick={() => router.push('/')}
+              className="relative flex items-center group py-4 -ml-2">
+              <Image
+                className="group-hover:opacity-80"
+                width={35}
+                height={35}
+                src={Logo}
+                alt="logo"
+              />
+              <div className="relative">
+                <h3 className="font-sora tracking-wide -ml-1 font-semibold text-lg cursor-pointer text-primary dark:text-white group-hover:opacity-80">
+                  Lazydev
+                </h3>
+                <p className="absolute -top-4 -right-2 text-2xl group-hover:text-[#82ceee]">
+                  .
+                </p>
               </div>
             </div>
             <IoIosArrowBack onClick={toggleSidebar} />
@@ -60,12 +77,13 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             </div>
             <ul className="p-2">
               {links.map((item) => (
-                <li
-                  onClick={() => router.push(`${item.path}`)}
-                  key={item.id}
-                  className="sidebar__link">
-                  {item.title}
-                </li>
+                <Link href={item.path}>
+                  <li
+                    key={item.id}
+                    className={`router.pathname === ${item.path} ? sidebar__link : sidebar__link`}>
+                    {item.title}
+                  </li>
+                </Link>
               ))}
             </ul>
           </div>

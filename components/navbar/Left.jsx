@@ -19,7 +19,7 @@ const Left = ({ sidebar, setSidebar }) => {
         />
         <div
           onClick={() => router.push('/')}
-          className="relative flex items-center">
+          className="relative flex items-center select-none">
           <Image
             className="group-hover:opacity-80"
             width={30}

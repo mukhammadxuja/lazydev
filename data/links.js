@@ -65,7 +65,7 @@ export const links = [
     path: '/docs/components/card',
   },
   {
-    id: 13,
+    id: 14,
     title: 'Tag Input',
     path: '/docs/components/tag-input',
   },

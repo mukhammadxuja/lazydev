@@ -5,7 +5,8 @@ export const Introduction = () => {
   const { t } = useTranslation();
   return (
     <div className="py-10 space-y-4 md:space-y-8">
-      <div className="space-y-2 md:space-y-3">
+      <div />
+      <div id='what-is-lazydev' className="space-y-2 md:space-y-3">
         <h2 className="text-base md:text-2xl font-semibold text-primary dark:text-white">
           {t('introduction:what_is_lazydev')}
         </h2>
@@ -21,7 +22,8 @@ export const Introduction = () => {
           </li>
         </ul>
       </div>
-      <div className="space-y-2 md:space-y-3">
+      <div />
+      <div id='why-lazydev' className="space-y-2 md:space-y-3">
         <h2 className="text-base md:text-2xl font-semibold text-primary dark:text-white">
           {t('introduction:why_lazydev')}
         </h2>

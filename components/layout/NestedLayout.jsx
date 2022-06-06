@@ -35,7 +35,7 @@ export const NestedLayout = ({ children, name, title }) => {
       <Head>
         <title>{title}</title>
       </Head>
-      
+
       <div className="flex bg-white dark:bg-darkSecondary shadow-lg">
         <div className="hidden lg:block">
           <aside className="bg-white dark:bg-darkPrimary fixed z-30 h-screen w-[240px] px-5 pt-[5rem] overflow-y-auto scrollbar-hide">
@@ -75,7 +75,7 @@ export const NestedLayout = ({ children, name, title }) => {
                 </div>
                 <ul className="p-2">
                   {links.map((item) => (
-                    <Link href={`${item.path}`}>
+                    <Link href={item.path}>
                       <li key={item.id} className="sidebar__link">
                         {item.title}
                       </li>

@@ -28,15 +28,11 @@ const Footer = ({ bg }) => {
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
             Lazydev
           </h3>
-          <Link href="/docs/guide/introduction/#about-lazydev">
-            <p className="link text-sm">
-              {t('home:footer_about_lazydev')}
-            </p>
+          <Link href="/en/docs/guide/introduction#what-is-lazydev">
+            <p className="link text-sm">{t('home:footer_about_lazydev')}</p>
           </Link>
-          <Link href="/docs/guide/introduction/#why-lazydev">
-            <p className="link text-sm">
-              {t('home:footer_why_lazydev')}
-            </p>
+          <Link href="/en/docs/guide/introduction#why-lazydev">
+            <p className="link text-sm">{t('home:footer_why_lazydev')}</p>
           </Link>
           <Link href="/docs/guide/introduction/#faq">
             <p className="link text-sm">FAQ</p>
@@ -44,38 +40,32 @@ const Footer = ({ bg }) => {
         </div>
         <div className="py-2 space-y-2 md:space-y-4">
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
-          {t('home:footer_resources')}
+            {t('home:footer_resources')}
           </h3>
-          <Link href="docs/components">
-            <p className="link text-sm">
-            {t('home:footer_docs')}
-            </p>
+          <Link href="/en/docs/guide/introduction">
+            <p className="link text-sm">{t('home:footer_docs')}</p>
           </Link>
           <Link href="https://github/AnvarovM/lazydev">
             <p className="link text-sm">GitHUb</p>
           </Link>
-          <Link href="">
-            <p className="link text-sm">
-            {t('home:footer_privacy')}
-            </p>
+          <Link href="#!">
+            <p className="link text-sm">{t('home:footer_privacy')}</p>
           </Link>
         </div>
         <div className="py-2 space-y-2 md:space-y-4">
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
-          {t('home:footer_help')}
+            {t('home:footer_help')}
           </h3>
-          <Link href="https://github/AnvarovM/lazydev">
-            <p className="link text-sm">
-            {t('home:footer_issues')}
-            </p>
+          <Link href="#!">
+            <p className="link text-sm">{t('home:footer_issues')}</p>
           </Link>
-          <Link href="/docs/guide/introduction/#faq">
+          <Link href="#!">
             <p className="link text-sm">FAQ</p>
           </Link>
         </div>
         <div className="py-2 space-y-2 md:space-y-4">
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
-          {t('home:footer_team')}
+            {t('home:footer_team')}
           </h3>
           <Link className="list-none" href="/docs/components/avatar">
             <p className="link text-sm">Website</p>
