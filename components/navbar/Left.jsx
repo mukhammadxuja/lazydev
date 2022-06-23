@@ -35,7 +35,7 @@ const Left = ({ sidebar, setSidebar }) => {
               .
             </p>
           </div>
-          <span className='text-[0.65rem] md:mx-3 px-2 py-0.5 rounded-2xl bg-blue-500'>BETA</span>
+          <span className='text-[0.65rem] md:mx-3 px-2 py-0.5 rounded-2xl bg-blue-500 text-white'>BETA</span>
         </div>
       </div>
     </div>
