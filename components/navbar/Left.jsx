@@ -27,7 +27,7 @@ const Left = ({ sidebar, setSidebar }) => {
             src={Logo}
             alt="logo"
           />
-          <div className="relative">
+          <div className="relative hidden md:block">
             <h3 className="font-sora tracking-wide -ml-1 font-semibold text-lg group-hover:cursor-pointer text-primary dark:text-white group-hover:opacity-80">
               Lazydev
             </h3>
@@ -35,6 +35,7 @@ const Left = ({ sidebar, setSidebar }) => {
               .
             </p>
           </div>
+          <span className='text-[0.65rem] md:mx-3 px-2 py-0.5 rounded-2xl bg-blue-500'>BETA</span>
         </div>
       </div>
     </div>
