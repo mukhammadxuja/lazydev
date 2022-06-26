@@ -20,13 +20,6 @@ const Left = ({ sidebar, setSidebar }) => {
         <div
           onClick={() => router.push('/')}
           className="relative flex items-center select-none">
-          <Image
-            className="group-hover:opacity-80"
-            width={30}
-            height={28}
-            src={Logo}
-            alt="logo"
-          />
           <div className="relative hidden md:block">
             <h3 className="font-sora tracking-wide -ml-1 font-semibold text-lg group-hover:cursor-pointer text-primary dark:text-white group-hover:opacity-80">
               Lazydev

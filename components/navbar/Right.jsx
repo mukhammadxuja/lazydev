@@ -32,7 +32,7 @@ const Right = () => {
                 ? 'block w-auto bg-transparent outline-none text-primary flex-grow font-normal text-sm'
                 : 'hidden lg:block bg-transparent outline-none text-primary flex-grow font-normal text-sm'
             }
-            type="text"
+            type="search"
             placeholder="Lazy Search"
           />
           <BiSearch
