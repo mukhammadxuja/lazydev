@@ -34,3 +34,5 @@ export { default as Card2 } from './ui/Card2';
 export { default as Card3 } from './ui/Card3';
 export { default as Card4 } from './ui/Card4';
 export { default as CircleCard } from './ui/CircleCard';
+
+export { default as Ripple } from './docs/components/button/Ripple';

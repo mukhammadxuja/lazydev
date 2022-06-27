@@ -8,11 +8,7 @@ import { SidebarLink } from '@/components/layout/SidebarLink';
 
 import { Default } from '@/components/docs/components/button/Default';
 import { Border } from '@/components/docs/components/button/Border';
-import { Gradient } from '@/components/docs/components/button/Gradient';
 import { Transparent } from '@/components/docs/components/button/Transparent';
-import { LoadingA } from '@/components/docs/components/button/LoadingA';
-import { LoadingB } from '@/components/docs/components/button/LoadingB';
-import { Glassphorism } from '@/components/docs/components/button/Glassphorism';
 
 export const meta = {
   name: 'Button',
@@ -31,26 +27,11 @@ export const getStaticProps = async ({ locale }) => {
   <a href="#default" className="sidebar__link">
     Default
   </a>
-  <a href="#border" className="sidebar__link">
-    Border
-  </a>
-  <a href="#gradient" className="sidebar__link">
-    Gradient
-  </a>
-  <a href="#transparent" className="sidebar__link">
-    Transparent
-  </a>
-  <a href="#loadinga" className="sidebar__link">
-    Loading A
-  </a>
-  <a href="#glassphorism" className="sidebar__link">
-    Glassphorism
-  </a>
 </SidebarLink>
 
 <PrevAndNext leftPath="/docs/theme" rightPath="/docs/components/alert" />
 
-<div id="default"></div>
+<div id="default" />
 
 <ComponentExample name="Default" paragraph="This is a paragraph">
   <Default />
@@ -63,39 +44,35 @@ import React, { useState } from 'react';
 export const Default = () => {
   const [active, setActive] = useState(true);
 
-const button =
-'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-[#1a5cff] dark:bg-[#1a5cff] md:text-sm text-white hover:shadow-md hover:shadow-blue-500/50 ';
+  return (
+    <div className="flex items-center space-x-3">
+      <a
+        onClick={() => setActive(true)}
+        className={`${
+          active ? '-translate-y-1' : ''
+        } w-fit mx-auto rounded-lg py-2 px-8 font-medium shadow-md text-sm duration-300
+          active:bg-opacity-80 cursor-pointer ease-in-out active:scale-95 bg-[#1a5cff] 
+          dark:bg-[#1a5cff] md:text-sm text-white hover:shadow-md`}>
+        Active
+      </a>
+      <a
+        onClick={() => setActive(false)}
+        className={`${
+          active ? '' : '-translate-y-1'
+        } w-fit mx-auto rounded-lg py-2 px-8 font-medium shadow-md text-sm duration-300
+          active:bg-opacity-80 cursor-pointer ease-in-out active:scale-95 bg-[#1a5cff] 
+          dark:bg-[#1a5cff] md:text-sm text-white hover:shadow-md`}>
+        Default
+      </a>
+    </div>
+  );
+};
 
-const disabledButton =
-'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-[#1a5cff] dark:bg-[#1a5cff] md:text-sm text-white ';
-
-return (
-
-<div className="flex items-center space-x-3">
-  <button
-    onClick={() => setActive(true)}
-    className={
-      active ? button + '-translate-y-1 shadow-md shadow-blue-500/50' : button
-    }>
-    Active
-  </button>
-  <button
-    onClick={() => setActive(false)}
-    className={
-      active ? button : button + '-translate-y-1 shadow-md shadow-blue-500/50'
-    }>
-    Default
-  </button>
-  <button className={disabledButton + 'opacity-50 cursor-auto select-none'}>
-    Disabled
-  </button>
-</div>
-);
 
 ````
 </Code>
 
-<div id="border"></div>
+<div id="border" />
 
 <ComponentExample name="Border" paragraph="This is a paragraph">
   <Border />
@@ -108,27 +85,26 @@ import React, { useState } from 'react';
 export const Border = () => {
   const [active, setActive] = useState(true);
 
-  const button =
-    'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-[#1a5cff] dark:bg-[#1a5cff] md:text-sm text-white hover:shadow-md hover:shadow-blue-600 ';
-
-  const disabledButton =
-    'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-[#1a5cff] dark:bg-[#1a5cff] md:text-sm text-white ';
-
   return (
     <div className="flex items-center space-x-3">
-      <button
+      <a
         onClick={() => setActive(true)}
-        className={active ? button + '-translate-y-1' : button}>
+        className={`${
+          active ? 'bg-[#1a5cff] text-white' : ''
+        } w-fit mx-auto rounded-lg py-2 px-8 cursor-pointer active:scale-95
+        shadow-md text-sm duration-300 border border-[#1a5cff] active:bg-opacity-80
+        ease-in-out bg-transparent md:text-sm text-[#1a5cff]`}>
         Active
-      </button>
-      <button
+      </a>
+      <a
         onClick={() => setActive(false)}
-        className={active ? button : button + '-translate-y-1'}>
+        className={`${
+          active ? '' : 'bg-[#1a5cff] text-white'
+        } w-fit mx-auto rounded-lg py-2 px-8 cursor-pointer active:scale-95
+        shadow-md text-sm duration-300 border border-[#1a5cff] active:bg-opacity-80
+        ease-in-out bg-transparent md:text-sm text-[#1a5cff]`}>
         Default
-      </button>
-      <button className={disabledButton + 'opacity-50 cursor-auto select-none'}>
-        Default
-      </button>
+      </a>
     </div>
   );
 };
@@ -136,50 +112,6 @@ export const Border = () => {
 
 </Code>
 
-<div id="gradient"></div>
-
-<ComponentExample name="Gradient" paragraph="This is a paragraph">
-  <Gradient />
-</ComponentExample>
-
-<Code>
-```jsx
-import React, { useState } from 'react';
-
-export const Gradient = () => {
-  const [active, setActive] = useState(true);
-
-const button =
-'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-gradient-to-r from-[#1a5cff] via-purple-500 to-pink-500 md:text-sm text-white hover:shadow-md hover:shadow-blue-500/50 ';
-
-const disabledButton =
-'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-gradient-to-r from-[#1a5cff] via-purple-500 to-pink-500 md:text-sm text-white ';
-
-return (
-
-<div className="flex items-center space-x-3">
-  <button
-    onClick={() => setActive(true)}
-    className={
-      active ? button + '-translate-y-1 shadow-md shadow-blue-500/50' : button
-    }>
-    Active
-  </button>
-  <button
-    onClick={() => setActive(false)}
-    className={
-      active ? button : button + '-translate-y-1 shadow-md shadow-blue-500/50'
-    }>
-    Default
-  </button>
-  <button className={disabledButton + 'opacity-50 cursor-auto select-none'}>
-    Disabled
-  </button>
-</div>
-); };
-
-````
-</Code>
 
 <div id="transparent" />
 
@@ -194,108 +126,29 @@ import React, { useState } from 'react';
 export const Transparent = () => {
   const [active, setActive] = useState(true);
 
-  const button =
-    'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-gradient-to-r from-[#1a5cff] via-purple-500 to-pink-500 md:text-sm text-white hover:shadow-md hover:shadow-blue-500/50 ';
-
-  const disabledButton =
-    'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-gradient-to-r from-[#1a5cff] via-purple-500 to-pink-500 md:text-sm text-white ';
-
   return (
     <div className="flex items-center space-x-3">
-      <button
+      <a
         onClick={() => setActive(true)}
-        className={active ? button + '-translate-y-1 shadow-md shadow-blue-500/50' : button}>
+        className={`${
+          active ? 'bg-blue-500 bg-opacity-30' : ''
+        } w-fit mx-auto rounded-lg py-2 px-8 cursor-pointer active:scale-95
+          shadow-md text-sm duration-300 ease-in-out hover:bg-blue-500 hover:bg-opacity-30
+          md:text-sm text-[#1a5cff]`}>
         Active
-      </button>
-      <button
+      </a>
+      <a
         onClick={() => setActive(false)}
-        className={active ? button : button + '-translate-y-1 shadow-md shadow-blue-500/50'}>
+        className={`${
+          active ? '' : 'bg-blue-500 bg-opacity-30'
+        } w-fit mx-auto rounded-lg py-2 px-8 cursor-pointer active:scale-95
+          shadow-md text-sm duration-300 ease-in-out hover:bg-blue-500 hover:bg-opacity-30
+          md:text-sm text-[#1a5cff]`}>
         Default
-      </button>
-      <button className={disabledButton + 'opacity-50 cursor-auto select-none'}>
-        Disabled
-      </button>
+      </a>
     </div>
   );
 };
-````
-
-</Code>
-
-<div id="loadinga"></div>
-
-<ComponentExample name="Loading A" paragraph="This is a paragraph">
-  <LoadingA />
-</ComponentExample>
-
-<Code>
-```jsx
-import React, { useState } from 'react';
-
-export const Loading = () => {
-  const [active, setActive] = useState(true);
-
-const button =
-'w-fit flex items-center space-x-2 mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-[#1a5cff] dark:bg-[#1a5cff] md:text-sm text-white hover:shadow-md hover:shadow-blue-500/50 ';
-
-const disabledButton =
-'w-fit flex items-center space-x-2 mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-[#1a5cff] dark:bg-[#1a5cff] md:text-sm text-white ';
-
-return (
-
-<div className="flex items-center space-x-3">
-  <button
-    onClick={() => setActive(true)}
-    className={
-      active ? button + '-translate-y-1 shadow-md shadow-blue-500/50' : button
-    }>
-    <span className="w-[15px] h-[15px] rounded-full border-[2px] border-transparent border-r-white animate-spin" />
-    <p>Active</p>
-  </button>
-  <button
-    onClick={() => setActive(false)}
-    className={
-      active ? button : button + '-translate-y-1 shadow-md shadow-blue-500/50'
-    }>
-    <span className="w-[15px] h-[15px] rounded-full border-[2px] border-transparent border-r-white animate-spin" />
-    <p>Default</p>
-  </button>
-  <button className={disabledButton + 'opacity-50 cursor-auto select-none'}>
-    <span className="w-[15px] h-[15px] rounded-full border-[2px] border-transparent border-r-white animate-spin" />
-    <p>Disabled</p>
-  </button>
-</div>
-); };
-
-````
-</Code>
-
-<div id="glassphorism"></div>
-
-<ComponentExample name="Glassphorism" paragraph="This is a paragraph">
-  <Glassphorism />
-</ComponentExample>
-
-<Code>
-```jsx
-import React from 'react';
-
-export const Glassphorism = () => {
-  const buttonGlassphorism =
-    'bg-[#28282d] rounded-xl py-2 px-4 md:py-4 md:px-5 text-white font-medium text-sm group-hover:scale-110 group-hover:z-1 duration-300';
-  const buttonAfter =
-    'absolute -bottom-2 -right-2 group-hover:bottom-2 group-hover:right-0 w-8 h-8 group-hover:w-full group-hover:h-full rounded-xl z-10 bg-gray-200 bg-opacity-50 backdrop-filter backdrop-blur-sm duration-300';
-
-  return (
-    <div className="relative cursor-pointer group">
-      <button className={buttonGlassphorism}>
-        <span className="z-30">Glassphorism</span>
-      </button>
-      <span className={buttonAfter}></span>
-    </div>
-  );
-};
-
 ````
 
 </Code>

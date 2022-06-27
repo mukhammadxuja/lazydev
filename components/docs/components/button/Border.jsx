@@ -3,28 +3,22 @@ import React, { useState } from 'react';
 export const Border = () => {
   const [active, setActive] = useState(true);
 
-  const button =
-    'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 border border-[#1a5cff] active:bg-opacity-80 ease-in-out bg-transparent md:text-sm text-[#1a5cff] ';
-
-  const disabledButton =
-    'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 border border-[#1a5cff] active:bg-opacity-80 ease-in-out bg-transparent md:text-sm text-[#1a5cff] opacity-50 cursor-auto select-none';
-
   return (
     <div className="flex items-center space-x-3">
-      <button
+      <a
         onClick={() => setActive(true)}
-        className={active ? button + 'bg-[#1a5cff] text-white' : button}>
+        className={`${
+          active ? 'bg-[#1a5cff] text-white' : ''
+        } w-fit mx-auto rounded-lg py-2 px-8 cursor-pointer active:scale-95 shadow-md text-sm duration-300 border border-[#1a5cff] active:bg-opacity-80 ease-in-out bg-transparent md:text-sm text-[#1a5cff]`}>
         Active
-      </button>
-      <button
+      </a>
+      <a
         onClick={() => setActive(false)}
-        className={active ? button : button + 'bg-[#1a5cff] text-white'}>
+        className={`${
+          active ? '' : 'bg-[#1a5cff] text-white'
+        } w-fit mx-auto rounded-lg py-2 px-8 cursor-pointer active:scale-95 shadow-md text-sm duration-300 border border-[#1a5cff] active:bg-opacity-80 ease-in-out bg-transparent md:text-sm text-[#1a5cff]`}>
         Default
-      </button>
-      <button className={disabledButton}>
-        Disabled
-      </button>
+      </a>
     </div>
   );
 };
-// 1a5cff

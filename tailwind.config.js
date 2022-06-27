@@ -18,14 +18,29 @@ module.exports = {
         sora: ['Sora', 'sans-serif'],
       },
       backgroundImage: {
-        'gradient-radial': 'radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0)',
-      }
+        'gradient-radial':
+          'radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0)',
+      },
+      animation: {
+        blob: "blob 7s ease-in-out infinite"
+      },
+      keyframes: {
+        blob: {
+          '0%': {
+            transform: 'translate(0px, 0px) scale(1)',
+          },
+          '33%': {
+            transform: 'translate(30px, -50px) scale(1.1)',
+          },
+          '66%': {
+            transform: 'translate(-20px, 20px) scale(0.9)',
+          },
+          '100%': {
+            transform: 'translate(0px, 0px) scale(1)',
+          },
+        },
+      },
     },
-    ripple: (theme) => ({
-      colors: theme('colors'),
-      modifierTransition: 'background 0.3s',
-      activeTransition: 'background 0.1s',
-    }),
   },
   plugins: [
     require('tailwind-scrollbar-hide'),

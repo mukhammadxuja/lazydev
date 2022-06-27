@@ -23,7 +23,7 @@
     @apply absolute py-4 pl-4 pr-8 rounded-md top-14 -left-2 opacity-0 duration-200 ease-in-out bg-white shadow-xl dark:bg-darkPrimary;
   }
   .btn {
-    @apply w-fit mx-auto rounded-xl py-3 px-5 shadow-lg text-sm duration-300 ease-in-out;
+    @apply w-fit mx-auto overflow-hidden rounded-xl py-3 px-5 shadow-lg text-sm duration-300 ease-in-out;
   }
   .dark__btn {
     @apply bg-white dark:bg-darkSecondary text-xs md:text-sm text-primary dark:text-white hover:drop-shadow-2xl hover:translate-y-1;

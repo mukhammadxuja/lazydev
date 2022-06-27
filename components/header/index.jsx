@@ -23,6 +23,7 @@ import {
   Card2,
   Card3,
   Card4,
+  Ripple
 } from '..';
 
 const Header = () => {
@@ -40,7 +41,9 @@ const Header = () => {
           </p>
           <div className="flex items-center w-fit space-x-2 mx-auto md:mx-0">
             <Link href="docs/guide/introduction">
-              <button className="btn btn__primary">{t('home:boshlash')}</button>
+              <button className="btn btn__primary">{t('home:boshlash')}
+              <Ripple color={'#fff'} duration={1000} />
+              </button>
             </Link>
             <div className="flex items-center space-x-2">
               <a

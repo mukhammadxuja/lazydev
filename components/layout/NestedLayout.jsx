@@ -130,7 +130,8 @@ export const NestedLayout = ({ children, name, title }) => {
               </div>
             </div>
           </div>
-          <div className="max-w-4xl mx-auto px-4 lg:px-0">
+          <div className="relative max-w-4xl mx-auto px-4 lg:px-0">
+            
             <div>{children}</div>
           </div>
 

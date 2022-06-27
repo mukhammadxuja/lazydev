@@ -8,6 +8,18 @@ html {
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-delay-2000 {
+    animation-delay: 2s;
+  }
+  .animation-delay-3000 {
+    animation-delay: 3s;
+  }
+  .animation-delay-4000 {
+    animation-delay: 4s;
+  }
+}
+
 @layer base {
   :root {
     --color-primary: #2c3e50;
@@ -52,3 +64,14 @@ html {
     transform: translateX(100vw);
   }
 }
+
+.ripple {
+  animation: ripple;
+}
+
+@keyframes ripple {
+    to {
+      opacity: 0;
+      transform: scale(2);
+    }
+  }
