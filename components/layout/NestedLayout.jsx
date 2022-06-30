@@ -106,20 +106,6 @@ export const NestedLayout = ({ children, name, title }) => {
                   }>
                   {name}
                 </h3>
-                <div className="flex items-center space-x-2 md:space-x-3">
-                  <FiEdit
-                    title="Edit Page"
-                    className="text-lg hover:opacity-75 rounded-lg cursor-pointer"
-                  />
-                  <FiCode
-                    title="View Github Code"
-                    className="text-lg hover:opacity-75 rounded-lg cursor-pointer"
-                  />
-                  <BiBug
-                    title="Report a Bug"
-                    className="text-lg hover:opacity-75 rounded-lg cursor-pointer"
-                  />
-                </div>
               </div>
               <div className="hidden lg:block">
                 <BiArrowBack

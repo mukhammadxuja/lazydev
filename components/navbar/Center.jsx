@@ -10,11 +10,11 @@ const Center = () => {
   return (
     <>
       <div className="hidden lg:inline-flex items-center space-x-3 md:space-x-8">
-        <div>
-          <p onClick={() => setGuide(!guide)} className="link list-none">
+        <Link href="/docs/guide/introduction">
+          <p className="link list-none">
             Docs
           </p>
-        </div>
+        </Link>
 
         <div class="relative group">
           <button

@@ -70,6 +70,11 @@ export const links = [
     path: '/docs/components/tag-input',
   },
   {
+    id: 14,
+    title: 'Accordion',
+    path: '/docs/components/accordion',
+  },
+  {
     id: 15,
     title: 'Another',
     path: '/docs/components/another',

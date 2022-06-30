@@ -104,7 +104,7 @@ const Accordion = (props) => {
         <div
           className={`${
             active ? 'bg-blue-100 dark:bg-black dark:bg-opacity-40' : ''
-          } py-2 px-4 flex items-center cursor-pointer hover:bg-blue-100 dark:hover:bg-black dark:hover:bg-opacity-40 group`}
+          } py-2 px-4 flex items-center cursor-pointer hover:bg-blue-300 hover:bg-opacity-70 dark:hover:bg-black dark:hover:bg-opacity-40 group`}
           onClick={toggleAccordion}>
           {Icon}
           <div className="ml-4 flex-grow">
@@ -144,12 +144,7 @@ const Accordion = (props) => {
 export const Default = () => {
   return (
     <div className="relative">
-      <div className="absolute top-1/3 left-1/3 transform -translate-x-1/2 -translate-y-1/2">
-        <div className="absolute -top-10 -left-20 w-20 h-20 md:w-40 md:h-40 bg-purple-400 animate-blob animation-delay-2000 rounded-full filter blur-xl opacity-60" />
-        <div className="absolute top-2 left-2 w-20 h-20 md:w-40 md:h-40 bg-orange-300 animate-blob animation-delay-4000 rounded-full filter blur-xl opacity-60" />
-        <div className="absolute -top-20 left-1/2 w-20 h-20 md:w-40 md:h-40 bg-green-400 animate-blob animation-delay-2000 rounded-full filter blur-xl opacity-60" />
-      </div>
-      <div className="w-[18rem] md:w-[25rem] bg-white dark:bg-black bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-40 dark:bg-opacity-40 py-2 flex flex-col border border-blue-400 rounded-lg">
+      <div className="w-[18rem] md:w-[25rem] bg-white dark:bg-black backdrop-filter backdrop-blur-sm bg-opacity-40 dark:bg-opacity-40 py-2 flex flex-col border border-blue-400 rounded-lg">
         <Accordion
           title="Connected devices"
           paragraph="Two issues to fix right now"
