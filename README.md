@@ -9,28 +9,25 @@
 - [ ] Breadcrumb
 - [x] Button
 - [x] Card
-- [x] Checkbox
-- [ ] Chip
+- [ ] Checkbox
 - [ ] Collapse
 - [x] Dialogs
-- [ ] Divider
 - [ ] Dropdown
-- [ ] Images
 - [x] Input
 - [ ] List
 - [x] Loading
-- [x] Navbar
-- [x] Notification
+- [ ] Navbar
+- [x] Toast
 - [ ] Number Input
-- [x] Pagination
-- [x] Popup
+- [ ] Pagination
+- [ ] Popup
 - [ ] Progress
-- [x] Radio
+- [ ] Radio
 - [x] Select
 - [x] Sidebar
 - [ ] Slider
-- [x] Switch
-- [x] Table
+- [ ] Switch
+- [ ] Table
 - [ ] Tabs
 - [ ] Textarea
 - [x] Tooltip
