@@ -11,9 +11,7 @@ const Center = () => {
     <>
       <div className="hidden lg:inline-flex items-center space-x-3 md:space-x-8">
         <Link href="/docs/guide/introduction">
-          <p className="link list-none">
-            Docs
-          </p>
+          <p className="link list-none">Docs</p>
         </Link>
 
         <div class="relative group">
@@ -49,9 +47,12 @@ const Center = () => {
         </div>
 
         <div>
-          <p onClick={() => setGuide(!guide)} className="link list-none">
+          <a
+            target="_blank"
+            href="https://github.com/mukhammadxuja/Lazydev"
+            className="link list-none">
             Feedback
-          </p>
+          </a>
         </div>
       </div>
     </>

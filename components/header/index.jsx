@@ -23,15 +23,15 @@ import {
   Card2,
   Card3,
   Card4,
-  Ripple
+  Ripple,
 } from '..';
 
 const Header = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="w-full h-screen">
-      <div className="relative container mx-auto grid grid-cols-1 md:grid-cols-2 content-center items-center h-screen px-4 md:px-0">
+    <div className="container mx-auto w-full h-screen">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 content-center items-center h-screen px-4 md:px-0">
         <div className="space-y-3">
           <h3 className="relative text-2xl text-center md:text-left md:text-[1.7rem] lg:text-[2rem] font-semibold text-primary dark:text-white">
             {t('home:heading')}
@@ -41,9 +41,7 @@ const Header = () => {
           </p>
           <div className="flex items-center w-fit space-x-2 mx-auto md:mx-0">
             <Link href="docs/guide/introduction">
-              <button className="btn btn__primary">{t('home:boshlash')}
-              <Ripple color={'#fff'} duration={1000} />
-              </button>
+              <button className="btn btn__primary">{t('home:boshlash')}</button>
             </Link>
             <div className="flex items-center space-x-2">
               <a
@@ -60,9 +58,6 @@ const Header = () => {
                 className="btn px-3 py-[0.60rem] relative bg-transparent dark:bg-darkSecondary border-2 border-gray-300 hover:border-gray-800 dark:border-gray-600 dark:hover:border-gray-200 flex items-center space-x-2 text-primary dark:text-white"
                 rel="noreferrer">
                 <BsGithub className="text-xl" />
-                <span className="absolute -top-3 -right-5 px-2 py-1 text-xs text-white bg-primary dark:bg-darkSecondary rounded-t-lg rounded-br-lg">
-                  57
-                </span>
               </a>
             </div>
           </div>

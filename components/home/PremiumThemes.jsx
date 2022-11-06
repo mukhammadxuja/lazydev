@@ -9,7 +9,7 @@ const PremiumThemes = () => {
   const { t } = useTranslation();
   return (
     <>
-      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 my-10 md:py-16 px-4 lg:px-0">
+      <div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 items-center gap-6 md:gap-8 lg:gap-10 my-10 md:py-16 px-4 lg:px-0">
         <div className="relative mx-auto md:mx-0">
           <div className="absolute z-10 -top-16 md:-top-28 -left-0 md:-left-20">
             <LazyLoadImage

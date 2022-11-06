@@ -6,6 +6,16 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
+    container: {
+      center: true,
+      padding: {
+        DEFAULT: '1rem',
+        sm: '2rem',
+        lg: '4rem',
+        xl: '5rem',
+        '2xl': '6rem',
+      },
+    },
     extend: {
       colors: {
         primary: 'var(--color-primary)',
@@ -22,7 +32,7 @@ module.exports = {
           'radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0)',
       },
       animation: {
-        blob: "blob 7s ease-in-out infinite"
+        blob: 'blob 7s ease-in-out infinite',
       },
       keyframes: {
         blob: {

@@ -25,15 +25,8 @@ const Tools = () => {
             />
             <CircleCard
               src="/images/tools/next.svg"
-              isHidden="block dark:hidden"
               title="Next js"
               alt="Next light logo"
-            />
-            <CircleCard
-              src="/images/tools/next-dark.svg"
-              isHidden="hidden dark:block"
-              title="Next js"
-              alt="Next dark logo"
             />
             <CircleCard
               src="/images/tailwind.svg"

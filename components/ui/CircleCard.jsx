@@ -1,10 +1,9 @@
-import React from 'react';
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 const CircleCard = ({ src, alt, isHidden }) => {
   return (
     <>
-      <div className={`square__card  ${isHidden}`}>
+      <div className={`${isHidden} square__card`}>
         <LazyLoadImage
           src={src}
           effect="blur"

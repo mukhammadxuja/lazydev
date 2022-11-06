@@ -13,7 +13,7 @@ export const Metadata = () => {
         name="description"
       />
       <title>Lazydev - Framework Components - React.js</title>
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.ico"  type="image/x-icon" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link rel="preconnect" href="https://fonts.gstatic.com" />
       <link
