@@ -49,6 +49,7 @@ const Center = () => {
         <div>
           <a
             target="_blank"
+            rel="noreferrer"
             href="https://github.com/mukhammadxuja/Lazydev"
             className="link list-none">
             Feedback

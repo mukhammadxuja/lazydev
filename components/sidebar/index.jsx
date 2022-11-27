@@ -5,7 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-import Logo from './logo.png'
+import Logo from './logo.png';
 
 const Sidebar = ({ sidebar, setSidebar }) => {
   const [activeLink, setActiveLink] = useState(false);
@@ -77,13 +77,13 @@ const Sidebar = ({ sidebar, setSidebar }) => {
             </div>
             <ul className="p-2">
               {links.map((item) => (
-                <Link href={item.path}>
-                  <li
-                    key={item.id}
-                    className={`router.pathname === ${item.path} ? sidebar__link : sidebar__link`}>
-                    {item.title}
-                  </li>
-                </Link>
+                <li
+                  key={item.id}
+                  className={`router.pathname === ${item.path} ? sidebar__link : sidebar__link`}>
+                  <Link href={item.path}>
+                    <a>{item.title}</a>
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
