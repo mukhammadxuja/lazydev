@@ -5,4 +5,4 @@ module.exports = {
   singleQuote: true,
   bracketSameLine: true,
   arrowParens: 'always',
-}
+};

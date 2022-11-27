@@ -3,8 +3,7 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
 import { IoIosArrowForward } from 'react-icons/io';
-import { FiEdit, FiCode } from 'react-icons/fi';
-import { BiBug, BiArrowBack } from 'react-icons/bi';
+import { BiArrowBack } from 'react-icons/bi';
 
 import { Footer, Setting } from '../';
 import { links } from '../../data/links';
@@ -42,7 +41,7 @@ export const NestedLayout = ({ children, name, title }) => {
             <div className="">
               <div className="py-1">
                 <div className="flex items-center space-x-1 cursor-pointer">
-                  <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
+                  <h4 className="font-semibold text-primary dark:text-white">
                     Guide
                   </h4>
                   <IoIosArrowForward className="text-sm" />
@@ -55,7 +54,7 @@ export const NestedLayout = ({ children, name, title }) => {
               </div>
               <div className="py-1">
                 <div className="flex items-center space-x-1 cursor-pointer">
-                  <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
+                  <h4 className="font-semibold text-primary dark:text-white">
                     Theme
                   </h4>
                   <IoIosArrowForward className="text-sm" />
@@ -68,18 +67,18 @@ export const NestedLayout = ({ children, name, title }) => {
               </div>
               <div className="py-1">
                 <div className="flex items-center space-x-1 cursor-pointer">
-                  <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
+                  <h4 className="font-semibold text-primary dark:text-white">
                     Components
                   </h4>
                   <IoIosArrowForward className="text-sm" />
                 </div>
                 <ul className="p-2">
                   {links.map((item) => (
-                    <Link href={item.path}>
-                      <li key={item.id} className="sidebar__link">
-                        {item.title}
-                      </li>
-                    </Link>
+                    <li key={item.id} className="sidebar__link">
+                      <Link href={item.path}>
+                        <a>{item.title}</a>
+                      </Link>
+                    </li>
                   ))}
                 </ul>
               </div>
@@ -117,7 +116,6 @@ export const NestedLayout = ({ children, name, title }) => {
             </div>
           </div>
           <div className="relative max-w-4xl mx-auto px-4 lg:px-0">
-            
             <div>{children}</div>
           </div>
 

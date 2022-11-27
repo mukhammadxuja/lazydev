@@ -14,7 +14,7 @@ const Center = () => {
           <p className="link list-none">Docs</p>
         </Link>
 
-        <div class="relative group">
+        <div className="relative group">
           <button
             type="button"
             className="link list-none flex items-center"
@@ -26,9 +26,9 @@ const Center = () => {
               viewBox="0 0 20 20"
               fill="currentColor">
               <path
-                fill-rule="evenodd"
+                clipRule="evenodd"
                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clip-rule="evenodd"
+                clipRule="evenodd"
               />
             </svg>
           </button>
@@ -36,11 +36,11 @@ const Center = () => {
             <div className="absolute -top-4 w-full h-6 bg-transparent" />
             <ul className="absolute z-10 left-1/2 transform -translate-x-1/2 bg-white dark:bg-darkPrimary shadow-md w-36 rounded-md p-3">
               {links.map((item, index) => (
-                <Link href={`${item.path}`}>
-                  <li key={index} className="link py-1">
-                    {item.title}
-                  </li>
-                </Link>
+                <li key={index} className="link py-1">
+                  <Link href={`${item.path}`}>
+                    <a>{item.title}</a>
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>

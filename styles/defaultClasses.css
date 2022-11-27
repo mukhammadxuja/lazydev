@@ -8,7 +8,7 @@
     @apply text-secondary cursor-pointer hover:text-primary font-medium dark:hover:text-white whitespace-nowrap dark:group-hover:text-white;
   }
   .sidebar__link {
-    @apply text-secondary cursor-pointer hover:text-primary font-normal py-1 md:py-1.5 dark:hover:text-white whitespace-nowrap dark:group-hover:text-white;
+    @apply text-secondary cursor-pointer hover:text-primary font-normal py-1 dark:hover:text-white whitespace-nowrap dark:group-hover:text-white;
   }
   .sidebar {
     @apply bg-white dark:bg-darkSecondary fixed z-[100] h-screen w-[240px] transform -translate-x-full px-5 overflow-y-auto scrollbar-hide duration-200;

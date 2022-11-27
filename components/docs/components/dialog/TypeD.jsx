@@ -46,7 +46,7 @@ export const TypeD = () => {
                 both visually and in its ecosystem Lazydev does not have a
                 design line such as other component frameworks based on Material
                 Design, we believe that there are already emaciated frameworks
-                that look visually and in UI / UX and we don't want to be one
+                that look visually and in UI / UX and we don&apos;t want to be one
                 more of the bunch, apart from that we love to create and design
                 new experiences and surprise you with new elements or details
                 that we can only do by being visually free.

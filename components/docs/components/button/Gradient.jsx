@@ -1,28 +1,14 @@
-import React, { useState } from 'react';
-
 export const Gradient = () => {
-  const [active, setActive] = useState(true);
-
-  const button =
-    'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-gradient-to-r from-[#1a5cff] via-purple-500 to-pink-500 md:text-sm text-white hover:shadow-md hover:shadow-blue-500/50 ';
-
-  const disabledButton =
-    'w-fit mx-auto rounded-xl py-2 px-4 shadow-md text-sm duration-300 active:bg-opacity-80 ease-in-out bg-gradient-to-r from-[#1a5cff] via-purple-500 to-pink-500 md:text-sm text-white ';
-
   return (
     <div className="flex items-center space-x-3">
-      <button
-        onClick={() => setActive(true)}
-        className={active ? button + '-translate-y-1 shadow-md shadow-blue-500/50' : button}>
+      <button className="text-white bg-gradient-to-br from-[#009FFD] to-[#2A2A72] hover:bg-gradient-to-bl font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb- active:scale-95 duration-300">
         Active
       </button>
-      <button
-        onClick={() => setActive(false)}
-        className={active ? button : button + '-translate-y-1 shadow-md shadow-blue-500/50'}>
-        Default
-      </button>
-      <button className={disabledButton + 'opacity-50 cursor-auto select-none'}>
-        Disabled
+
+      <button className="relative inline-flex items-center justify-center p-0.5 mb-0 mr-2 overflow-hidden text-sm font-medium text-[#1a5cff] rounded-lg group bg-gradient-to-br from-[#009FFD] to-[#2A2A72] hover:text-white active:scale-95 duration-300">
+        <span className="relative px-5 py-2 transition-all ease-in duration-200 bg-white rounded-md group-hover:bg-opacity-0">
+          Gradient
+        </span>
       </button>
     </div>
   );
