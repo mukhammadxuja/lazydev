@@ -8,7 +8,6 @@ import { useRouter } from 'next/router';
 import Logo from './logo.png';
 
 const Sidebar = ({ sidebar, setSidebar }) => {
-  const [activeLink, setActiveLink] = useState(false);
 
   const router = useRouter();
 
@@ -44,7 +43,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           </div>
           <div className="py-1">
             <div className="flex items-center space-x-1 cursor-pointer">
-              <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
+              <h4 className="font-semibold text-primary dark:text-white">
                 Guide
               </h4>
               <IoIosArrowForward className="text-sm" />
@@ -57,7 +56,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           </div>
           <div className="py-1">
             <div className="flex items-center space-x-1 cursor-pointer">
-              <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
+              <h4 className="font-semibold text-primary dark:text-white">
                 Theme
               </h4>
               <IoIosArrowForward className="text-sm" />
@@ -70,7 +69,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
           </div>
           <div className="py-1">
             <div className="flex items-center space-x-1 cursor-pointer">
-              <h4 className="font-semibold font-[1rem] text-primary dark:text-white">
+              <h4 className="font-semibold text-primary dark:text-white">
                 Components
               </h4>
               <IoIosArrowForward className="text-sm" />
