@@ -28,7 +28,6 @@ const Center = () => {
               <path
                 clipRule="evenodd"
                 d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
-                clipRule="evenodd"
               />
             </svg>
           </button>
@@ -51,8 +50,20 @@ const Center = () => {
             target="_blank"
             rel="noreferrer"
             href="https://github.com/mukhammadxuja/Lazydev"
-            className="link list-none">
-            Feedback
+            className="link flex items-center space-x-2 -ml-1 list-none">
+            Give a star
+            <svg
+              aria-hidden="true"
+              height="14"
+              viewBox="0 0 16 16"
+              version="1.1"
+              width="14"
+              fill="#fcd706"
+              className='mt-1 ml-1'>
+              <path
+                fillRule="evenodd"
+                d="M8 .25a.75.75 0 01.673.418l1.882 3.815 4.21.612a.75.75 0 01.416 1.279l-3.046 2.97.719 4.192a.75.75 0 01-1.088.791L8 12.347l-3.766 1.98a.75.75 0 01-1.088-.79l.72-4.194L.818 6.374a.75.75 0 01.416-1.28l4.21-.611L7.327.668A.75.75 0 018 .25z"></path>
+            </svg>
           </a>
         </div>
       </div>
