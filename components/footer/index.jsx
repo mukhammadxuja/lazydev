@@ -1,4 +1,3 @@
-import React from 'react';
 import Link from 'next/link';
 import { AiOutlineSend } from 'react-icons/ai';
 import { useTranslation } from 'next-i18next';
