@@ -85,9 +85,9 @@ const Footer = ({ bg }) => {
           <a
             target="_blank"
             className="font-medium hover:text-white"
-            href="https://anvarovm.vercel.app"
+            href="https://anvarov.vercel.app/"
             rel="noreferrer">
-            Akzmsh
+            Anvarov
           </a>
         </p>
       </div>
