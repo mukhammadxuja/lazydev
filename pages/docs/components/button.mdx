@@ -13,13 +13,13 @@ import { OutlineColor } from '@/components/docs/components/button/OutlineColor';
 import { GhostColor } from '@/components/docs/components/button/GhostColor';
 import { SoftColor } from '@/components/docs/components/button/SoftColor';
 import { Animations } from '@/components/docs/components/button/Animations';
-import { Transparent } from '@/components/docs/components/button/Transparent';
+import { Disabled } from '@/components/docs/components/button/Disabled';
 import { Gradient } from '@/components/docs/components/button/Gradient';
 import { Loading } from '@/components/docs/components/button/Loading';
 
 export const meta = {
-  name: 'Button',
-  title: 'Button | Lazydev ui components',
+  name: 'Buttons',
+  title: 'Buttons | Lazydev ui components',
 };
 
 export const getStaticProps = async ({ locale }) => {
@@ -51,6 +51,9 @@ export const getStaticProps = async ({ locale }) => {
   </a>
   <a href="#animations" className="sidebar__link">
     Animations
+  </a>
+  <a href="#disabled" className="sidebar__link">
+    Disabled
   </a>
   <a href="#gradient" className="sidebar__link">
     Gradient
@@ -512,22 +515,32 @@ export const getStaticProps = async ({ locale }) => {
 
 </Code>
 
-<div id="transparent" />
+<div id="disabled" />
 
-<ComponentExample name="Transparent" paragraph="Transparent button component">
-  <Transparent />
+<ComponentExample name="Disabled" paragraph="Make buttons look inactive by adding the disabled boolean attribute and .cursor-not-allowed class to any <button> element.
+<a>s don't support the disabled attribute.">
+  <Disabled />
 </ComponentExample>
 
 <Code>
   ```jsx
-  <div className="flex items-center space-x-3">
-    <a className="w-fit bg-blue-500 bg-opacity-30 rounded-lg py-2 px-8 cursor-pointer font-medium active:scale-95 shadow-md text-sm duration-300 ease-in-out hover:bg-blue-500 hover:bg-opacity-30 md:text-sm text-[#1a5cff] hover:bg-transparent">
-      Active
-    </a>
-    <a className="w-fit hover:bg-blue-500 hover:bg-opacity-30 rounded-lg py-2 px-8 cursor-pointer font-medium active:scale-95 shadow-md text-sm duration-300 ease-in-out  md:text-sm text-[#1a5cff] bg-transparent">
-      Transparent
-    </a>
-  </div>
+      <button
+        type="button"
+        disabled
+        className="rounded-lg md:rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        text-white bg-blue-600 enabled:hover:bg-blue-500 disabled:opacity-75
+        disabled:cursor-not-allowed enabled:cursor-pointer"
+        >
+        Disabled
+      </button>
+      <button
+        type="button"
+        className="rounded-lg md:rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm border font-medium
+        bg-white text-gray-500 shadow-sm cursor-not-allowed dark:bg-gray-800
+        dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400"
+        disabled>
+        Disabled
+      </button>
   ```
 </Code>
 
