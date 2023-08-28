@@ -1,0 +1,35 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+import { NestedLayout } from '@/components/layout/NestedLayout';
+import ComponentExample from '@/components/layout/ComponentExample';
+import { Code } from '@/components/layout/Code';
+import { PrevAndNext } from '@/components/layout/PrevAndNext';
+import { SidebarLink } from '@/components/layout/SidebarLink';
+
+import { ContextMenu } from '@/components/docs/components/context-menu/index';
+
+export const meta = {
+  name: 'Context Menu',
+  title: 'Context Menu | Lazydev ui components',
+};
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home'])),
+    },
+  };
+};
+
+<PrevAndNext
+  leftPath="/docs/components/pagination"
+  rightPath="/docs/components/sidebar"
+/>
+
+<ContextMenu />
+
+export default ({ children }) => (
+  <NestedLayout name={meta.name} title={meta.title}>
+    {children}
+  </NestedLayout>
+);
