@@ -23,7 +23,7 @@ export const Rounded = () => {
       </button>
       <button
         type="button"
-        className="btn rounded-full bg-transparent dark:bg-transparent border-2 border-blue-300 hover:border-blue-600 dark:border-gray-600 dark:hover:border-gray-500 text-blue-600 dark:text-white mx-1 md:mx-2 my-1 md:my-2">
+        className="btn rounded-full bg-transparent dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 border-2 border-blue-300 hover:border-blue-600 dark:hover:border-gray-500 text-blue-600 dark:text-white mx-1 md:mx-2 my-1 md:my-2">
         White
       </button>
       <button
