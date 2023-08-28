@@ -5,7 +5,7 @@ export const SidebarLink = ({ children }) => {
 
   // scroll animation
   const controlNavbar = () => {
-    if (window.scrollY > 200) {
+    if (window.scrollY > 50) {
       setShow(false);
     } else {
       setShow(true);
@@ -25,10 +25,13 @@ export const SidebarLink = ({ children }) => {
         className={
           show
             ? 'hidden md:block fixed z-50 top-[10rem] right-4 duration-300'
-            : 'hidden md:block fixed z-50 top-[7rem] right-4 duration-300'
-        }>
-        <div className="flex flex-col text-right text-xs md:text-sm text-primary dark:text-gray-400 dark:hover:text-white space-x-1">
+            : 'hidden md:block fixed z-50 top-[8rem] right-4 duration-300'
+          }>
+        <div className="flex flex-col">
+          <h4 className='float-right text-black font-semibold text-xs md:text-base dark:text-white'>On this page</h4>
+          <div className='flex flex-col text-right text-xs md:text-sm mt-1'>
           {children}
+          </div>
         </div>
       </div>
     </div>

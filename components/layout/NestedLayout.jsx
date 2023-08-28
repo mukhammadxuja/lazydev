@@ -94,14 +94,14 @@ export const NestedLayout = ({ children, name, title }) => {
           <div
             className={
               show
-                ? 'breadcrumbs__div py-5 bg-gray-200'
-                : 'breadcrumbs__div py-3 bg-gray-100 dark:bg-darkSecondary'
+                ? 'breadcrumbs__div py-5 bg-gray-200 duration-300'
+                : 'breadcrumbs__div py-3 md:py-4 bg-gray-100 dark:bg-darkSecondary duration-300'
             }>
             <div>
               <div className="max-w-4xl mx-auto px-4 lg:px-0 flex items-center justify-between z-30">
                 <h3
                   className={
-                    show ? 'heading' : 'heading text-base font-medium'
+                    show ? 'heading duration-300' : 'heading text-base font-medium pt-1 -mb-1 duration-300'
                   }>
                   {name}
                 </h3>
@@ -110,7 +110,7 @@ export const NestedLayout = ({ children, name, title }) => {
                 <BiArrowBack
                   onClick={() => router.push('/')}
                   title="Go to Back"
-                  className="absolute left-3 top-1/3 text-lg hover:opacity-75 rounded-lg cursor-pointer"
+                  className="absolute left-3 top-1/2 text-lg hover:opacity-75 rounded-lg cursor-pointer -mt-1 mb-1"
                 />
               </div>
             </div>
