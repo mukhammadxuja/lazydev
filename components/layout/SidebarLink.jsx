@@ -24,8 +24,8 @@ export const SidebarLink = ({ children }) => {
       <div
         className={
           show
-            ? 'hidden md:block fixed z-50 top-[10rem] right-4 duration-300'
-            : 'hidden md:block fixed z-50 top-[8rem] right-4 duration-300'
+            ? 'hidden xl:block fixed z-50 top-[10rem] right-4 duration-300'
+            : 'hidden xl:block fixed z-50 top-[8rem] right-4 duration-300'
           }>
         <div className="flex flex-col">
           <h4 className='float-right text-black font-semibold text-xs md:text-base dark:text-white'>On this page</h4>

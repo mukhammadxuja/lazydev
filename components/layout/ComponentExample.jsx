@@ -9,7 +9,7 @@ const ComponentExample = ({ children, name, paragraph, space, bgImage }) => {
         <h3 className="py-1 md:py-3 text-lg md:text-2xl font-semibold">{name}</h3>
       </div>
       <p className="text-xs md:text-sm pl-4 pb-2 md:pb-4">{paragraph}</p>
-      <div className={`rounded-xl bg-white bg-opacity-8 dark:bg-darkPrimary py-10 flex justify-center z-0 ${bgImage} bg-no-repeat bg-cover`}>
+      <div className={`rounded-xl bg-white bg-opacity-8 dark:bg-darkPrimary py-6 md:py-10 px-4 md:px-6 flex justify-center z-0 ${bgImage} bg-no-repeat bg-cover`}>
         <div className={`${space}`}>{children}</div>
       </div>
     </div>

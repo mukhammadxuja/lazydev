@@ -8,6 +8,10 @@ import { SidebarLink } from '@/components/layout/SidebarLink';
 
 import { Types } from '@/components/docs/components/button/Types';
 import { Rounded } from '@/components/docs/components/button/Rounded';
+import { SolidColor } from '@/components/docs/components/button/SolidColor';
+import { OutlineColor } from '@/components/docs/components/button/OutlineColor';
+import { GhostColor } from '@/components/docs/components/button/GhostColor';
+import { SoftColor } from '@/components/docs/components/button/SoftColor';
 import { Border } from '@/components/docs/components/button/Border';
 import { Transparent } from '@/components/docs/components/button/Transparent';
 import { Gradient } from '@/components/docs/components/button/Gradient';
@@ -33,8 +37,17 @@ export const getStaticProps = async ({ locale }) => {
   <a href="#rounded" className="sidebar__link">
     Rounded
   </a>
-  <a href="#border" className="sidebar__link">
-    Border
+  <a href="#solidColor" className="sidebar__link">
+    Solid color variants
+  </a>
+  <a href="#outlineColor" className="sidebar__link">
+    Outline color variants
+  </a>
+   <a href="#ghostColor" className="sidebar__link">
+    Ghost color variants
+  </a>
+  <a href="#softColor" className="sidebar__link">
+    Soft color variants
   </a>
   <a href="#transparent" className="sidebar__link">
     Transparent
@@ -98,7 +111,7 @@ export const getStaticProps = async ({ locale }) => {
   </button>
   <button
     type="button"
-    className="hover:underline rounded-xl py-2 px-4 md:py-3 md:px-6 bg-transparent text-blue-600
+    className="hover:underline text-xs md:text-sm rounded-xl py-2 px-4 md:py-3 md:px-6 bg-transparent text-blue-600
     active:text-blue-400">
     Link
   </button>
@@ -156,10 +169,277 @@ export const getStaticProps = async ({ locale }) => {
   </button>
   <button
     type="button"
-    className="hover:underline py-2 px-4 md:py-3 md:px-6 bg-transparent text-blue-600
+    className="hover:underline text-xs md:text-sm py-2 px-4 md:py-3 md:px-6 bg-transparent text-blue-600
     active:text-blue-400">
     Link
   </button>
+  ````
+</Code>
+
+<div id="solidColor" />
+
+<ComponentExample name="Solid color variants" paragraph="Predefined solid color button styles.">
+  <SolidColor />
+</ComponentExample>
+
+<Code>
+  ```jsx
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+    text-blue-600 hover:-translate-y-0.5 active:translate-y-0
+    shadow-blue-100 hover:shadow-blue-300 bg-blue-600 hover:bg-blue-500
+        dark:bg-blue-600 text-white mx-1 md:mx-2 my-1 md:my-2">
+        Blue
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        shadow-teal-100 hover:shadow-teal-300 bg-teal-600 hover:bg-teal-500
+        dark:bg-teal-600 text-white mx-1 md:mx-2 my-1 md:my-2">
+        Teal
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        shadow-rose-100 hover:shadow-rose-300 bg-rose-600 hover:bg-rose-500
+        dark:bg-rose-600 text-white mx-1 md:mx-2 my-1 md:my-2">
+        Rose
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        shadow-fuchsia-100 hover:shadow-fuchsia-300 bg-fuchsia-600 hover:bg-fuchsia-500
+        dark:bg-fuchsia-600 text-white mx-1 md:mx-2 my-1 md:my-2">
+        Fuchsia
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        shadow-yellow-100 hover:shadow-yellow-300 bg-yellow-600 hover:bg-yellow-500
+        dark:bg-yellow-600 text-white mx-1 md:mx-2 my-1 md:my-2">
+        Yellow
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        shadow-indigo-100 hover:shadow-indigo-300 bg-indigo-600 hover:bg-indigo-500
+        dark:bg-indigo-600 text-white mx-1 md:mx-2 my-1 md:my-2">
+        Indigo
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        shadow-orange-100 hover:shadow-orange-300 bg-orange-600 hover:bg-orange-500
+        dark:bg-orange-600 text-white mx-1 md:mx-2 my-1 md:my-2">
+        Orange
+      </button>
+  ````
+</Code>
+
+<div id="outlineColor" />
+
+<ComponentExample name="Outline color variants" paragraph="Predefined outline color button styles.">
+  <OutlineColor />
+</ComponentExample>
+
+<Code>
+  ```jsx
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        bg-transparent dark:bg-transparent hover:bg-blue-600 border-2 border-blue-300
+        hover:border-blue-600 dark:border-blue-600 dark:hover:border-blue-600 text-blue-600 hover:text-white dark:text-blue-600 dark:hover:bg-blue-600 dark:hover:text-white mx-1 md:mx-2 my-1 md:my-2">
+        Blue
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        bg-transparent dark:bg-transparent hover:bg-teal-600 border-2 border-teal-300
+        hover:border-teal-600 dark:border-teal-600 dark:hover:border-teal-600 text-teal-600 hover:text-white dark:text-teal-600 dark:hover:bg-teal-600 dark:hover:text-white mx-1 md:mx-2 my-1 md:my-2">
+        Teal
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        bg-transparent dark:bg-transparent hover:bg-rose-600 border-2 border-rose-300
+        hover:border-rose-600 dark:border-rose-600 dark:hover:border-rose-600 text-rose-600 hover:text-white dark:text-rose-600 dark:hover:bg-rose-600 dark:hover:text-white mx-1 md:mx-2 my-1 md:my-2">
+        Rose
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        bg-transparent dark:bg-transparent hover:bg-fuchsia-600 border-2 border-fuchsia-300
+        hover:border-fuchsia-600 dark:border-fuchsia-600 dark:hover:border-fuchsia-600 text-fuchsia-600 hover:text-white dark:text-fuchsia-600 dark:hover:bg-fuchsia-600 dark:hover:text-white mx-1 md:mx-2 my-1 md:my-2">
+        Fuchsia
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        bg-transparent dark:bg-transparent hover:bg-yellow-600 border-2 border-yellow-300
+        hover:border-yellow-600 dark:border-yellow-600 dark:hover:border-yellow-600 text-yellow-600 hover:text-white dark:text-yellow-600 dark:hover:bg-yellow-600 dark:hover:text-white mx-1 md:mx-2 my-1 md:my-2">
+        Yellow
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        bg-transparent dark:bg-transparent hover:bg-indigo-600 border-2 border-indigo-300
+        hover:border-indigo-600 dark:border-indigo-600 dark:hover:border-indigo-600 text-indigo-600 hover:text-white dark:text-indigo-600 dark:hover:bg-indigo-600 dark:hover:text-white mx-1 md:mx-2 my-1 md:my-2">
+        Indigo
+      </button>
+      <button
+        type="button"
+        className="rounded-full py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium
+        hover:-translate-y-0.5 active:translate-y-0
+        bg-transparent dark:bg-transparent hover:bg-orange-600 border-2 border-orange-300
+        hover:border-orange-600 dark:border-orange-600 dark:hover:border-orange-600 text-orange-600 hover:text-white dark:text-orange-600 dark:hover:bg-orange-600 dark:hover:text-white mx-1 md:mx-2 my-1 md:my-2">
+        Orange
+      </button>
+  ````
+</Code>
+
+<div id="ghostColor" />
+
+<ComponentExample name="Ghost color variants" paragraph="Predefined ghost color button styles.">
+  <GhostColor />
+</ComponentExample>
+
+<Code>
+  ```jsx
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-blue-300 duration-200 bg-transparent
+        hover:bg-blue-100 dark:bg-transparent dark:hover:bg-blue-100 text-blue-600 mx-1 md:mx-2 my-1 md:my-2">
+        Blue
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-teal-300 duration-200 bg-transparent
+        hover:bg-teal-100 dark:bg-transparent dark:hover:bg-teal-100 text-teal-600 mx-1 md:mx-2 my-1 md:my-2">
+        Teal
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-rose-300 duration-200 bg-transparent
+        hover:bg-rose-100 dark:bg-transparent dark:hover:bg-rose-100 text-rose-600 mx-1 md:mx-2 my-1 md:my-2">
+        Rose
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-fuchsia-300 duration-200 bg-transparent
+        hover:bg-fuchsia-100 dark:bg-transparent dark:hover:bg-fuchsia-100 text-fuchsia-600 mx-1 md:mx-2 my-1 md:my-2">
+        Fuchsia
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-yellow-300 duration-200 bg-transparent
+        hover:bg-yellow-100 dark:bg-transparent dark:hover:bg-yellow-100 text-yellow-600 mx-1 md:mx-2 my-1 md:my-2">
+        Yellow
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-indigo-300 duration-200 bg-transparent
+        hover:bg-indigo-100 dark:bg-transparent dark:hover:bg-indigo-100 text-indigo-600 mx-1 md:mx-2 my-1 md:my-2">
+        Indigo
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-orange-300 duration-200 bg-transparent
+        hover:bg-orange-100 dark:bg-transparent dark:hover:bg-orange-100 text-orange-600 mx-1 md:mx-2 my-1 md:my-2">
+        Orange
+      </button>
+  ````
+</Code>
+
+<div id="softColor" />
+
+<ComponentExample name="Soft color variants" paragraph="Predefined soft color button styles.">
+  <SoftColor />
+</ComponentExample>
+
+<Code>
+  ```jsx
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-blue-300 duration-200
+        bg-transparent bg-blue-100 hover:bg-blue-600 dark:bg-blue-100 dark:hover:bg-blue-600
+        dark:hover:text-white text-blue-600 hover:text-white mx-1 md:mx-2 my-1 md:my-2">
+        Blue
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-teal-300 duration-200
+        bg-transparent bg-teal-100 hover:bg-teal-600 dark:bg-teal-100
+        dark:hover:bg-teal-600 dark:hover:text-white text-teal-600 hover:text-white mx-1
+        md:mx-2 my-1 md:my-2">
+        Teal
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-rose-300 duration-200
+        bg-transparent bg-rose-100 hover:bg-rose-600 dark:bg-rose-100
+        dark:hover:bg-rose-600 dark:hover:text-white text-rose-600 hover:text-white mx-1
+        md:mx-2 my-1 md:my-2">
+        Rose
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-fuchsia-300 duration-200
+        bg-transparent bg-fuchsia-100 hover:bg-fuchsia-600 dark:bg-fuchsia-100
+        dark:hover:bg-fuchsia-600 dark:hover:text-white text-fuchsia-600 hover:text-white
+        mx-1 md:mx-2 my-1 md:my-2">
+        Fuchsia
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-yellow-300 duration-200
+        bg-transparent bg-yellow-100 hover:bg-yellow-600 dark:bg-yellow-100
+        dark:hover:bg-yellow-600 dark:hover:text-white text-yellow-600 hover:text-white
+        mx-1 md:mx-2 my-1 md:my-2">
+        Yellow
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-indigo-300 duration-200
+        bg-transparent bg-indigo-100 hover:bg-indigo-600 dark:bg-indigo-100
+        dark:hover:bg-indigo-600 dark:hover:text-white text-indigo-600 hover:text-white
+        mx-1 md:mx-2 my-1 md:my-2">
+        Indigo
+      </button>
+      <button
+        type="button"
+        className="rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm font-medium
+        hover:-translate-y-0.5 active:translate-y-0 hover:shadow-orange-300 duration-200
+        bg-transparent bg-orange-100 hover:bg-orange-600 dark:bg-orange-100
+        dark:hover:bg-orange-600 dark:hover:text-white text-orange-600 hover:text-white
+        mx-1 md:mx-2 my-1 md:my-2">
+        Orange
+      </button>
   ````
 </Code>
 
