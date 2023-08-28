@@ -36,7 +36,7 @@ export const Code = ({ children }) => {
       <div className="relative overflow-y-scroll">
         <div
           className={
-            showCode ? 'hidden h-0' : 'p-8 text-primary dark:text-white h-auto'
+            showCode ? 'hidden h-0' : 'text-xs md:text-sm xl:text-base px-0 py-4 lg:p-8 text-primary dark:text-white h-auto'
           }>
           {children}
         </div>

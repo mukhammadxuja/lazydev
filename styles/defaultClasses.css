@@ -26,7 +26,7 @@
     @apply absolute py-4 pl-4 pr-8 rounded-md top-14 -left-2 opacity-0 duration-200 ease-in-out bg-white shadow-xl dark:bg-darkPrimary;
   }
   .btn {
-    @apply rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium text-blue-600 hover:-translate-y-0.5 active:translate-y-0;
+    @apply rounded-lg md:rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium text-blue-600 hover:-translate-y-0.5 active:translate-y-0;
   }
   .dark__btn {
     @apply bg-white dark:bg-darkSecondary text-xs md:text-sm text-primary dark:text-white hover:drop-shadow-2xl hover:translate-y-1;
@@ -85,5 +85,41 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+.btn-shine {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shine::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  transform: rotate(45deg);
+  animation: none; /* Disable the animation by default */
+  transition: opacity 0.3s ease-in-out; /* Add a transition for smooth effect */
+}
+
+.btn-shine:hover::before {
+  animation: shine 1.5s infinite; /* Enable the animation on hover */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.8),
+    rgba(255, 255, 255, 0.5)
+  );
+}
+
+@keyframes shine {
+  0% {
+    transform: translateX(-150%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(150%) rotate(45deg);
   }
 }

@@ -12,7 +12,7 @@ import { SolidColor } from '@/components/docs/components/button/SolidColor';
 import { OutlineColor } from '@/components/docs/components/button/OutlineColor';
 import { GhostColor } from '@/components/docs/components/button/GhostColor';
 import { SoftColor } from '@/components/docs/components/button/SoftColor';
-import { Border } from '@/components/docs/components/button/Border';
+import { Animations } from '@/components/docs/components/button/Animations';
 import { Transparent } from '@/components/docs/components/button/Transparent';
 import { Gradient } from '@/components/docs/components/button/Gradient';
 import { Loading } from '@/components/docs/components/button/Loading';
@@ -49,8 +49,8 @@ export const getStaticProps = async ({ locale }) => {
   <a href="#softColor" className="sidebar__link">
     Soft color variants
   </a>
-  <a href="#transparent" className="sidebar__link">
-    Transparent
+  <a href="#animations" className="sidebar__link">
+    Animations
   </a>
   <a href="#gradient" className="sidebar__link">
     Gradient
@@ -443,28 +443,71 @@ export const getStaticProps = async ({ locale }) => {
   ````
 </Code>
 
-<div id="border" />
+<div id="animations" />
 
-<ComponentExample name="Border" paragraph="Border button component">
-  <Border />
+<ComponentExample name="Animations" paragraph="Button hover animations.">
+  <Animations />
 </ComponentExample>
 
 <Code>
 ```jsx
-  <div className="flex items-center space-x-3">
-    <button
-        className="w-fit rounded-lg py-2 px-8 active:scale-95
-      shadow-md text-sm duration-300 bg-[#1a5cff] active:bg-opacity-80
-      ease-in-out bg-transparent font-medium md:text-sm text-white hover:bg-transparent border border-[#1a5cff] hover:text-[#1a5cff]">
-        Active
-    </button>
-    <button
-        className="w-fit rounded-lg py-2 px-8 active:scale-95
-    shadow-md text-sm duration-300 border border-[#1a5cff] active:bg-opacity-80
-    ease-in-out bg-transparent font-medium md:text-sm text-[#1a5cff] hover:bg-[#1a5cff] hover:text-white">
-        Border
-    </button>
-  </div>
+      <button
+        type="button"
+        className="rounded-lg md:rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200
+        font-medium hover:-translate-y-0.5 active:translate-y-0 shadow-blue-100 hover:shadow-blue-300
+        bg-blue-600 hover:bg-blue-500 dark:bg-blue-600 text-white mx-1 md:mx-2 my-1 md:my-2">
+        Jump
+      </button>
+      <button
+        type="button"
+        className="rounded-lg md:rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200
+        font-medium hover:scale-105 active:scale-100 shadow-blue-100 hover:shadow-blue-300 bg-blue-600
+        hover:bg-blue-500 dark:bg-blue-600 text-white mx-1 md:mx-2 my-1 md:my-2">
+        Scale
+      </button>
+      <button
+        type="button"
+        className="rounded-lg md:rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200
+        font-medium shadow-blue-100 hover:shadow-blue-300 bg-blue-600 hover:bg-blue-500 dark:bg-blue-600
+        text-white mx-1 md:mx-2 my-1 md:my-2 btn-shine">
+        Shine
+      </button>
+
+      .btn-shine {
+      position: relative;
+      overflow: hidden;
+      }
+
+      .btn-shine::before {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        transform: rotate(45deg);
+        animation: none; /* Disable the animation by default */
+        transition: opacity 0.3s ease-in-out; /* Add a transition for smooth effect */
+      }
+
+      .btn-shine:hover::before {
+        animation: shine 1.5s infinite; /* Enable the animation on hover */
+        background: linear-gradient(
+          to right,
+          rgba(255, 255, 255, 0.5),
+          rgba(255, 255, 255, 0.8),
+          rgba(255, 255, 255, 0.5)
+        );
+      }
+
+      @keyframes shine {
+        0% {
+          transform: translateX(-150%) rotate(45deg);
+        }
+        100% {
+          transform: translateX(150%) rotate(45deg);
+        }
+      }
 ````
 
 </Code>
