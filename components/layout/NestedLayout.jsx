@@ -48,7 +48,7 @@ export const NestedLayout = ({ children, name, title }) => {
                     <li
                       key={link.id}
                       className={`${
-                        router.asPath == item.path
+                        router.asPath == link.path
                           ? 'sidebar__link text-blue-500'
                           : 'sidebar__link '
                       }`}>
