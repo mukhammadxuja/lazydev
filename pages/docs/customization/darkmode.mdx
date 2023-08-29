@@ -1,0 +1,30 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+import { NestedLayout } from '@/components/layout/NestedLayout';
+import { PrevAndNext } from '@/components/layout/PrevAndNext';
+
+export const meta = {
+  name: 'Dark Mode',
+  title: 'Dark Mode | Lazydev ui components',
+};
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home'])),
+    },
+  };
+};
+
+<PrevAndNext
+  leftPath="/docs/guide/introduction"
+  rightPath="/docs/components/button"
+/>
+
+<div className="h-screen"></div>
+
+export default ({ children }) => (
+  <NestedLayout name={meta.name} title={meta.title}>
+    {children}
+  </NestedLayout>
+);
