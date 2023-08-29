@@ -23,7 +23,7 @@ const Footer = ({ bg }) => {
         />
       </div>
       <div className="max-w-4xl py-6 md:py-16 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        <div className="py-2 space-y-2 md:space-y-4">
+        <div className="py-2 space-y-1">
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
             Lazydev
           </h3>
@@ -37,7 +37,7 @@ const Footer = ({ bg }) => {
             <p className="link text-sm">FAQ</p>
           </Link>
         </div>
-        <div className="py-2 space-y-2 md:space-y-4">
+        <div className="py-2 space-y-1">
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
             {t('home:footer_resources')}
           </h3>
@@ -51,7 +51,7 @@ const Footer = ({ bg }) => {
             <p className="link text-sm">{t('home:footer_privacy')}</p>
           </Link>
         </div>
-        <div className="py-2 space-y-2 md:space-y-4">
+        <div className="py-2 space-y-1">
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
             {t('home:footer_help')}
           </h3>
@@ -62,7 +62,7 @@ const Footer = ({ bg }) => {
             <p className="link text-sm">FAQ</p>
           </Link>
         </div>
-        <div className="py-2 space-y-2 md:space-y-4">
+        <div className="py-2 space-y-1">
           <h3 className="text-xl font-medium text-primary dark:text-white py-4">
             {t('home:footer_team')}
           </h3>
@@ -79,15 +79,15 @@ const Footer = ({ bg }) => {
         </div>
       </div>
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row space-y-1 md:space-y-0 items-start md:items-center md:justify-between pt-3 pb-5 md:py-10">
-        <p className="text-secondary text-sm">Copyright ©2022 Lazydev</p>
+        <p className="text-secondary text-sm">Copyright ©2023 Lazydev</p>
         <p className="text-secondary text-sm">
           Created By{' '}
           <a
             target="_blank"
-            className="font-medium hover:text-white"
-            href="https://anvarovm.vercel.app"
+            className="font-medium hover:text-gray-600 dark:hover:text-white"
+            href="https://anvarov.vercel.app/"
             rel="noreferrer">
-            Akzmsh
+            Anvarov
           </a>
         </p>
       </div>
