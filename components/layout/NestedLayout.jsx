@@ -2,11 +2,11 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import Head from 'next/head';
-import { IoIosArrowForward } from 'react-icons/io';
+// import { IoIosArrowForward } from 'react-icons/io';
 import { BiArrowBack } from 'react-icons/bi';
 
 import { Footer, Setting } from '../';
-import { links } from '../../data/links';
+import { sidebar } from '../../data/links';
 
 export const NestedLayout = ({ children, name, title }) => {
   const [show, setShow] = useState(true);
@@ -38,53 +38,29 @@ export const NestedLayout = ({ children, name, title }) => {
       <div className="flex bg-white dark:bg-darkSecondary shadow-lg">
         <div className="hidden lg:block">
           <aside className="bg-white dark:bg-darkPrimary fixed z-30 h-screen w-[240px] px-5 pt-[5rem] overflow-y-auto scrollbar-hide">
-            <div className="">
-              <div className="py-1">
-                <div className="flex items-center space-x-1 cursor-pointer">
-                  <h4 className="font-semibold text-primary dark:text-white">
-                    Guide
-                  </h4>
-                  <IoIosArrowForward className="text-sm" />
-                </div>
-                <ul className="p-2">
-                  <Link href="/docs/guide/introduction">
-                    <li className="sidebar__link">Introduction</li>
-                  </Link>
-                </ul>
-              </div>
-              <div className="py-1">
-                <div className="flex items-center space-x-1 cursor-pointer">
-                  <h4 className="font-semibold text-primary dark:text-white">
-                    Theme
-                  </h4>
-                  <IoIosArrowForward className="text-sm" />
-                </div>
-                <ul className="p-2">
-                  <Link href="/docs/theme/">
-                    <li className="sidebar__link">Colors</li>
-                  </Link>
-                </ul>
-              </div>
-              <div className="py-1">
-                <div className="flex items-center space-x-1 cursor-pointer">
-                  <h4 className="font-semibold text-primary dark:text-white">
-                    Components
-                  </h4>
-                  <IoIosArrowForward className="text-sm" />
-                </div>
-                <ul className="p-2">
-                  {links.map((item) => (
-                    <li key={item.id} className={`${router.asPath == item.path ? "sidebar__link text-blue-500" : "sidebar__link "}`}>
-                      <Link href={item.path}>
-                        <a>{item.title}</a>
-                      </Link>
+            {sidebar.map((item) => (
+              <div key={item.id} className="flex flex-col space-y-1">
+                <h2 className="font-semibold text-gray-900 dark:text-white">
+                  {item.name}
+                </h2>
+                <ul className="py-2 px-4 border-l-2  border-gray-100">
+                  {item.links.map((link) => (
+                    <li
+                      key={link.id}
+                      className={`${
+                        router.asPath == item.path
+                          ? 'sidebar__link text-blue-500'
+                          : 'sidebar__link '
+                      }`}>
+                      <Link href={link.path}>{link.title}</Link>
                     </li>
                   ))}
                 </ul>
               </div>
-            </div>
+            ))}
           </aside>
         </div>
+
         <Setting
           reverse="flex-row-reverse"
           position="fixed z-40 bottom-5 right-4"
@@ -101,7 +77,9 @@ export const NestedLayout = ({ children, name, title }) => {
               <div className="max-w-4xl mx-auto px-4 lg:px-0 flex items-center justify-between z-30">
                 <h3
                   className={
-                    show ? 'heading duration-300' : 'heading text-base font-medium pt-1 -mb-1 duration-300'
+                    show
+                      ? 'heading duration-300'
+                      : 'heading text-base font-medium pt-1 -mb-1 duration-300'
                   }>
                   {name}
                 </h3>
