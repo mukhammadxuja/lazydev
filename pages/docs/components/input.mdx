@@ -8,6 +8,7 @@ import { PrevAndNext } from '@/components/layout/PrevAndNext';
 
 import { Basic } from '@/components/docs/components/input/Basic';
 import { Label } from '@/components/docs/components/input/Label';
+import { FloatingLabel } from '@/components/docs/components/input/FloatingLabel';
 import { Icon } from '@/components/docs/components/input/Icon';
 import { Color } from '@/components/docs/components/input/Color';
 import { Tailwind } from '@/components/docs/components/input/Tailwind';
@@ -27,13 +28,13 @@ export const getStaticProps = async ({ locale }) => {
 
 <SidebarLink>
   <a href="#basic" className="text-right">
-    Basic
+    Basic usage
   </a>
-  <a href="#default2" className="text-right">
-    Default B
+  <a href="#label" className="text-right">
+    Label
   </a>
-  <a href="#glassmorphism" className="text-right">
-    Glassmorphism
+  <a href="#floatingLabel" className="text-right">
+    Floating Label
   </a>
   <a href="#withButton" className="text-right">
     With button
@@ -64,7 +65,7 @@ export const getStaticProps = async ({ locale }) => {
       border-gray-200 hover:border-blue-200 outline-none focus:ring-blue-300 
       dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700
       dark:text-gray-400 duration-300" placeholder="Basic input example." />
-      
+
       <textarea type="text" rows={3} className="px-3 py-2 md:py-3 md:px-4 block w-full
       md:w-[18rem] xl:w-[22rem] rounded-lg md:rounded-xl text-sm placeholder:text-gray-600
       placeholder:font-normal border-2 ring-2
@@ -74,32 +75,66 @@ export const getStaticProps = async ({ locale }) => {
 ```
 </Code>
 
+<div id="label"></div>
+
 <ComponentExample
-  name="Label Placeholder"
-  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
+  name="Label input"
+  paragraph="Basic input example with label.">
   <Label />
 </ComponentExample>
 
 <Code>
 ```jsx
-import React from 'react';
-
-export const Label = () => {
-  return (
-    <div className="relative group">
+   <div className="flex flex-col space-y-1">
       <label
-        className="absolute top-0 left-0 w-full h-full flex items-center pl-[10px] duration-200 text-sm group-focus-within:text-xs group-focus-within:h-1/2 group-focus-within:-translate-y-full group-focus-within:pl-0"
-        htmlFor="label">
-        Label
+        className="text-xs md:text-sm font-medium">
+        First name
       </label>
       <input
-        id="label"
-        className="rounded-xl w-[15rem] md:w-[25rem] bg-gray-200 outline-none py-3 px-4 text-xs"
         type="text"
+        className="px-3 py-2 md:py-3 md:px-4 block w-full md:w-[18rem] xl:w-[22rem] rounded-lg md:rounded-xl text-sm border-2 ring-2ring-transparent border-gray-200 hover:border-blue-200 outline-none focus:ring-blue-300  dark:bg-gray-800 dark:hover:bg-slate-800dark:border-gray-700 dark:text-gray-400 duration-300"
+        placeholder="Mukhammadjohn"
       />
     </div>
-  );
-};
+````
+</Code>
+
+<div id="floatingLabel"></div>
+
+<ComponentExample
+  name="Floating label"
+  paragraph="Label input with animations.">
+  <FloatingLabel />
+</ComponentExample>
+
+<Code>
+```jsx
+      <div className="relative group">
+        <label
+          className="absolute top-0 left-0 w-full h-full flex items-center pl-[16px] duration-300 text-xs md:text-sm font-medium group-focus-within:text-xs md:group-focus-within:text-sm group-focus-within:-top-1 group-focus-within:h-1/2 group-focus-within:-translate-y-full group-focus-within:pl-0 cursor-text"
+          htmlFor="label1">
+          First name
+        </label>
+        <input
+          id="label1"
+          type="text"
+          className="px-3 py-2 md:py-3 md:px-4 block w-full md:w-[18rem] xl:w-[22rem] rounded-lg md:rounded-xl text-sm placeholder:opacity-0 placeholder:group-focus-within:opacity-100 placeholder:text-gray-600 placeholder:font-normal border-2 ring-2 ring-transparent border-gray-200 hover:border-blue-200 outline-none focus:ring-blue-300  dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 duration-300"
+          placeholder="Mukhammadjohn"
+        />
+      </div>
+      <div className="relative group">
+        <label
+          className="absolute top-0 left-0 w-full h-full flex items-center pl-[16px] duration-200 text-xs md:text-sm font-medium group-focus-within:font-normal md:group-focus-within:text-[0.60rem] group-focus-within:-top-1 group-focus-within:h-1/2 group-focus-within:translate-y-1 group-focus-within:translate-x-4 group-focus-within:pl-0 group-focus-within:text-blue-500 cursor-text"
+          htmlFor="label2">
+          Last name
+        </label>
+        <input
+          id="label2"
+          type="text"
+          className="px-3 pt-3 pb-1 md:pt-4 md:pb-2 md:px-4 block w-full md:w-[18rem] xl:w-[22rem] rounded-lg md:rounded-xl text-sm placeholder:opacity-0 placeholder:group-focus-within:opacity-100 placeholder:text-gray-600 placeholder:font-normal border-2 ring-2 ring-transparent border-gray-200 hover:border-blue-200 outline-none focus:ring-blue-300  dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:text-gray-400 duration-200"
+          placeholder="Zayniddinov"
+        />
+      </div>
 
 ````
 </Code>
