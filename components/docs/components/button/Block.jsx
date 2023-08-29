@@ -3,12 +3,12 @@ export const Block = () => {
     <div className="flex flex-col space-y-2">
       <button
         type="button"
-        className="w-full md:w-[18rem] xl:w-[22rem] rounded-lg md:rounded-xl py-2 px-4 md:py-3 md:px-6 text-xs md:text-sm duration-200 font-medium hover:-translate-y-0.5 active:translate-y-0 shadow-blue-100 hover:shadow-blue-300 bg-blue-600 hover:bg-blue-500 dark:bg-blue-600 text-white">
+        className="w-full md:w-[18rem] xl:w-[22rem] rounded-lg md:rounded-xl py-2 px-4 md:py-2.5 md:px-6 text-xs md:text-sm duration-200 font-medium hover:-translate-y-0.5 active:translate-y-0 shadow-blue-100 hover:shadow-blue-300 bg-blue-600 hover:bg-blue-500 dark:bg-blue-600 text-white">
         Sign up
       </button>
       <button
         type="button"
-        className="w-full md:w-[18rem] xl:w-[22rem] flex items-center justify-center space-x-2 rounded-lg md:rounded-xl py-2 px-4 md:py-3 md:px-6 duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-blue-100 hover:shadow-blue-300 bg-gray-50 hover:bg-gray-100 border-2 border-gray-100 dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:hover:border-gray-500">
+        className="w-full md:w-[18rem] xl:w-[22rem] flex items-center justify-center space-x-2 rounded-lg md:rounded-xl py-2 px-4 md:py-2.5 md:px-6 duration-200 hover:-translate-y-0.5 active:translate-y-0 shadow-blue-100 hover:shadow-blue-300 bg-gray-50 hover:bg-gray-100 border-2 border-gray-100 dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700 dark:hover:border-gray-500">
         <span>
           <svg
             width="20px"

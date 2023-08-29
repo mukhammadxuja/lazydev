@@ -6,7 +6,7 @@ import { SidebarLink } from '@/components/layout/SidebarLink';
 import { NestedLayout } from '@/components/layout/NestedLayout';
 import { PrevAndNext } from '@/components/layout/PrevAndNext';
 
-import { Default } from '@/components/docs/components/input/Default';
+import { Basic } from '@/components/docs/components/input/Basic';
 import { Label } from '@/components/docs/components/input/Label';
 import { Icon } from '@/components/docs/components/input/Icon';
 import { Color } from '@/components/docs/components/input/Color';
@@ -26,8 +26,8 @@ export const getStaticProps = async ({ locale }) => {
 };
 
 <SidebarLink>
-  <a href="#default" className="text-right">
-    Default 1
+  <a href="#basic" className="text-right">
+    Basic
   </a>
   <a href="#default2" className="text-right">
     Default B
@@ -48,29 +48,29 @@ export const getStaticProps = async ({ locale }) => {
   rightPath="/docs/components/select"
 />
 
-<div id="default"></div>
+<div id="basic"></div>
 
 <ComponentExample
-  name="Default"
-  paragraph="Ranglar va ikonkalar ixtiyoriy! O'zingizga ma'qul rangni qo'llashingiz mumkin. Kodni olmoqchi bo'sangiz Show code tugmasini bosing">
-  <Default />
+  name="Basic"
+  paragraph="Basic input example with placeholder.">
+  <Basic />
 </ComponentExample>
 
 <Code>
 ```jsx
-import React from 'react';
-
-export const Default = () => {
-  return (
-    <>
-      <input
-        className="rounded-xl w-[15rem] md:w-[25rem] bg-gray-200 outline-none py-3 px-4 text-xs focus:px-6 duration-200"
-        type="text"
-        placeholder="Default input"
-      />
-    </>
-  );
-};
+      <input type="text" className="px-3 py-2 md:py-3 md:px-4 block w-full md:w-[18rem]
+      xl:w-[22rem] rounded-lg md:rounded-xl text-sm placeholder:text-gray-600
+      placeholder:font-normal border-2 ring-2 ring-transparent
+      border-gray-200 hover:border-blue-200 outline-none focus:ring-blue-300 
+      dark:bg-gray-800 dark:hover:bg-slate-800 dark:border-gray-700
+      dark:text-gray-400 duration-300" placeholder="Basic input example." />
+      
+      <textarea type="text" rows={3} className="px-3 py-2 md:py-3 md:px-4 block w-full
+      md:w-[18rem] xl:w-[22rem] rounded-lg md:rounded-xl text-sm placeholder:text-gray-600
+      placeholder:font-normal border-2 ring-2
+      ring-transparent border-gray-200 hover:border-blue-200 outline-none focus:ring-blue-300 
+      dark:bg-gray-800 dark:hover:bg-slate-800
+      dark:border-gray-700 dark:text-gray-400 duration-300" placeholder="Basic textarea example." />
 ```
 </Code>
 
