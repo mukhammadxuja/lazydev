@@ -74,7 +74,7 @@ export const NestedLayout = ({ children, name, title }) => {
                 </div>
                 <ul className="p-2">
                   {links.map((item) => (
-                    <li key={item.id} className="sidebar__link">
+                    <li key={item.id} className={`${router.asPath == item.path ? "sidebar__link text-blue-500" : "sidebar__link "}`}>
                       <Link href={item.path}>
                         <a>{item.title}</a>
                       </Link>

@@ -10,9 +10,6 @@
   .sidebar__link {
     @apply text-secondary cursor-pointer hover:text-blue-500 font-medium py-0.5 dark:hover:text-white whitespace-nowrap dark:group-hover:text-white;
   }
-  .sidebar__link:active {
-    @apply text-blue-600
-  }
   .sidebar {
     @apply bg-white dark:bg-darkSecondary fixed z-[100] h-screen w-[240px] transform -translate-x-full px-5 overflow-y-auto scrollbar-hide duration-200;
   }
@@ -51,6 +48,9 @@
   }
   .breadcrumbs__div {
     @apply sticky z-30 top-[2.4rem] md:top-[3.5rem] mt-[3.5rem] bg-gray-100 dark:bg-[#141417] duration-300 shadow-md;
+  }
+  i {
+    @apply text-red-500
   }
 }
 

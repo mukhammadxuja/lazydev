@@ -78,7 +78,7 @@ const Sidebar = ({ sidebar, setSidebar }) => {
               {links.map((item) => (
                 <li
                   key={item.id}
-                  className={`router.pathname === ${item.path} ? sidebar__link : sidebar__link`}>
+                  className={`router.asPath === ${item.path} ? sidebar__link : sidebar__link`}>
                   <Link href={item.path}>
                     <a>{item.title}</a>
                   </Link>
