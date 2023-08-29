@@ -35,7 +35,7 @@
     @apply py-7 px-8 rounded-3xl w-[120px] h-[120px] md:w-[140px] md:h-[140px] inline-flex items-center justify-center bg-white dark:bg-darkSecondary shadow-lg hover:translate-y-2 duration-300 ease-in-out;
   }
   .heading {
-    @apply text-[1.2rem] md:text-[1.7rem] lg:text-[2rem] font-semibold text-primary dark:text-white;
+    @apply text-[1.2rem] md:text-[1.7rem] font-semibold text-primary dark:text-white;
   }
   .paragraph {
     @apply text-xs sm:text-sm md:text-base lg:text-lg font-medium text-primary dark:text-white;

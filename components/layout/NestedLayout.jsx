@@ -70,7 +70,7 @@ export const NestedLayout = ({ children, name, title }) => {
           <div
             className={
               show
-                ? 'breadcrumbs__div py-5 bg-gray-200 duration-300'
+                ? 'breadcrumbs__div py-4 bg-gray-200 duration-300'
                 : 'breadcrumbs__div py-3 md:py-4 bg-gray-100 dark:bg-darkSecondary duration-300'
             }>
             <div>
@@ -78,8 +78,8 @@ export const NestedLayout = ({ children, name, title }) => {
                 <h3
                   className={
                     show
-                      ? 'heading duration-300'
-                      : 'heading text-base font-medium pt-1 -mb-1 duration-300'
+                      ? 'heading duration-300 -mb-2'
+                      : 'heading text-base font-medium pt-1 -mb-2 duration-300'
                   }>
                   {name}
                 </h3>
