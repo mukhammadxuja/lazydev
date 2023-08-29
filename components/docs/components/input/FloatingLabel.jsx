@@ -18,7 +18,7 @@ export const FloatingLabel = () => {
       </div>
       <div className="relative group">
         <label
-          className="absolute top-0 left-0 w-full h-full flex items-center pl-[16px] duration-200 text-xs md:text-sm font-medium group-focus-within:font-normal md:group-focus-within:text-[0.60rem] group-focus-within:-top-1 group-focus-within:h-1/2 group-focus-within:translate-y-1 group-focus-within:translate-x-4 group-focus-within:pl-0 group-focus-within:text-blue-500 cursor-text"
+          className="absolute top-0 left-0 w-full h-full flex items-center pl-[16px] duration-200 text-xs md:text-sm font-medium group-focus-within:font-normal group-focus-within:text-[0.50rem] md:group-focus-within:text-[0.60rem] group-focus-within:-top-1 group-focus-within:h-1/2 group-focus-within:translate-y-1 group-focus-within:translate-x-4 group-focus-within:pl-0 group-focus-within:text-blue-500 cursor-text"
           htmlFor="label2">
           Last name
         </label>
