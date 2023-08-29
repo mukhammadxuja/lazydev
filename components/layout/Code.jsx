@@ -35,19 +35,14 @@ export const Code = ({ children }) => {
           </span>
         )}
       </div>
-      <div className="relative overflow-y-scroll">
+      <div className="relative overflow-scroll">
         <div
           ref={codeRef}
           className={
-            showCode ? 'hidden h-0' : 'text-xs md:text-sm xl:text-base px-0 py-4 lg:p-8 text-primary dark:text-white h-auto'
+            showCode ? 'hidden h-0' : 'text-xs md:text-sm xl:text-base px-0 py-4 lg:p-8 text-primary dark:text-white h-96'
           }>
           {children}
         </div>
-        {/* <a
-          onClick={handleCopy}
-          className="">
-          {copySuccess}
-        </a> */}
         <button className='absolute top-4 right-4 px-6 py-2 rounded-md bg-gray-100 hover:bg-opacity-75 active:bg-white shadow-lg cursor-pointer' onClick={handleCopy}>{copy}</button>
       </div>
     </div>

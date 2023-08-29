@@ -29,7 +29,7 @@ export const SidebarLink = ({ children }) => {
           }>
         <div className="flex flex-col">
           <h4 className='float-right ml-auto text-black font-semibold text-xs md:text-base dark:text-white'>On this page</h4>
-          <div className='flex flex-col text-right text-xs md:text-sm mt-1'>
+          <div className='flex flex-col text-right text-xs mt-1'>
           {children}
           </div>
         </div>
