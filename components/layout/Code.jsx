@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { FiEye, FiEyeOff } from 'react-icons/fi';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 export const Code = ({ children }) => {
   const [showCode, setShowCode] = useState(true);
-  const [copySuccess, setCopySuccess] = useState('Copy');
+  const [copy, setCopy] = useState('Copy');
+  const codeRef = useRef(null)
 
-  const copyToClipBoard = async (copyMe) => {
-    try {
-      await navigator.clipboard.writeText(copyMe);
-      setCopySuccess('Copied');
-      setInterval(() => {
-        setCopySuccess('Copy');
-      }, 3000);
-    } catch (err) {
-      setCopySuccess('Failed to copy!');
-    }
+  const handleCopy = () => {
+    const textToCopy = codeRef.current.textContent;
+    navigator.clipboard.writeText(textToCopy)
+      .then(() => {
+        setCopy('Copied!');
+        setTimeout(() => {
+          setCopy('Copy');
+        }, 3000);
+      })
+      .catch((error) => {
+        console.error('Failed to copy text:', error);
+      });
   };
 
   return (
@@ -35,16 +37,18 @@ export const Code = ({ children }) => {
       </div>
       <div className="relative overflow-y-scroll">
         <div
+          ref={codeRef}
           className={
             showCode ? 'hidden h-0' : 'text-xs md:text-sm xl:text-base px-0 py-4 lg:p-8 text-primary dark:text-white h-auto'
           }>
           {children}
         </div>
         {/* <a
-          onClick={() => copyToClipBoard(children.toString())}
-          className="absolute top-4 right-4 px-6 py-2 rounded-md bg-gray-100 hover:bg-opacity-75 active:bg-white shadow-lg cursor-pointer">
+          onClick={handleCopy}
+          className="">
           {copySuccess}
         </a> */}
+        <button className='absolute top-4 right-4 px-6 py-2 rounded-md bg-gray-100 hover:bg-opacity-75 active:bg-white shadow-lg cursor-pointer' onClick={handleCopy}>{copy}</button>
       </div>
     </div>
   );
