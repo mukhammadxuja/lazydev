@@ -50,7 +50,7 @@
     @apply sticky z-30 top-[2.4rem] md:top-[3.5rem] mt-[3.5rem] bg-gray-100 dark:bg-[#141417] duration-300 shadow-md;
   }
   i {
-    @apply text-red-500
+    @apply text-rose-500;
   }
 }
 

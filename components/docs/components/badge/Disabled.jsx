@@ -1,6 +1,6 @@
 export const Disabled = () => {
   return (
-    <div className="flex items-center gap-2">
+    <div className="flex items-center space-x-1 md:space-x-2">
       <button
         type="button"
         disabled

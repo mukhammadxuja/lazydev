@@ -1,0 +1,95 @@
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
+
+import { NestedLayout } from '@/components/layout/NestedLayout';
+import ComponentExample from '@/components/layout/ComponentExample';
+import { Code } from '@/components/layout/Code';
+import { PrevAndNext } from '@/components/layout/PrevAndNext';
+import { SidebarLink } from '@/components/layout/SidebarLink';
+
+import { Types } from '@/components/docs/components/badge/Types';
+import { Solid } from '@/components/docs/components/badge/Solid';
+import { Soft } from '@/components/docs/components/badge/Soft';
+
+import { Test } from '@/components/docs/components/navbar/Test';
+
+export const meta = {
+  name: 'Badge',
+  title: 'Badge | Lazydev ui components',
+};
+
+export const getStaticProps = async ({ locale }) => {
+  return {
+    props: {
+      ...(await serverSideTranslations(locale, ['home'])),
+    },
+  };
+};
+
+<SidebarLink>
+  <a href="#types" className="sidebar__link">
+    Types badges
+  </a>
+  <a href="#solid" className="sidebar__link">
+    Solid variants
+  </a>
+  <a href="#Soft" className="sidebar__link">
+    Soft variants
+  </a>
+  <a href="#outline" className="sidebar__link">
+    Outline variants
+  </a>
+  <a href="#ghost" className="sidebar__link">
+    Ghost variants
+  </a>
+  <a href="#rounded" className="sidebar__link">
+    Rounded
+  </a>
+  <a href="#block" className="sidebar__link">
+    Block Button
+  </a>
+  <a href="#disabled" className="sidebar__link">
+    Disabled
+  </a>
+  <a href="#gradient" className="sidebar__link">
+    Gradient
+  </a>
+</SidebarLink>
+
+<PrevAndNext
+  leftPath="/docs/components/pagination"
+  rightPath="/docs/components/sidebar"
+/>
+
+<div id="types" />
+
+<ComponentExample
+  name="Types"
+  paragraph="The most commonly used button styles.">
+  <Types />
+</ComponentExample>
+
+<Code>```jsx ````</Code>
+
+<div id="solid" />
+
+<ComponentExample
+  name="Solid"
+  paragraph="The most commonly used button styles.">
+  <Solid />
+</ComponentExample>
+
+<Code>```jsx ````</Code>
+
+<div id="soft" />
+
+<ComponentExample name="Soft" paragraph="The most commonly used button styles.">
+  <Soft />
+</ComponentExample>
+
+<Code>```jsx ````</Code>
+
+export default ({ children }) => (
+  <NestedLayout name={meta.name} title={meta.title}>
+    {children}
+  </NestedLayout>
+);

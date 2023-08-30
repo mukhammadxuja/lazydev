@@ -19,7 +19,7 @@ export const Color = () => {
         </label>
         <input
           id="color"
-          className="rounded-xl bg-red-200 dark:bg-[#352428] outline-none py-3 px-4 text-xs group-focus-within:bg-opacity-60"
+          className="rounded-xl bg-rose-200 dark:bg-[#352428] outline-none py-3 px-4 text-xs group-focus-within:bg-opacity-60"
           type="text"
         />
       </div>

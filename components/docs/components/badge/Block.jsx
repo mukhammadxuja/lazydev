@@ -1,6 +1,6 @@
 export const Block = () => {
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col space-y-2">
       <button
         type="button"
         className="w-full md:w-[18rem] xl:w-[22rem] rounded-lg md:rounded-xl py-2 px-4 md:py-2.5 md:px-6 text-xs md:text-sm duration-200 font-medium hover:-translate-y-0.5 active:translate-y-0 shadow-blue-100 hover:shadow-blue-300 bg-blue-600 hover:bg-blue-500 dark:bg-blue-600 text-white">

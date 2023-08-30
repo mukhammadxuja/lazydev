@@ -4,12 +4,12 @@ import { MdErrorOutline, MdClose } from 'react-icons/md';
 export const Error = () => {
   return (
     <>
-      <div className="h-max w-[15rem] md:w-[20rem] p-2 mt-2 border-2 border-red-400 dark:border-opacity-50 bg-red-100 dark:bg-[#352428] rounded-xl flex items-center justify-between">
+      <div className="h-max w-[15rem] md:w-[20rem] p-2 mt-2 border-2 border-rose-400 dark:border-opacity-50 bg-rose-100 dark:bg-[#352428] rounded-xl flex items-center justify-between">
         <div className="flex items-center">
-          <div className="flex items-center justify-center w-10 h-10 bg-red-500 dark:bg-[#4a272d] rounded-2xl">
+          <div className="flex items-center justify-center w-10 h-10 bg-rose-500 dark:bg-[#4a272d] rounded-2xl">
             <span className="flex items-center justify-center bg-white rounded-xl w-6 h-6">
               <span>
-                <MdErrorOutline className="text-red-500 dark:text-[#b33131]" />
+                <MdErrorOutline className="text-rose-500 dark:text-[#b33131]" />
               </span>
             </span>
           </div>

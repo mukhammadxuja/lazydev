@@ -16,7 +16,7 @@ export const TypeB = () => {
           />
           <div className="absolute top-3 left-4 flex items-center space-x-2 cursor-pointer">
             <span className="p-1.5 rounded-lg bg-white flex items-center justify-center w-fit duration-200 hover:-translate-y-1">
-              <BsHeartFill className="text-sm text-red-500" />
+              <BsHeartFill className="text-sm text-rose-500" />
             </span>
             <span className="p-1.5 rounded-lg bg-white flex items-center justify-center w-fit duration-200 space-x-1 hover:-translate-y-1">
               <RiMessage3Fill className="text-sm text-blue-500" />
@@ -25,9 +25,7 @@ export const TypeB = () => {
           </div>
         </div>
         <div className="absolute bottom-0 left-0 right-0 rounded-b-xl bg-white bg-opacity-50 backdrop-filter backdrop-blur-sm p-4 group-hover:py-6 duration-300">
-          <h5 className="text-primary font-medium text-sm">
-            Segoe cute
-          </h5>
+          <h5 className="text-primary font-medium text-sm">Segoe cute</h5>
           <small className="text-xs font-light text-primary">
             Do you want to participate?
           </small>

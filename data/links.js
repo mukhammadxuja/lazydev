@@ -67,6 +67,11 @@ export const sidebar = [
     name: "Components",
     links: [
       {
+        id: 4.0,
+        title: 'Badge',
+        path: '/docs/components/badge',
+      },
+      {
         id: 4.1,
         title: 'Button',
         path: '/docs/components/button',

@@ -64,11 +64,11 @@ export const TypeA = () => {
       </div>
       {/* Red alert */}
       <div
-        className="p-4 mb-4 bg-red-100 rounded-lg dark:bg-red-200 mx-8"
+        className="p-4 mb-4 bg-rose-100 rounded-lg dark:bg-rose-200 mx-8"
         role="alert">
         <div className="flex items-center">
           <svg
-            className="mr-2 w-5 h-5 text-red-700 dark:text-red-800"
+            className="mr-2 w-5 h-5 text-rose-700 dark:text-rose-800"
             fill="currentColor"
             viewBox="0 0 20 20"
             xmlns="http://www.w3.org/2000/svg">
@@ -77,11 +77,11 @@ export const TypeA = () => {
               d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"
               clipRule="evenodd"></path>
           </svg>
-          <h3 className="text-lg font-medium text-red-700 dark:text-red-800">
+          <h3 className="text-lg font-medium text-rose-700 dark:text-rose-800">
             This is a danger alert
           </h3>
         </div>
-        <div className="mt-2 mb-4 text-sm text-red-700 dark:text-red-800">
+        <div className="mt-2 mb-4 text-sm text-rose-700 dark:text-rose-800">
           More info about this info danger goes here. This example text is going
           to run a bit longer so that you can see how spacing within an alert
           works with this kind of content.
@@ -89,7 +89,7 @@ export const TypeA = () => {
         <div className="flex">
           <button
             type="button"
-            className="text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-red-800 dark:hover:bg-red-900">
+            className="text-white bg-rose-700 hover:bg-rose-800 focus:ring-4 focus:outline-none focus:ring-rose-300 font-medium rounded-lg text-xs px-3 py-1.5 mr-2 text-center inline-flex items-center dark:bg-rose-800 dark:hover:bg-rose-900">
             <svg
               className="-ml-0.5 mr-2 h-4 w-4"
               fill="currentColor"
@@ -105,7 +105,7 @@ export const TypeA = () => {
           </button>
           <button
             type="button"
-            className="text-red-700 bg-transparent border border-red-700 hover:bg-red-800 hover:text-white focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:border-red-800 dark:text-red-800 dark:hover:text-white">
+            className="text-rose-700 bg-transparent border border-rose-700 hover:bg-rose-800 hover:text-white focus:ring-4 focus:outline-none focus:ring-rose-300 font-medium rounded-lg text-xs px-3 py-1.5 text-center dark:border-rose-800 dark:text-rose-800 dark:hover:text-white">
             Dismiss
           </button>
         </div>
