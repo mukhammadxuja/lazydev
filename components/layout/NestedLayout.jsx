@@ -39,18 +39,18 @@ export const NestedLayout = ({ children, name, title }) => {
         <div className="hidden lg:block">
           <aside className="bg-white dark:bg-darkPrimary fixed z-30 h-screen w-[240px] px-5 pt-[5rem] overflow-y-auto scrollbar-hide">
             {sidebar.map((item) => (
-              <div key={item.id} className="flex flex-col space-y-1">
+              <div key={item.id} className="flex flex-col space-y-1 py-1">
                 <h2 className="font-semibold text-gray-900 dark:text-white">
                   {item.name}
                 </h2>
-                <ul className="py-2 px-4 border-l-2  border-gray-100">
+                <ul className="py-2 border-l-2 border-gray-100 dark:border-gray-800">
                   {item.links.map((link) => (
                     <li
                       key={link.id}
                       className={`${
                         router.asPath == link.path
-                          ? 'sidebar__link text-blue-500'
-                          : 'sidebar__link '
+                          ? 'sidebar__link dark:hover:text-blue-500 px-4 border-l border-blue-500 font-normal text-blue-500'
+                          : 'sidebar__link dark:hover:text-blue-500 px-4 border-l border-transparent hover:border-blue-500 font-normal'
                       }`}>
                       <Link href={link.path}>{link.title}</Link>
                     </li>

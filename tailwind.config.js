@@ -21,15 +21,26 @@ module.exports = {
         primary: 'var(--color-primary)',
         secondary: 'var(--color-secondary)',
         darkPrimary: 'var(--color-dark-primary)',
-        darkSecondary: 'var(--color-dark-secondary)',
+        darkSecondary: 'var(--color-dark-secondary)'
+      },
+      backgroundImage: {
+        'gradient-radial':
+        'radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0)',
+      },
+      borderRadius: {
+        'none': '0',
+        'sm': '0.125rem',
+        'default': '0.25rem',
+        'md': '0.375rem',
+        'lg': '0.5rem',
+        'xl': '0.75rem',
+        '2xl': '1rem',
+        '3xl': '1.5rem',
+        'full': '9999px',
       },
       fontFamily: {
         poppins: ['Poppins', 'Monda'],
         sora: ['Sora', 'sans-serif'],
-      },
-      backgroundImage: {
-        'gradient-radial':
-          'radial-gradient(farthest-side,#0000 calc(100% - 3px),#000 0)',
       },
       animation: {
         blob: 'blob 7s ease-in-out infinite',
